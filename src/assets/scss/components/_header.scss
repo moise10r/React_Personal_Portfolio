@@ -1,6 +1,41 @@
 .main-header {
   width: 100%;
+}
+
+.header-main-container {
+  width: 95%;
+  margin: 0 auto;
   height: 8rem;
-  background-color:red;
   @include flex-between(row);
+}
+
+.nav-list {
+  display: none;
+}
+
+.social-media-list {
+  display: none;
+}
+
+.menu-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: $text-color;
+  cursor: pointer;
+  border-radius: 50%;
+  @include flex-center(row);
+}
+
+.menu-icon .humberger {
+  font-size: 2.5rem;
+}
+
+.logo-container .logo {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: $text-color;
+}
+
+.logo-container .logo span {
+  color: $secondary-color;
 }
