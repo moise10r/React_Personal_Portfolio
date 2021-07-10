@@ -83,6 +83,70 @@ ul {
   color: #cf000f;
 }
 
+.headline-section {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.main-healine-container {
+  width: 100%;
+  padding-top: 4.5rem;
+}
+
+.main-healine-container .me {
+  width: 80%;
+  max-width: 300px;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: 0;
+  text-align: left;
+  color: #fff;
+}
+
 .container {
   width: 100%;
+  position: relative;
+}
+
+.bar {
+  height: 100px;
+  width: 1px;
+  background-color: #ffffff99;
+  margin-bottom: 1rem;
+}
+
+.last {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.left-bar-icons {
+  position: absolute;
+  top: 20vh;
+  left: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-bar-icons .social-icons-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icons-list .social-left-bar-icons-link {
+  margin: 0.5rem 0;
+}
+
+.rigth-scroll-bar {
+  display: none;
+}
+
+.bar-icon {
+  font-size: 1.6rem;
+  color: #fff;
 }

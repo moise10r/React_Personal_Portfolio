@@ -4,8 +4,6 @@ import HeadLine from '../headline';
 
 import { IconContext } from 'react-icons';
 import { ImGithub } from 'react-icons/im';
-import { IoMdMenu } from 'react-icons/io';
-import { FaFacebookF } from 'react-icons/fa';
 import { FiTwitter } from 'react-icons/fi';
 import { GrLinkedinOption } from 'react-icons/gr';
 
@@ -19,13 +17,31 @@ class Home extends Component {
 					<HeadLine />
 				</main>
 				<div className='left-bar-icons'>
-					<div className='first-bar'></div>
+					<div className='bar'></div>
 					<ul className='social-icons-list'>
 						<li className='social-left-bar-icons-link'>
-							<a href='#1'></a>
+							<a href='#1'>
+								<IconContext.Provider value={{ className: 'bar-icon' }}>
+									<ImGithub />
+								</IconContext.Provider>
+							</a>
+						</li>
+						<li className='social-left-bar-icons-link'>
+							<a href='#1'>
+								<IconContext.Provider value={{ className: 'bar-icon' }}>
+									<FiTwitter />
+								</IconContext.Provider>
+							</a>
+						</li>
+						<li className='social-left-bar-icons-link'>
+							<a href='#1'>
+								<IconContext.Provider value={{ className: 'bar-icon' }}>
+									<GrLinkedinOption />
+								</IconContext.Provider>
+							</a>
 						</li>
 					</ul>
-					<div className='last-bar'></div>
+					<div className='bar last'></div>
 				</div>
 				<div className='rigth-scroll-bar'></div>
 			</div>

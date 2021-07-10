@@ -1,1 +1,41 @@
   @import '../components/header';
+  @import '../components/headline';
+
+  .container {
+    width: 100%;
+    position: relative;
+  }
+  
+  .bar {
+    height: 100px;
+    width: 1px;
+    background-color: $secondary-text-color;
+    margin-bottom: 1rem;
+  }
+  
+  .last {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  .left-bar-icons {
+    position: absolute;
+    top: 20vh;
+    left:1.2rem;
+    @include flex-center(column);
+  }
+  
+  .left-bar-icons .social-icons-list {
+    @include flex-center(column);
+  }
+  
+  .social-icons-list .social-left-bar-icons-link {
+    margin: 0.5rem 0;
+  }
+  .rigth-scroll-bar {
+    display: none;
+  }
+
+.bar-icon {
+  font-size: 1.6rem;
+  color: $text-color;
+}
