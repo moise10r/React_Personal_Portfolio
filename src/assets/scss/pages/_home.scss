@@ -18,9 +18,9 @@
     margin-bottom: 0;
   }
   .left-bar-icons {
-    position: absolute;
+    position: fixed;
     top: 20vh;
-    left:1.2rem;
+    left: 2.5%;
     @include flex-center(column);
   }
   

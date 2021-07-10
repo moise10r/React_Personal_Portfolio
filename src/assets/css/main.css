@@ -37,27 +37,25 @@ ul {
 
 .main-header {
   width: 100%;
+  position: fixed;
+  top: 0;
 }
-
-.header-main-container {
-  width: 95%;
+.main-header .header-main-container {
+  width: 90%;
   margin: 0 auto;
-  height: 8rem;
+  height: 9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-
-.nav-list {
+.main-header .header-main-container .nav-list {
   display: none;
 }
-
-.social-media-list {
+.main-header .header-main-container .social-media-list {
   display: none;
 }
-
-.menu-icon {
+.main-header .header-main-container .menu-icon {
   width: 4rem;
   height: 4rem;
   background-color: #fff;
@@ -68,18 +66,15 @@ ul {
   align-items: center;
   flex-direction: row;
 }
-
-.menu-icon .humberger {
+.main-header .header-main-container .menu-icon .humberger {
   font-size: 2.5rem;
 }
-
-.logo-container .logo {
+.main-header .header-main-container .logo-container .logo {
   font-size: 2.8rem;
   font-weight: 900;
   color: #fff;
 }
-
-.logo-container .logo span {
+.main-header .header-main-container .logo-container .logo span {
   color: #cf000f;
 }
 
@@ -87,13 +82,11 @@ ul {
   width: 75%;
   margin: 0 auto;
 }
-
-.main-healine-container {
+.headline-section .main-healine-container {
   width: 100%;
-  padding-top: 4.5rem;
+  padding-top: 12rem;
 }
-
-.main-healine-container .me {
+.headline-section .main-healine-container .me {
   width: 80%;
   max-width: 300px;
   font-size: 4rem;
@@ -102,6 +95,60 @@ ul {
   letter-spacing: 0;
   text-align: left;
   color: #fff;
+}
+.headline-section .main-healine-container .me span {
+  color: #cf000f;
+}
+.headline-section .main-healine-container .about-me {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  text-align: left;
+  color: #ffffff99;
+  margin-top: 1.5rem;
+}
+.headline-section .main-healine-container .connections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+.headline-section .main-healine-container .connections .btn-resume {
+  padding: 0.6rem 2rem;
+  border: 1px solid #cf000f;
+  background-color: #afafaf;
+  color: #cf000f;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-right: 1.3rem;
+}
+.headline-section .main-healine-container .connections .connect {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #cf000f;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.headline-section .main-healine-container .connections .connect .connect-icon {
+  margin-left: 0.2rem;
+  font-size: 2.4rem;
+}
+.headline-section .main-healine-container .connections .connect::after {
+  position: absolute;
+  content: "";
+  bottom: 0.29rem;
+  right: 0;
+  left: 0;
+  border-radius: 5rem;
+  height: 2px;
+  background-color: #cf000f;
 }
 
 .container {
@@ -122,9 +169,9 @@ ul {
 }
 
 .left-bar-icons {
-  position: absolute;
+  position: fixed;
   top: 20vh;
-  left: 1.2rem;
+  left: 2.5%;
   display: flex;
   justify-content: center;
   align-items: center;
