@@ -144,8 +144,8 @@ ul {
   position: absolute;
   content: "";
   bottom: 0.29rem;
-  right: 0;
-  left: 0;
+  width: 107%;
+  left: 0rem;
   border-radius: 5rem;
   height: 2px;
   background-color: #cf000f;
