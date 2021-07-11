@@ -92,7 +92,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #161616;
+  background-color: #303030;
   z-index: 999;
 }
 
@@ -198,7 +198,7 @@ ul {
   top: 1rem;
   right: -4.5rem;
   font-size: 1.3rem;
-  background-color: #161616;
+  background-color: #303030;
   padding: 0.4rem 0.6rem;
 }
 .main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a:hover {
