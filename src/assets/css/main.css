@@ -93,7 +93,7 @@ ul {
   justify-content: flex-start;
 }
 .headline-section .main-healine-container .headline-left-container {
-  width: 60%;
+  width: 100%;
 }
 .headline-section .main-healine-container .headline-left-container .me {
   width: 100%;
@@ -174,6 +174,11 @@ ul {
   height: 2px;
   background-color: #cf000f;
 }
+@media screen and (min-width: 900px) {
+  .headline-section .main-healine-container .headline-left-container {
+    width: 45%;
+  }
+}
 .headline-section .main-healine-container .headline-img {
   width: 55%;
   display: none;
@@ -253,6 +258,26 @@ ul {
 
 .rigth-scroll-bar {
   display: none;
+  position: fixed;
+  top: 18vh;
+  right: 4%;
+  height: 70vh;
+  width: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+.rigth-scroll-bar::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #cf000f;
+}
+@media screen and (min-width: 500px) {
+  .rigth-scroll-bar {
+    display: block;
+  }
 }
 
 .bar-icon {

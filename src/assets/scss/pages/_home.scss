@@ -54,6 +54,24 @@
   }
   .rigth-scroll-bar {
     display: none;
+    position: fixed;
+    top: 18vh;
+    right: 4%;
+    height: 70vh;
+    width: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: $text-color;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 10vh;
+      background-color: $secondary-color;
+    }
+    @include media(500px){
+      display: block;
+    }
   }
 
 .bar-icon {

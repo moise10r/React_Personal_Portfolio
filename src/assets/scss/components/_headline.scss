@@ -7,7 +7,7 @@
     @include flex-center(row);
     justify-content:flex-start;
 		.headline-left-container {
-			width: 60%;
+			width: 100%;
 			.me {
 				width: 100%;
 				font-size: 4rem;
@@ -75,6 +75,9 @@
 					}
 				}
 			}
+      @include media(900px) {
+        width: 45%;
+      }
 		}
     .headline-img {
       width: 55%;
