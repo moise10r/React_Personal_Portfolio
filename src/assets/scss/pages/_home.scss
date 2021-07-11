@@ -11,12 +11,14 @@
     width: 1px;
     background-color: $secondary-text-color;
     margin-bottom: 1rem;
+    z-index: -1;
     @include media(800px){
       height: 120px;
     }
   }
 
   .last {
+    z-index: -1;
     margin-top: 1rem;
     margin-bottom: 0;
     position: relative;
@@ -31,6 +33,7 @@
     }
   }
   .left-bar-icons {
+    z-index: -1;
     position: fixed;
     top: 20vh;
     left: 2.5%;
@@ -53,6 +56,7 @@
 
   }
   .rigth-scroll-bar {
+    z-index: -1;
     display: none;
     position: fixed;
     top: 18vh;
@@ -75,6 +79,7 @@
   }
 
 .bar-icon {
+  z-index: -1;
   font-size: 1.6rem;
   color: $text-color;
   &:hover {

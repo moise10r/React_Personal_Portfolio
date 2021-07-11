@@ -78,6 +78,193 @@ ul {
 .main-header .header-main-container .logo-container .logo span {
   color: #cf000f;
 }
+.main-header .header-main-container .navbar-img-wrapper,
+.main-header .header-main-container .close-icon,
+.main-header .header-main-container .languages {
+  display: none;
+}
+
+.main-navbar.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.main-navbar.open .main-navbar-container {
+  width: 100%;
+  height: 100%;
+}
+.main-navbar.open .main-navbar-container .menu-icon {
+  display: none;
+}
+.main-navbar.open .main-navbar-container .close-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #161616;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.main-navbar.open .main-navbar-container .close-icon .close {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.main-navbar.open .main-navbar-container .header-list {
+  margin-top: 8rem;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.main-navbar.open .main-navbar-container .header-list .navbar-img-wrapper {
+  display: none;
+  width: 50%;
+  float: left;
+  margin-left: 5rem;
+  margin-top: -5rem;
+}
+.main-navbar.open .main-navbar-container .header-list .navbar-img-wrapper img {
+  max-width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container .header-list .navbar-img-wrapper {
+    display: block;
+  }
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list .nav-link {
+  margin-right: 7rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container .header-list .nav-list .nav-link {
+    margin-right: 10rem;
+    margin-top: 4rem;
+  }
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #161616;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a {
+    font-size: 4.5rem;
+    font-weight: 900;
+  }
+}
+.main-navbar.open .main-navbar-container .header-list .social-media-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 10.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link {
+  padding: 0 1rem;
+}
+.main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link .header-icon {
+  color: #161616;
+  font-size: 2rem;
+}
+.main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link .header-icon:hover {
+  color: #636363;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link .header-icon {
+    font-size: 3rem;
+  }
+}
+.main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:first-child::after, .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:last-child::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30%;
+  background-color: #969696;
+  top: 50%;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:first-child::after, .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:last-child::before {
+    width: 90px;
+  }
+}
+.main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:first-child::after {
+  left: -5rem;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:first-child::after {
+    left: -10rem;
+  }
+}
+.main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:last-child::before {
+  right: -5rem;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link:last-child::before {
+    right: -10rem;
+  }
+}
+.main-navbar.open .main-navbar-container .header-list .languages {
+  position: absolute;
+  bottom: 16rem;
+  right: 10rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.main-navbar.open .main-navbar-container .header-list .languages li {
+  margin-top: 0.5rem;
+}
+.main-navbar.open .main-navbar-container .header-list .languages li a {
+  color: #161616;
+  font-size: 1.8rem;
+}
+.main-navbar.open .main-navbar-container .header-list .languages li a:hover {
+  color: #cf000f;
+}
+.main-navbar.open .main-navbar-container .header-list .languages li:last-child a {
+  color: #cf000f;
+  text-decoration: underline;
+}
+.main-navbar.open .main-navbar-container::before {
+  position: absolute;
+  top: 20vh;
+  right: 3%;
+  content: "MENU";
+  transform: rotate(90deg);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.main-navbar.open .main-navbar-container::after {
+  position: absolute;
+  top: 30vh;
+  right: 5%;
+  content: "";
+  height: 26rem;
+  width: 0.3rem;
+  background-color: #7c7c7c;
+  border-radius: 0.5rem;
+}
 
 .headline-section {
   width: 100%;
@@ -151,6 +338,7 @@ ul {
   margin-right: 1.3rem;
 }
 .headline-section .main-healine-container .headline-left-container .connections .connect {
+  z-index: -1;
   font-size: 1.6rem;
   font-weight: 900;
   color: #cf000f;
@@ -202,6 +390,7 @@ ul {
   width: 1px;
   background-color: #ffffff99;
   margin-bottom: 1rem;
+  z-index: -1;
 }
 @media screen and (min-width: 800px) {
   .bar {
@@ -210,6 +399,7 @@ ul {
 }
 
 .last {
+  z-index: -1;
   margin-top: 1rem;
   margin-bottom: 0;
   position: relative;
@@ -225,6 +415,7 @@ ul {
 }
 
 .left-bar-icons {
+  z-index: -1;
   position: fixed;
   top: 20vh;
   left: 2.5%;
@@ -257,6 +448,7 @@ ul {
 }
 
 .rigth-scroll-bar {
+  z-index: -1;
   display: none;
   position: fixed;
   top: 18vh;
@@ -281,6 +473,7 @@ ul {
 }
 
 .bar-icon {
+  z-index: -1;
   font-size: 1.6rem;
   color: #fff;
 }
