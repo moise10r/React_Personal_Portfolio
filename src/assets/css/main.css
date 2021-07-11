@@ -513,6 +513,7 @@ ul {
 @media screen and (min-width: 500px) {
   .rigth-scroll-bar {
     display: block;
+    right: 6%;
   }
 }
 

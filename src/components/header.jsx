@@ -13,12 +13,20 @@ class Header extends Component {
 		isOpen: false,
 	};
 	handleMenu() {
-		const isOpen = this.state.isOpen;
 		this.setState({
 			isOpen: true,
 		});
-		console.log(this.state.isOpen);
 	}
+
+	handleCloseMenu() {
+		console.log(this.state.isOpen);
+		if (this.state.isOpen) {
+			this.setState({
+				isOpen: false,
+			});
+		} else return;
+	}
+
 	render() {
 		return (
 			<header className='main-header'>
@@ -28,14 +36,19 @@ class Header extends Component {
 							Moise<span>.</span>
 						</a>
 					</div>
-					<nav className='main-navbar' ref={this.menu}>
+					<nav
+						className={this.state.isOpen ? 'main-navbar open' : 'main-navbar'}
+					>
 						<div className='main-navbar-container'>
 							<div className='menu-icon' onClick={() => this.handleMenu()}>
 								<IconContext.Provider value={{ className: 'humberger' }}>
 									<IoMdMenu />
 								</IconContext.Provider>
 							</div>
-							<div className='close-icon'>
+							<div
+								className='close-icon'
+								onClick={() => this.handleCloseMenu()}
+							>
 								<IconContext.Provider value={{ className: 'close' }}>
 									<VscClose />
 								</IconContext.Provider>
