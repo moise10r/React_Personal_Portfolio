@@ -9,7 +9,16 @@ import { VscClose } from 'react-icons/vsc';
 import navbarImg from '../assets/images/navbar-img.svg';
 
 class Header extends Component {
-	state = {};
+	state = {
+		isOpen: false,
+	};
+	handleMenu() {
+		const isOpen = this.state.isOpen;
+		this.setState({
+			isOpen: true,
+		});
+		console.log(this.state.isOpen);
+	}
 	render() {
 		return (
 			<header className='main-header'>
@@ -19,9 +28,9 @@ class Header extends Component {
 							Moise<span>.</span>
 						</a>
 					</div>
-					<nav className='main-navbar'>
+					<nav className='main-navbar' ref={this.menu}>
 						<div className='main-navbar-container'>
-							<div className='menu-icon'>
+							<div className='menu-icon' onClick={() => this.handleMenu()}>
 								<IconContext.Provider value={{ className: 'humberger' }}>
 									<IoMdMenu />
 								</IconContext.Provider>
@@ -33,11 +42,13 @@ class Header extends Component {
 							</div>
 							<div className='header-list'>
 								<div className='navbar-img-wrapper'>
-									<img src={navbarImg} alt='' srcset='' />
+									<img src={navbarImg} alt='' />
 								</div>
 								<ul className='nav-list'>
 									<li className='nav-link'>
-										<a href='#1'>Home</a>
+										<a href='#1' className='active'>
+											Home<span>01</span>
+										</a>
 									</li>
 									<li className='nav-link'>
 										<a href='#2'>Portfolio</a>
@@ -89,10 +100,10 @@ class Header extends Component {
 								</ul>
 								<ul className='languages'>
 									<li>
-										<a href='#2'>FR</a>
+										<a href='#2'>EN</a>
 									</li>
 									<li>
-										<a href='#2'>EN</a>
+										<a href='#2'>FR</a>
 									</li>
 									<li>
 										<a href='#3'>moiserushanika2006@gmail.com</a>

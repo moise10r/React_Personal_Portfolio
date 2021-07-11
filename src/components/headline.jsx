@@ -21,8 +21,8 @@ const HeadLine = () => {
 						<a href='#2' className='btn-resume'>
 							Resume
 						</a>
-						<a href='#2' className='connect'>
-							LET'S CONNECT{' '}
+						<a href='#3' className='connect'>
+							LET'S CONNECT
 							<span>
 								<IconContext.Provider value={{ className: 'connect-icon' }}>
 									<AiOutlineDisconnect />

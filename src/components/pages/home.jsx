@@ -11,7 +11,7 @@ class Home extends Component {
 	state = {};
 	render() {
 		return (
-			<div class='container'>
+			<div className='container'>
 				<Header />
 				<main>
 					<HeadLine />

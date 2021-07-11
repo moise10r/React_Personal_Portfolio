@@ -16,6 +16,7 @@ body {
   padding: 0;
   font-size: 1.6rem;
   background-color: #161616;
+  overflow: hidden;
 }
 
 input,
@@ -40,6 +41,7 @@ ul {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 999;
 }
 .main-header .header-main-container {
   width: 90%;
@@ -90,7 +92,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #161616;
   z-index: 999;
 }
 
@@ -107,7 +109,7 @@ ul {
   right: 2rem;
   width: 4rem;
   height: 4rem;
-  background-color: #161616;
+  background-color: #fff;
   cursor: pointer;
   border-radius: 50%;
   display: flex;
@@ -117,7 +119,7 @@ ul {
 }
 .main-navbar.open .main-navbar-container .close-icon .close {
   font-size: 2.5rem;
-  color: #fff;
+  color: #161616;
 }
 .main-navbar.open .main-navbar-container .header-list {
   margin-top: 8rem;
@@ -146,10 +148,15 @@ ul {
   align-items: center;
   flex-direction: column;
   align-items: flex-end;
+  padding-right: 7rem;
 }
 .main-navbar.open .main-navbar-container .header-list .nav-list .nav-link {
-  margin-right: 7rem;
   margin-top: 1rem;
+  width: 30rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
 }
 @media screen and (min-width: 768px) {
   .main-navbar.open .main-navbar-container .header-list .nav-list .nav-link {
@@ -158,15 +165,48 @@ ul {
   }
 }
 .main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a {
+  width: 100%;
+  text-align: end;
   font-size: 3.5rem;
   font-weight: 600;
-  color: #161616;
+  color: #fff;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a {
     font-size: 4.5rem;
     font-weight: 900;
   }
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a span {
+  position: absolute;
+  top: 1rem;
+  right: -3rem;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a.active {
+  color: #cf000f;
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a::after {
+  position: absolute;
+  content: "";
+  height: 3rem;
+  width: 3rem;
+  top: 1rem;
+  right: -4.5rem;
+  font-size: 1.3rem;
+  background-color: #161616;
+  padding: 0.4rem 0.6rem;
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a:hover {
+  transform: translateX(-3rem);
+  transition: all 0.75s cubic-bezier(0.63, 0.03, 0.21, 1);
+}
+.main-navbar.open .main-navbar-container .header-list .nav-list .nav-link a:hover::after {
+  opacity: 0;
 }
 .main-navbar.open .main-navbar-container .header-list .social-media-list {
   display: flex;
@@ -182,11 +222,11 @@ ul {
   padding: 0 1rem;
 }
 .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link .header-icon {
-  color: #161616;
+  color: #fff;
   font-size: 2rem;
 }
 .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link .header-icon:hover {
-  color: #636363;
+  color: #cf000f;
 }
 @media screen and (min-width: 768px) {
   .main-navbar.open .main-navbar-container .header-list .social-media-list .social-media-link .header-icon {
@@ -236,10 +276,13 @@ ul {
   margin-top: 0.5rem;
 }
 .main-navbar.open .main-navbar-container .header-list .languages li a {
-  color: #161616;
-  font-size: 1.8rem;
+  color: #fff;
+  font-size: 2rem;
 }
 .main-navbar.open .main-navbar-container .header-list .languages li a:hover {
+  color: #cf000f;
+}
+.main-navbar.open .main-navbar-container .header-list .languages li:first-child a {
   color: #cf000f;
 }
 .main-navbar.open .main-navbar-container .header-list .languages li:last-child a {
@@ -254,6 +297,7 @@ ul {
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 400;
+  color: #fff;
 }
 .main-navbar.open .main-navbar-container::after {
   position: absolute;
@@ -338,7 +382,7 @@ ul {
   margin-right: 1.3rem;
 }
 .headline-section .main-healine-container .headline-left-container .connections .connect {
-  z-index: -1;
+  z-index: 1;
   font-size: 1.6rem;
   font-weight: 900;
   color: #cf000f;
@@ -390,7 +434,7 @@ ul {
   width: 1px;
   background-color: #ffffff99;
   margin-bottom: 1rem;
-  z-index: -1;
+  z-index: 1;
 }
 @media screen and (min-width: 800px) {
   .bar {
@@ -399,7 +443,7 @@ ul {
 }
 
 .last {
-  z-index: -1;
+  z-index: 1;
   margin-top: 1rem;
   margin-bottom: 0;
   position: relative;
@@ -415,7 +459,7 @@ ul {
 }
 
 .left-bar-icons {
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   top: 20vh;
   left: 2.5%;
@@ -448,7 +492,7 @@ ul {
 }
 
 .rigth-scroll-bar {
-  z-index: -1;
+  z-index: 1;
   display: none;
   position: fixed;
   top: 18vh;
@@ -473,7 +517,7 @@ ul {
 }
 
 .bar-icon {
-  z-index: -1;
+  z-index: 1;
   font-size: 1.6rem;
   color: #fff;
 }
@@ -484,4 +528,8 @@ ul {
   .bar-icon {
     font-size: 2.5rem;
   }
+}
+
+a {
+  cursor: pointer;
 }
