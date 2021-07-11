@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -79,16 +80,23 @@ ul {
 }
 
 .headline-section {
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 12rem;
 }
 .headline-section .main-healine-container {
-  width: 100%;
-  padding-top: 12rem;
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
 }
-.headline-section .main-healine-container .me {
-  width: 80%;
-  max-width: 300px;
+.headline-section .main-healine-container .headline-left-container {
+  width: 60%;
+}
+.headline-section .main-healine-container .headline-left-container .me {
+  width: 100%;
   font-size: 4rem;
   font-weight: 700;
   line-height: 4rem;
@@ -96,10 +104,16 @@ ul {
   text-align: left;
   color: #fff;
 }
-.headline-section .main-healine-container .me span {
+@media screen and (min-width: 800px) {
+  .headline-section .main-healine-container .headline-left-container .me {
+    font-size: 7rem;
+    line-height: 6.5rem;
+  }
+}
+.headline-section .main-healine-container .headline-left-container .me span {
   color: #cf000f;
 }
-.headline-section .main-healine-container .about-me {
+.headline-section .main-healine-container .headline-left-container .about-me {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.4rem;
@@ -107,7 +121,12 @@ ul {
   color: #ffffff99;
   margin-top: 1.5rem;
 }
-.headline-section .main-healine-container .connections {
+@media screen and (min-width: 800px) {
+  .headline-section .main-healine-container .headline-left-container .about-me {
+    max-width: 500px;
+  }
+}
+.headline-section .main-healine-container .headline-left-container .connections {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +135,12 @@ ul {
   align-items: flex-end;
   margin-top: 1rem;
 }
-.headline-section .main-healine-container .connections .btn-resume {
+@media screen and (min-width: 800px) {
+  .headline-section .main-healine-container .headline-left-container .connections {
+    margin-top: 2rem;
+  }
+}
+.headline-section .main-healine-container .headline-left-container .connections .btn-resume {
   padding: 0.6rem 2rem;
   border: 1px solid #cf000f;
   background-color: #afafaf;
@@ -126,7 +150,7 @@ ul {
   border-radius: 0.5rem;
   margin-right: 1.3rem;
 }
-.headline-section .main-healine-container .connections .connect {
+.headline-section .main-healine-container .headline-left-container .connections .connect {
   font-size: 1.6rem;
   font-weight: 900;
   color: #cf000f;
@@ -136,11 +160,11 @@ ul {
   align-items: center;
   flex-direction: row;
 }
-.headline-section .main-healine-container .connections .connect .connect-icon {
+.headline-section .main-healine-container .headline-left-container .connections .connect .connect-icon {
   margin-left: 0.2rem;
   font-size: 2.4rem;
 }
-.headline-section .main-healine-container .connections .connect::after {
+.headline-section .main-healine-container .headline-left-container .connections .connect::after {
   position: absolute;
   content: "";
   bottom: 0.29rem;
@@ -149,6 +173,18 @@ ul {
   border-radius: 5rem;
   height: 2px;
   background-color: #cf000f;
+}
+.headline-section .main-healine-container .headline-img {
+  width: 55%;
+  display: none;
+}
+.headline-section .main-healine-container .headline-img img {
+  max-width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .headline-section .main-healine-container .headline-img {
+    display: block;
+  }
 }
 
 .container {
@@ -162,10 +198,25 @@ ul {
   background-color: #ffffff99;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 800px) {
+  .bar {
+    height: 120px;
+  }
+}
 
 .last {
   margin-top: 1rem;
   margin-bottom: 0;
+  position: relative;
+}
+.last::before {
+  position: absolute;
+  content: "© Moise. 2021";
+  bottom: -3rem;
+  left: 2.5%;
+  width: 120px;
+  color: #fff;
+  font-weight: 500;
 }
 
 .left-bar-icons {
@@ -176,6 +227,12 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+  .left-bar-icons {
+    top: 20vh;
+    left: 4%;
+  }
 }
 
 .left-bar-icons .social-icons-list {
@@ -188,6 +245,11 @@ ul {
 .social-icons-list .social-left-bar-icons-link {
   margin: 0.5rem 0;
 }
+@media screen and (min-width: 800px) {
+  .social-icons-list .social-left-bar-icons-link {
+    margin: 1.5rem 0;
+  }
+}
 
 .rigth-scroll-bar {
   display: none;
@@ -196,4 +258,12 @@ ul {
 .bar-icon {
   font-size: 1.6rem;
   color: #fff;
+}
+.bar-icon:hover {
+  color: #cf000f;
+}
+@media screen and (min-width: 800px) {
+  .bar-icon {
+    font-size: 2.5rem;
+  }
 }

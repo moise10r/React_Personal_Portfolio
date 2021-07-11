@@ -1,67 +1,90 @@
 .headline-section {
-  width: 75%;
-  margin: 0 auto;
-  .main-healine-container {
-    width: 100%;
-    padding-top: 12rem;
-     .me {
-      width: 80%;
-      max-width: 300px;
-      font-size: 4rem;
-      font-weight: 700;
-      line-height: 4rem;
-      letter-spacing: 0;
-      text-align: left;
-      color: $text-color;
-      span {
-        color: $secondary-color;
+	width: 100%;
+	margin-top: 12rem;
+	.main-healine-container {
+		margin: 0 auto;
+		width: 75%;
+    @include flex-center(row);
+    justify-content:flex-start;
+		.headline-left-container {
+			width: 60%;
+			.me {
+				width: 100%;
+				font-size: 4rem;
+				font-weight: 700;
+				line-height: 4rem;
+				letter-spacing: 0;
+				text-align: left;
+				color: $text-color;
+				@include media(800px) {
+					font-size: 7rem;
+					line-height: 6.5rem;
+				}
+				span {
+					color: $secondary-color;
+				}
+			}
+			.about-me {
+				font-size: 1.6rem;
+				font-weight: 500;
+				line-height: 2.4rem;
+				text-align: left;
+				color: $secondary-text-color;
+				margin-top: 1.5rem;
+				@include media(800px) {
+					max-width: 500px;
+				}
+			}
+			.connections {
+				@include flex-center(row);
+				justify-content: flex-start;
+				align-items: flex-end;
+				margin-top: 1rem;
+				@include media(800px) {
+					margin-top: 2rem;
+				}
+				.btn-resume {
+					padding: 0.6rem 2rem;
+					border: 1px solid $secondary-color;
+					background-color: lighten($back-ground-color, 60);
+					color: $secondary-color;
+					font-size: 1.8rem;
+					font-weight: 600;
+					border-radius: 0.5rem;
+					margin-right: 1.3rem;
+				}
+				.connect {
+					font-size: 1.6rem;
+					font-weight: 900;
+					color: $secondary-color;
+					position: relative;
+					@include flex-center(row);
+					.connect-icon {
+						margin-left: 0.2rem;
+						font-size: 2.4rem;
+					}
+					&::after {
+						position: absolute;
+						content: '';
+						bottom: 0.29rem;
+						width: 107%;
+						left: 0rem;
+						border-radius: 5rem;
+						height: 2px;
+						background-color: $secondary-color;
+					}
+				}
+			}
+		}
+    .headline-img {
+      width: 55%;
+      display: none;
+      img {
+        max-width: 100%;
       }
-      
-    }
-    .about-me {
-      font-size: 1.6rem;
-      font-weight: 500;
-      line-height: 2.4rem;
-      text-align: left;
-      color: $secondary-text-color;
-      margin-top: 1.5rem;
-    }
-    .connections {
-      @include flex-center(row);
-      justify-content: flex-start;
-      align-items: flex-end;
-      margin-top: 1rem;
-      .btn-resume {
-        padding: 0.6rem 2rem;
-        border: 1px solid $secondary-color;
-        background-color: lighten($back-ground-color, 60);
-        color: $secondary-color;
-        font-size: 1.8rem;
-        font-weight: 600;
-        border-radius: 0.5rem;
-        margin-right: 1.3rem;
-      }
-      .connect {
-        font-size: 1.6rem;
-        font-weight: 900;
-        color: $secondary-color;
-        position: relative;
-        @include flex-center(row);
-        .connect-icon {
-          margin-left: 0.2rem;
-          font-size: 2.4rem;
-        }
-        &::after {
-          position: absolute;
-          content: "";
-          bottom: 0.29rem;
-          width: 107%;
-          left: 0rem;
-          border-radius: 5rem;
-          height: 2px;
-          background-color: $secondary-color;
-        }
+      @include media(900px) {
+        display: block;
       }
     }
-  }
+	}
 }

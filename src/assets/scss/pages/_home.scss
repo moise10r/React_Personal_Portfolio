@@ -11,17 +11,34 @@
     width: 1px;
     background-color: $secondary-text-color;
     margin-bottom: 1rem;
+    @include media(800px){
+      height: 120px;
+    }
   }
-  
+
   .last {
     margin-top: 1rem;
     margin-bottom: 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "© Moise. 2021";
+      bottom: -3rem;
+      left: 2.5%;
+      width:120px;
+      color: $text-color;
+      font-weight: 500;
+    }
   }
   .left-bar-icons {
     position: fixed;
     top: 20vh;
     left: 2.5%;
     @include flex-center(column);
+    @include media(800px){
+      top: 20vh;
+      left: 4%;
+    }
   }
   
   .left-bar-icons .social-icons-list {
@@ -30,6 +47,10 @@
   
   .social-icons-list .social-left-bar-icons-link {
     margin: 0.5rem 0;
+    @include media(800px){
+      margin: 1.5rem 0;
+    }
+
   }
   .rigth-scroll-bar {
     display: none;
@@ -38,4 +59,11 @@
 .bar-icon {
   font-size: 1.6rem;
   color: $text-color;
+  &:hover {
+    color: $secondary-color;
+  }
+  @include media(800px){
+    font-size: 2.5rem;
+  }
+  
 }
