@@ -56,6 +56,7 @@
 		@include media(400px) {
 		}
 		li {
+			margin-right: 2rem;
 			a {
 				color: $text-color;
 				font-size: 1.7rem;
@@ -66,12 +67,11 @@
 			}
 			&:first-child a {
 				color: $secondary-color;
-				margin-right: 1rem;
 			}
 			&:last-child a {
 				color: $secondary-color;
 				text-decoration: underline;
-				display: none;
+				font-weight: 600;
 			}
 		}
 	}
@@ -157,7 +157,7 @@
 							color: $secondary-color;
 						}
 						&:hover {
-							color:red ;
+							color: $secondary-color ;
 							transform: translateX(-3rem);
 							transition: all .75s cubic-bezier(.63,.03,.21,1);
 						}
@@ -230,106 +230,6 @@
 				}
 			}
 		}
-		// 	@include flex-end(column);
-		// 	align-items: flex-end;
-		// 	padding-right: 3rem;
-		// 	background-color: red;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	// .nav-link {
-		// 	// 	margin-bottom: 1rem;
-		// 	// 	width: 30rem;
-		// 	// 	@include flex-end(row); 
-		// 	// 	@include media(768px) {
-		// 	// 		margin-right: 10rem;
-		// 	// 		margin-top: 4rem;
-		// 	// 	}
-		// 	// 	a {
-		// 	// 		width: 100%;
-		// 	// 		text-align: end;
-		// 	// 		font-size: 3.5rem;
-		// 	// 		font-weight: 600;
-		// 	// 		color:  $text-color;
-		// 	// 		position: relative;
-		// 	// 		@include media(768px) {
-		// 	// 			font-size: 4.5rem;
-		// 	// 			font-weight: 900;
-		// 	// 		}
-		// 	// 		span {
-		// 	// 			position: absolute;
-		// 	// 			top: 1rem;
-		// 	// 			right: -3rem;
-		// 	// 			font-size: 1.3rem;
-		// 	// 			padding: 0.4rem 0.6rem;
-		// 	// 			border-radius: 50%;
-		// 	// 			background-color: $text-color;
-		// 	// 		}
-		// 	// 		&.active {
-		// 	// 			color: $secondary-color;
-		// 	// 		}
-		// 	// 		&::after {
-		// 	// 			position: absolute;
-		// 	// 			content: "";
-		// 	// 			height: 3rem;
-		// 	// 			width: 3rem;
-		// 	// 			top: 1rem;
-		// 	// 			right: -4.5rem;
-		// 	// 			font-size: 1.3rem;
-		// 	// 			background-color: $black-ground-color;
-		// 	// 			padding: 0.4rem 0.6rem;
-		// 	// 		}
-		// 	// 		&:hover {
-		// 	// 			transform: translateX(-3rem);
-		// 	// 			transition: all .75s cubic-bezier(.63,.03,.21,1);
-		// 	// 		}
-		// 	// 		&:hover::after {
-		// 	// 			opacity: 0;
-		// 	// 		}
-		// 	// 	}
-		// 	// }
-		// }
-		// .social-media-list {
-		// 	@include flex-center(column);
-		// 	position: absolute;
-		// 	left: 2rem;
-		// 	.social-media-link {
-		// 		padding: 1rem 0;
-		// 		.header-icon {
-		// 			color:  $text-color;
-		// 			font-size: 2rem;
-		// 			&:hover {
-		// 				color: $secondary-color;
-		// 			}
-		// 			@include media(768px) {
-		// 				font-size: 3rem;
-		// 			}
-		// 		}
-		// 		// &:first-child::after,
-		// 		// &:last-child::before {
-		// 		// 	content: '';
-		// 		// 	position: absolute;
-		// 		// 	height: 2px;
-		// 		// 	width: 30%;
-		// 		// 	background-color: lighten($black-ground-color, 50);
-		// 		// 	top: 50%;
-		// 		// 	@include media(768px) {
-		// 		// 		width: 90px;
-		// 		// 	}
-		// 		// }
-		// 		// &:first-child::after {
-		// 		// 	left: -5rem;
-		// 		// 	@include media(768px) {
-		// 		// 		left: -10rem;
-		// 		// 	}
-		// 		// }
-		// 		// &:last-child::before {
-		// 		// 	right: -5rem;
-		// 		// 	@include media(768px) {
-		// 		// 		right: -10rem;
-		// 		// 	}
-		// 		// }
-		// 	}
-		// }
 	}
 
 	&::before {

@@ -102,6 +102,9 @@ ul {
   flex-direction: row;
   align-items: flex-end;
 }
+.main-navbar.open .languages li {
+  margin-right: 2rem;
+}
 .main-navbar.open .languages li a {
   color: #fff;
   font-size: 1.7rem;
@@ -112,12 +115,11 @@ ul {
 }
 .main-navbar.open .languages li:first-child a {
   color: #cf000f;
-  margin-right: 1rem;
 }
 .main-navbar.open .languages li:last-child a {
   color: #cf000f;
   text-decoration: underline;
-  display: none;
+  font-weight: 600;
 }
 
 .main-navbar.open .main-navbar-container {
@@ -223,7 +225,7 @@ ul {
   color: #cf000f;
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list .nav-link a:hover {
-  color: red;
+  color: #cf000f;
   transform: translateX(-3rem);
   transition: all 0.75s cubic-bezier(0.63, 0.03, 0.21, 1);
 }
