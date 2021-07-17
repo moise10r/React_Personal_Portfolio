@@ -7,16 +7,19 @@
 		width: 90%;
 		margin: 0 auto;
 		height: 9rem;
-		@include flex-between(row);
-		.left-list-container {
-			display: none;
-		}
+			.left-list-container {
+				display: none;
+			}
 		.menu-icon {
+			position: absolute;
+			top: 2.5rem;
+			right: 5%;
 			width: 4rem;
 			height: 4rem;
 			background-color: $text-color;
 			cursor: pointer;
 			border-radius: 50%;
+			z-index: 999;
 			@include flex-center(row);
 			.humberger {
 				font-size: 2.5rem;
@@ -39,14 +42,19 @@
 	}
 }
 
-.main-navbar.open {
+.main-navbar {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: $black-ground-color;
+	clip-path: circle(20px at 93.5% 7%);
+	transition: clip-path 2s;
 	z-index: 999;
+	background-color: $black-ground-color;
+	&.open {
+		clip-path: circle(100%);
+	}
 	.languages {
 		position: absolute;
 		top: 3rem;
@@ -72,6 +80,13 @@
 				color: $secondary-color;
 				text-decoration: underline;
 				font-weight: 600;
+				display: none;
+				@include media(442px){
+					display: block;
+				}
+				&:hover {
+					color: lighten($black-ground-color, 50);
+				}
 			}
 		}
 	}
@@ -118,7 +133,6 @@
 		}
 		.left-list-container {
 			width: 100%;
-			// margin: 0 auto;
 			height: 100%;
 			@include flex-center(row);
 			justify-content: space-between;
