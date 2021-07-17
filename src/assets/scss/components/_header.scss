@@ -332,32 +332,19 @@
 		// }
 	}
 
-	// &::before {
-	// 	display: none;
-	// 	@include media(768px) {
-	// 		display: block;
-	// 		position: absolute;
-	// 		top: 20vh;
-	// 		right: 3%;
-	// 		content: 'MENU';
-	// 		transform: rotate(90deg);
-	// 		font-size: 2rem;
-	// 		font-weight: 400;
-	// 		color:  $text-color;
-	// 	}
-	// }
-	// &::after {
-	// 	display: none;
-	// 	@include media(768px) {
-	// 		display: block;
-	// 		position: absolute;
-	// 		top: 30vh;
-	// 		right: 5%;
-	// 		content: '';
-	// 		height: 26rem;
-	// 		width: 0.3rem;
-	// 		background-color: lighten($black-ground-color, 40);
-	// 		border-radius: 0.5rem;
-	// 	}
-	// }
+	&::before {
+		z-index: 9999;
+		display: none;
+		@include media(768px) {
+			display: block;
+			position: absolute;
+			top: 20vh;
+			right: 3%;
+			content: 'MENU';
+			transform: rotate(90deg);
+			font-size: 2rem;
+			font-weight: 600;
+			color:  $secondary-color;
+		}
+	}
 }

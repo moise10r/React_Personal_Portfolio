@@ -306,6 +306,23 @@ ul {
     right: 20rem;
   }
 }
+.main-navbar.open .main-navbar-container::before {
+  z-index: 9999;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar.open .main-navbar-container::before {
+    display: block;
+    position: absolute;
+    top: 20vh;
+    right: 3%;
+    content: "MENU";
+    transform: rotate(90deg);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #cf000f;
+  }
+}
 
 .headline-section {
   width: 100%;
