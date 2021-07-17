@@ -85,8 +85,8 @@
 	}
 	.close-icon {
 		position: absolute;
-		top: 2rem;
-		right: 2rem;
+		top: 2.5rem;
+		right: 5%;
 		width: 4rem;
 		height: 4rem;
 		background-color: $text-color;
@@ -100,7 +100,7 @@
 		}
 	}
 	.header-list {
-		width: 100%;
+		width: 95%;
 		height: 100%;
 		@include flex-center(row);
 		justify-content: space-between;
@@ -117,8 +117,8 @@
 			}
 		}
 		.left-list-container {
-			width: 95%;
-			margin: 0 auto;
+			width: 100%;
+			// margin: 0 auto;
 			height: 100%;
 			@include flex-center(row);
 			justify-content: space-between;
