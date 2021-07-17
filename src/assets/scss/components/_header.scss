@@ -28,6 +28,7 @@
 		.logo-container .logo {
 			font-size: 2.8rem;
 			font-weight: 900;
+			line-height: 9rem;
 			color: $text-color;
 			span {
 				color: $secondary-color;
@@ -54,6 +55,7 @@
 	background-color: $black-ground-color;
 	&.open {
 		clip-path: circle(100%);
+		z-index: 99;
 	}
 	.languages {
 		position: absolute;
