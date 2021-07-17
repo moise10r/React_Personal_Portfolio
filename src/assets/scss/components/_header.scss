@@ -125,12 +125,12 @@
 			display: none;
 			@include media(992px) {
 				display: block;
-				width: 50%;
+				width: 60%;
 				float: left;
-				margin-left: 5rem;
+				margin-left: 14rem;
 			}			
 			img {
-				max-width: 85%;
+				max-width: 76%;
 			}
 		}
 		.left-list-container {
@@ -139,7 +139,7 @@
 			@include flex-center(row);
 			justify-content: space-between;
 			@include media(992px){
-				width: 50%;
+				width: 40%;
 				height: 100%;
 			}
 			.nav-list {

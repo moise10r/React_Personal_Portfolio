@@ -179,13 +179,13 @@ ul {
 @media screen and (min-width: 992px) {
   .main-navbar.open .main-navbar-container .header-list .navbar-img-wrapper {
     display: block;
-    width: 50%;
+    width: 60%;
     float: left;
-    margin-left: 5rem;
+    margin-left: 14rem;
   }
 }
 .main-navbar.open .main-navbar-container .header-list .navbar-img-wrapper img {
-  max-width: 85%;
+  max-width: 76%;
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container {
   width: 100%;
@@ -198,7 +198,7 @@ ul {
 }
 @media screen and (min-width: 992px) {
   .main-navbar.open .main-navbar-container .header-list .left-list-container {
-    width: 50%;
+    width: 40%;
     height: 100%;
   }
 }
