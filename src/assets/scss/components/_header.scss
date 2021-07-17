@@ -56,38 +56,38 @@
 	&.open {
 		clip-path: circle(100%);
 		z-index: 99;
-	}
-	.languages {
-		position: absolute;
-		top: 3rem;
-		left: 2rem;
-		@include flex-start(row);
-		align-items: flex-end;
-		@include media(400px) {
-		}
-		li {
-			margin-right: 2rem;
-			a {
-				color: $text-color;
-				font-size: 1.7rem;
-				font-weight: 400;
-				&:hover {
+		.languages {
+			position: absolute;
+			top: 3rem;
+			left: 2rem;
+			@include flex-start(row);
+			align-items: flex-end;
+			@include media(400px) {
+			}
+			li {
+				margin-right: 2rem;
+				a {
+					color: $text-color;
+					font-size: 1.7rem;
+					font-weight: 400;
+					&:hover {
+						color: $secondary-color;
+					}
+				}
+				&:first-child a {
 					color: $secondary-color;
 				}
-			}
-			&:first-child a {
-				color: $secondary-color;
-			}
-			&:last-child a {
-				color: $secondary-color;
-				text-decoration: underline;
-				font-weight: 600;
-				display: none;
-				@include media(442px){
-					display: block;
-				}
-				&:hover {
-					color: lighten($black-ground-color, 50);
+				&:last-child a {
+					color: $secondary-color;
+					text-decoration: underline;
+					font-weight: 600;
+					display: none;
+					@include media(442px){
+						display: block;
+					}
+					&:hover {
+						color: lighten($black-ground-color, 50);
+					}
 				}
 			}
 		}
