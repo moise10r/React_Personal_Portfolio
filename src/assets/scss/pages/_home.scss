@@ -30,6 +30,10 @@
       width:120px;
       color: $text-color;
       font-weight: 500;
+      display: none;
+      @include media(400px) {
+        display: block;
+      }
     }
   }
   .left-bar-icons {

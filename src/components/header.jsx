@@ -57,61 +57,66 @@ class Header extends Component {
 								<div className='navbar-img-wrapper'>
 									<img src={navbarImg} alt='' />
 								</div>
-								<ul className='nav-list'>
-									<li className='nav-link'>
-										<a href='#1' className='active'>
-											Home<span>01</span>
-										</a>
-									</li>
-									<li className='nav-link'>
-										<a href='#2'>Portfolio</a>
-									</li>
-									<li className='nav-link'>
-										<a href='#3'>About</a>
-									</li>
-									<li className='nav-link'>
-										<a href='#4'>Contact</a>
-									</li>
-								</ul>
-								<ul className='social-media-list'>
-									<li className='social-media-link'>
-										<a href='#2'>
-											<IconContext.Provider
-												value={{ className: 'header-icon' }}
-											>
-												<FaFacebookF />
-											</IconContext.Provider>
-										</a>
-									</li>
-									<li className='social-media-link'>
-										<a href='#2'>
-											<IconContext.Provider
-												value={{ className: 'header-icon' }}
-											>
-												<ImGithub />
-											</IconContext.Provider>
-										</a>
-									</li>
-									<li className='social-media-link'>
-										<a href='#2'>
-											<IconContext.Provider
-												value={{ className: 'header-icon' }}
-											>
-												<FiTwitter />
-											</IconContext.Provider>
-										</a>
-									</li>
-									<li className='social-media-link'>
-										<a href='#2'>
-											<IconContext.Provider
-												value={{ className: 'header-icon' }}
-											>
-												<GrLinkedinOption />
-											</IconContext.Provider>
-										</a>
-									</li>
-								</ul>
-								<ul className='languages'>
+								<div className="left-list-container">
+									<ul className='social-media-list'>
+										<li className='social-media-link'>
+											<a href='#2'>
+												<IconContext.Provider
+													value={{ className: 'header-icon' }}
+												>
+													<FaFacebookF />
+												</IconContext.Provider>
+											</a>
+										</li>
+										<li className='social-media-link'>
+											<a href='#2'>
+												<IconContext.Provider
+													value={{ className: 'header-icon' }}
+												>
+													<ImGithub />
+												</IconContext.Provider>
+											</a>
+										</li>
+										<li className='social-media-link'>
+											<a href='#2'>
+												<IconContext.Provider
+													value={{ className: 'header-icon' }}
+												>
+													<FiTwitter />
+												</IconContext.Provider>
+											</a>
+										</li>
+										<li className='social-media-link'>
+											<a href='#2'>
+												<IconContext.Provider
+													value={{ className: 'header-icon' }}
+												>
+													<GrLinkedinOption />
+												</IconContext.Provider>
+											</a>
+										</li>
+									</ul>
+									<ul className='nav-list'>
+										<li className='nav-link'>
+											<a href='#1' className='active'>
+												Home<span>01</span>
+											</a>
+										</li>
+										<li className='nav-link'>
+											<a href='#2'>Portfolio</a>
+										</li>
+										<li className='nav-link'>
+											<a href='#3'>About</a>
+										</li>
+										<li className='nav-link'>
+											<a href='#4'>Contact</a>
+										</li>
+									</ul>
+								</div>
+							
+							</div>
+						</div>
+						<ul className='languages'>
 									<li>
 										<a href='#2'>EN</a>
 									</li>
@@ -122,8 +127,6 @@ class Header extends Component {
 										<a href='#3'>moiserushanika2006@gmail.com</a>
 									</li>
 								</ul>
-							</div>
-						</div>
 					</nav>
 				</div>
 			</header>
