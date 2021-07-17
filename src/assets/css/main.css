@@ -90,7 +90,7 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  clip-path: circle(20px at 93.5% 7%);
+  clip-path: circle(4rem at 93.5% 4.5rem);
   transition: clip-path 2s;
   z-index: 999;
   background-color: #161616;
