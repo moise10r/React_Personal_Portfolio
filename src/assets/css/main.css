@@ -136,6 +136,7 @@ ul {
   background-color: #fff;
   cursor: pointer;
   border-radius: 50%;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,6 +198,7 @@ ul {
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list .nav-link {
   margin-bottom: 3rem;
+  padding: 1rem 0;
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list .nav-link a {
   text-align: end;
@@ -221,6 +223,11 @@ ul {
   background-color: #fff;
   color: #cf000f;
 }
+.main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list .nav-link a:hover {
+  color: red;
+  transform: translateX(-3rem);
+  transition: all 0.75s cubic-bezier(0.63, 0.03, 0.21, 1);
+}
 .main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list::after {
   position: absolute;
   content: "";
@@ -229,6 +236,7 @@ ul {
   width: 2.8rem;
   background-color: #161616;
   right: 0;
+  z-index: 99;
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container .social-media-list {
   padding-left: 1rem;
