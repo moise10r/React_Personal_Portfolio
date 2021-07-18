@@ -31,7 +31,8 @@ a {
   cursor: pointer;
 }
 
-ul {
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -93,10 +94,12 @@ ul {
   clip-path: circle(4rem at 93.5% 4.5rem);
   transition: clip-path 5s;
   background-color: #161616;
+  z-index: 1;
 }
 .main-navbar.open {
   transition: clip-path 3s;
   clip-path: circle(100%);
+  z-index: 2;
 }
 .main-navbar.open .languages {
   position: absolute;
@@ -238,11 +241,6 @@ ul {
   border-radius: 50%;
   background-color: #fff;
   color: #cf000f;
-}
-.main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list .nav-link a:hover {
-  color: #cf000f;
-  transform: translateX(-3rem);
-  transition: all 0.75s cubic-bezier(0.63, 0.03, 0.21, 1);
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list::after {
   position: absolute;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { IconContext } from 'react-icons';
 import { ImGithub } from 'react-icons/im';
 import { IoMdMenu } from 'react-icons/io';
@@ -7,11 +7,14 @@ import { FiTwitter } from 'react-icons/fi';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { VscClose } from 'react-icons/vsc';
 import navbarImg from '../assets/images/navbar-img.svg';
+import { motion } from "framer-motion";
+
 
 class Header extends Component {
 	state = {
 		isOpen: false,
 	};
+
 	handleMenu() {
 		this.setState({
 			isOpen: true,
@@ -36,7 +39,7 @@ class Header extends Component {
 							Moise<span>.</span>
 						</a>
 					</div>
-					<nav
+						<nav
 						className={this.state.isOpen ? 'main-navbar open' : 'main-navbar'}
 					>
 						<div className='main-navbar-container'>
@@ -96,12 +99,23 @@ class Header extends Component {
 											</a>
 										</li>
 									</ul>
-									<ul className='nav-list'>
-										<li className='nav-link'>
-											<a href='#1' className='active'>
+									<ul
+									 className='nav-list'>
+										<motion.li 
+											whileHover={{
+												scale:1.3,
+												x:-65
+											}}
+											transition={{ duration: 1 }}
+										className='nav-link'>
+											<motion.a 
+											 whileHover={{
+												 color:'#cf000f'
+											 }}
+											href='#1' className='active'>
 												Home<span>01</span>
-											</a>
-										</li>
+											</motion.a>
+										</motion.li>
 										<li className='nav-link'>
 											<a href='#2'>Portfolio</a>
 										</li>

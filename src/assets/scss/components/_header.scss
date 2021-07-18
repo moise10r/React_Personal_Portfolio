@@ -7,9 +7,23 @@
 		width: 90%;
 		margin: 0 auto;
 		height: 9rem;
-			.left-list-container {
-				display: none;
-			}
+		.left-list-container {
+			display: none;
+			// .nav-link {
+			// 	animation: flow 0.2s ease-in-out;
+			// 	z-index: 99999;
+			// }
+
+			// @keyframes flow {
+			// 	0% {
+			// 		transform: translateX(0);
+			// 	}
+
+			// 	100% {
+			// 		transform: translateX(-100vh);
+			// 	}
+			// }
+		}
 		.menu-icon {
 			position: absolute;
 			top: 2.5rem;
@@ -52,9 +66,11 @@
 	clip-path: circle(4rem at 93.5% 4.5rem);
 	transition: clip-path 5s;
 	background-color: $black-ground-color;
+	z-index: 1;
 	&.open {
 		transition: clip-path 3s;
 		clip-path: circle(100%);
+		z-index: 2;
 		.languages {
 			position: absolute;
 			top: 3rem;
@@ -169,11 +185,11 @@
 									background-color: $text-color;
 									color: $secondary-color;
 								}
-								&:hover {
-									color: $secondary-color ;
-									transform: translateX(-3rem);
-									transition: all .75s cubic-bezier(.63,.03,.21,1);
-								}
+								// &:hover {
+								// 	color: $secondary-color ;
+								// 	transform: translateX(-3rem);
+								// 	transition: all .75s cubic-bezier(.63,.03,.21,1);
+								// }
 							}
 						}
 						&::after {
