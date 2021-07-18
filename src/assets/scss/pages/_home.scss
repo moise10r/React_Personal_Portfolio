@@ -1,1 +1,101 @@
   @import '../components/header';
+  @import '../components/headline';
+
+  .container {
+    width: 100%;
+    position: relative;
+  }
+  
+  .bar {
+    height: 100px;
+    width: 1px;
+    background-color: $secondary-text-color;
+    margin-bottom: 1rem;
+    z-index: 1;
+    @include media(800px){
+      height: 120px;
+    }
+  }
+
+  .last {
+    z-index: 1;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "© Moise. 2021";
+      bottom: -3rem;
+      left: 2.5%;
+      width:120px;
+      color: $text-color;
+      font-weight: 500;
+      display: none;
+      @include media(400px) {
+        display: block;
+      }
+    }
+  }
+  .left-bar-icons {
+    z-index: 1;
+    position: fixed;
+    top: 20vh;
+    left: 2.5%;
+    @include flex-center(column);
+    @include media(800px){
+      top: 20vh;
+      left: 4%;
+    }
+  }
+  
+  .left-bar-icons .social-icons-list {
+    @include flex-center(column);
+  }
+  
+  .social-icons-list .social-left-bar-icons-link {
+    margin: 0.5rem 0;
+    @include media(800px){
+      margin: 1.5rem 0;
+    }
+
+  }
+  .rigth-scroll-bar {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 18vh;
+    right: 4%;
+    height: 70vh;
+    width: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: $text-color;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 10vh;
+      background-color: $secondary-color;
+    }
+    @include media(500px){
+      display: block;
+      right: 6%;
+    }
+  }
+
+.bar-icon {
+  z-index: 1;
+  font-size: 1.6rem;
+  color: $text-color;
+  &:hover {
+    color: $secondary-color;
+  }
+  @include media(800px){
+    font-size: 2.5rem;
+  }
+  
+}
+
+a {
+  cursor: pointer;
+}

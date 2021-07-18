@@ -25,3 +25,9 @@
   align-items: center;
   flex-direction: $direction;
 }
+
+@mixin media($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
