@@ -109,7 +109,7 @@ class Header extends Component {
 											<motion.li
 												whileHover={{
 													scale: 1.3,
-													x: -65,
+													x: -80,
 												}}
 												transition={{ duration: 1 }}
 												className='nav-link'
@@ -126,15 +126,6 @@ class Header extends Component {
 												</motion.a>
 											</motion.li>
 										))}
-										{/* <li className='nav-link'>
-											<a href='#2'>Portfolio</a>
-										</li>
-										<li className='nav-link'>
-											<a href='#3'>About</a>
-										</li>
-										<li className='nav-link'>
-											<a href='#4'>Contact</a>
-										</li> */}
 									</ul>
 								</div>
 							</div>
