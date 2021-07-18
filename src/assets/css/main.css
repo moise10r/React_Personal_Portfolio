@@ -235,7 +235,7 @@ li {
 .main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list .nav-link a span {
   position: absolute;
   top: 1rem;
-  right: -3rem;
+  right: -3.2rem;
   font-size: 1.3rem;
   padding: 0.4rem 0.6rem;
   border-radius: 50%;
@@ -247,9 +247,9 @@ li {
   content: "";
   top: 0;
   height: 100%;
-  width: 2.8rem;
+  width: 4rem;
   background-color: #161616;
-  right: 0;
+  right: -1.5rem;
   z-index: 99;
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container .social-media-list {

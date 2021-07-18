@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { IconContext } from 'react-icons';
 import { ImGithub } from 'react-icons/im';
 import { IoMdMenu } from 'react-icons/io';
@@ -7,12 +7,18 @@ import { FiTwitter } from 'react-icons/fi';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { VscClose } from 'react-icons/vsc';
 import navbarImg from '../assets/images/navbar-img.svg';
-import { motion } from "framer-motion";
-
+import { motion } from 'framer-motion';
 
 class Header extends Component {
 	state = {
 		isOpen: false,
+
+		links: [
+			{ id: 1, title: 'Home', to: '/' },
+			{ id: 2, title: 'Portfolio', to: '/' },
+			{ id: 3, title: 'About', to: '/' },
+			{ id: 4, title: 'Contact', to: '/' },
+		],
 	};
 
 	handleMenu() {
@@ -31,6 +37,7 @@ class Header extends Component {
 	}
 
 	render() {
+		const { links, isOpen } = this.state;
 		return (
 			<header className='main-header'>
 				<div className='header-main-container'>
@@ -39,9 +46,7 @@ class Header extends Component {
 							Moise<span>.</span>
 						</a>
 					</div>
-						<nav
-						className={this.state.isOpen ? 'main-navbar open' : 'main-navbar'}
-					>
+					<nav className={isOpen ? 'main-navbar open' : 'main-navbar'}>
 						<div className='main-navbar-container'>
 							<div className='menu-icon' onClick={() => this.handleMenu()}>
 								<IconContext.Provider value={{ className: 'humberger' }}>
@@ -60,7 +65,7 @@ class Header extends Component {
 								<div className='navbar-img-wrapper'>
 									<img src={navbarImg} alt='' />
 								</div>
-								<div className="left-list-container">
+								<div className='left-list-container'>
 									<ul className='social-media-list'>
 										<li className='social-media-link'>
 											<a href='#2'>
@@ -99,24 +104,29 @@ class Header extends Component {
 											</a>
 										</li>
 									</ul>
-									<ul
-									 className='nav-list'>
-										<motion.li 
-											whileHover={{
-												scale:1.3,
-												x:-65
-											}}
-											transition={{ duration: 1 }}
-										className='nav-link'>
-											<motion.a 
-											 whileHover={{
-												 color:'#cf000f'
-											 }}
-											href='#1' className='active'>
-												Home<span>01</span>
-											</motion.a>
-										</motion.li>
-										<li className='nav-link'>
+									<ul className='nav-list'>
+										{links.map((link) => (
+											<motion.li
+												whileHover={{
+													scale: 1.3,
+													x: -65,
+												}}
+												transition={{ duration: 1 }}
+												className='nav-link'
+											>
+												<motion.a
+													whileHover={{
+														color: '#cf000f',
+													}}
+													href='#1'
+													className='active'
+												>
+													{link.title}
+													<span>0{link.id}</span>
+												</motion.a>
+											</motion.li>
+										))}
+										{/* <li className='nav-link'>
 											<a href='#2'>Portfolio</a>
 										</li>
 										<li className='nav-link'>
@@ -124,23 +134,22 @@ class Header extends Component {
 										</li>
 										<li className='nav-link'>
 											<a href='#4'>Contact</a>
-										</li>
+										</li> */}
 									</ul>
 								</div>
-							
 							</div>
 						</div>
 						<ul className='languages'>
-									<li>
-										<a href='#2'>EN</a>
-									</li>
-									<li>
-										<a href='#2'>FR</a>
-									</li>
-									<li>
-										<a href='#3'>moiserushanika2006@gmail.com</a>
-									</li>
-								</ul>
+							<li>
+								<a href='#2'>EN</a>
+							</li>
+							<li>
+								<a href='#2'>FR</a>
+							</li>
+							<li>
+								<a href='#3'>moiserushanika2006@gmail.com</a>
+							</li>
+						</ul>
 					</nav>
 				</div>
 			</header>

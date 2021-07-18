@@ -178,18 +178,13 @@
 								span {
 									position: absolute;
 									top: 1rem;
-									right: -3rem;
+									right: -3.2rem;
 									font-size: 1.3rem;
 									padding: 0.4rem 0.6rem;
 									border-radius: 50%;
 									background-color: $text-color;
 									color: $secondary-color;
 								}
-								// &:hover {
-								// 	color: $secondary-color ;
-								// 	transform: translateX(-3rem);
-								// 	transition: all .75s cubic-bezier(.63,.03,.21,1);
-								// }
 							}
 						}
 						&::after {
@@ -197,9 +192,9 @@
 							content: "";
 							top: 0;
 							height: 100%;
-							width: 2.8rem;
+							width: 4rem;
 							background-color: $black-ground-color;
-							right: 0;
+							right: -1.5rem;
 							z-index: 99;
 						}
 					}
