@@ -20,17 +20,20 @@ class Header extends Component {
 		],
 	};
 	variants = {
-		open:{x: 0},
-		closed:{x:'100vw'}
-	}
+		open: { x: 0 },
+		closed: { x: '100vw' },
+	};
 	variants_2 = {
-		open:{y: -10},
-		closed:{y:'100vw'}
-	}
+		open: { y: 0 },
+		closed: { y: '100vw' },
+	};
 	variants_3 = {
-		open:{y: -10},
-		closed:{y:'100%'}
-	}
+		open: { y: -10 },
+	};
+	variants_4 = {
+		open: { y: -10 },
+		closed: { y: '-100vw'},
+	};
 	handleMenu() {
 		this.setState({
 			isOpen: true,
@@ -57,8 +60,7 @@ class Header extends Component {
 							Moise<span>.</span>
 						</a>
 					</div>
-					<nav 
-					className={isOpen ? 'main-navbar open' : 'main-navbar'}>
+					<nav className={isOpen ? 'main-navbar open' : 'main-navbar'}>
 						<div className='main-navbar-container'>
 							<div className='menu-icon' onClick={() => this.handleMenu()}>
 								<IconContext.Provider value={{ className: 'humberger' }}>
@@ -74,19 +76,25 @@ class Header extends Component {
 								</IconContext.Provider>
 							</div>
 							<div className='header-list'>
-								<motion.div 
-											animate = { isOpen ? 'open':'closed'}
-											transition={{ duration: 2}}
-											variants ={this.variants_3}
-								className='navbar-img-wrapper'>
+								<motion.div
+									animate={isOpen ? 'open' : 'closed'}
+									transition={{ duration: 2 }}
+									variants={this.variants_3}
+									className='navbar-img-wrapper'
+								>
 									<img src={navbarImg} alt='' />
 								</motion.div>
-								<motion.div 
-																animate = { isOpen ? 'open':'closed'}
-																transition={{ duration: 2}}
-																variants ={this.variants}
-								className='left-list-container'>
-									<ul className='social-media-list'>
+								<motion.div
+									animate={isOpen ? 'open' : 'closed'}
+									transition={{ duration: 2 }}
+									variants={this.variants}
+									className='left-list-container'
+								>
+									<motion.ul 
+														animate={isOpen ? 'open' : 'closed'}
+														transition={{ duration: 2 }}
+														variants={this.variants_4}
+									className='social-media-list'>
 										<li className='social-media-link'>
 											<a href='#2'>
 												<IconContext.Provider
@@ -123,12 +131,13 @@ class Header extends Component {
 												</IconContext.Provider>
 											</a>
 										</li>
-									</ul>
-									<motion.ul 
-										animate = { isOpen ? 'open':'closed'}
-										transition={{ duration: 2}}
-										variants ={this.variants}
-										className='nav-list'>
+									</motion.ul>
+									<motion.ul
+										animate={isOpen ? 'open' : 'closed'}
+										transition={{ duration: 2 }}
+										variants={this.variants}
+										className='nav-list'
+									>
 										{links.map((link) => (
 											<motion.li
 												whileHover={{
