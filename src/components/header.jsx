@@ -12,7 +12,6 @@ import { motion } from 'framer-motion';
 class Header extends Component {
 	state = {
 		isOpen: false,
-
 		links: [
 			{ id: 1, title: 'Home', to: '/' },
 			{ id: 2, title: 'Portfolio', to: '/' },
@@ -20,7 +19,18 @@ class Header extends Component {
 			{ id: 4, title: 'Contact', to: '/' },
 		],
 	};
-
+	variants = {
+		open:{x: 0},
+		closed:{x:'100vw'}
+	}
+	variants_2 = {
+		open:{y: -10},
+		closed:{y:'100vw'}
+	}
+	variants_3 = {
+		open:{y: -10},
+		closed:{y:'100%'}
+	}
 	handleMenu() {
 		this.setState({
 			isOpen: true,
@@ -28,11 +38,12 @@ class Header extends Component {
 	}
 
 	handleCloseMenu() {
-		console.log(this.state.isOpen);
 		if (this.state.isOpen) {
-			this.setState({
-				isOpen: false,
-			});
+			setTimeout(() => {
+				this.setState({
+					isOpen: false,
+				});
+			}, 500);
 		} else return;
 	}
 
@@ -46,7 +57,8 @@ class Header extends Component {
 							Moise<span>.</span>
 						</a>
 					</div>
-					<nav className={isOpen ? 'main-navbar open' : 'main-navbar'}>
+					<nav 
+					className={isOpen ? 'main-navbar open' : 'main-navbar'}>
 						<div className='main-navbar-container'>
 							<div className='menu-icon' onClick={() => this.handleMenu()}>
 								<IconContext.Provider value={{ className: 'humberger' }}>
@@ -62,10 +74,18 @@ class Header extends Component {
 								</IconContext.Provider>
 							</div>
 							<div className='header-list'>
-								<div className='navbar-img-wrapper'>
+								<motion.div 
+											animate = { isOpen ? 'open':'closed'}
+											transition={{ duration: 2}}
+											variants ={this.variants_3}
+								className='navbar-img-wrapper'>
 									<img src={navbarImg} alt='' />
-								</div>
-								<div className='left-list-container'>
+								</motion.div>
+								<motion.div 
+																animate = { isOpen ? 'open':'closed'}
+																transition={{ duration: 2}}
+																variants ={this.variants}
+								className='left-list-container'>
 									<ul className='social-media-list'>
 										<li className='social-media-link'>
 											<a href='#2'>
@@ -104,7 +124,11 @@ class Header extends Component {
 											</a>
 										</li>
 									</ul>
-									<ul className='nav-list'>
+									<motion.ul 
+										animate = { isOpen ? 'open':'closed'}
+										transition={{ duration: 2}}
+										variants ={this.variants}
+										className='nav-list'>
 										{links.map((link) => (
 											<motion.li
 												whileHover={{
@@ -126,8 +150,8 @@ class Header extends Component {
 												</motion.a>
 											</motion.li>
 										))}
-									</ul>
-								</div>
+									</motion.ul>
+								</motion.div>
 							</div>
 						</div>
 						<ul className='languages'>

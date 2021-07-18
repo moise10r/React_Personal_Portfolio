@@ -29,18 +29,22 @@ const HeadLine = () => {
 						contact me.
 					</motion.p>
 					<div className='connections'>
-						<motion.a 
-											initial={{ y: 1000 }}
-											animate={{ y: 10 }}
-											transition={{ duration: 2.5 }}
-						href='#2' className='btn-resume'>
+						<motion.a
+							initial={{ y: 1000 }}
+							animate={{ y: 10 }}
+							transition={{ duration: 2.5 }}
+							href='#2'
+							className='btn-resume'
+						>
 							Resume
 						</motion.a>
-						<motion.a href='#3' 
-											initial={{ y: 1000 }}
-											animate={{ y: 10 }}
-											transition={{ duration: 3}}
-						className='connect'>
+						<motion.a
+							href='#3'
+							initial={{ y: 1000 }}
+							animate={{ y: 10 }}
+							transition={{ duration: 3 }}
+							className='connect'
+						>
 							LET'S CONNECT
 							<span>
 								<IconContext.Provider value={{ className: 'connect-icon' }}>
@@ -50,11 +54,12 @@ const HeadLine = () => {
 						</motion.a>
 					</div>
 				</div>
-				<motion.div 
-						initial={{ y: 1000 }}
-							animate={{ y: 10 }}
-							transition={{ duration: 3}}
-				className='headline-img'>
+				<motion.div
+					initial={{ y: 1000 }}
+					animate={{ y: 10 }}
+					transition={{ duration: 3 }}
+					className='headline-img'
+				>
 					<img src={headlineImg} alt='' />
 				</motion.div>
 			</div>
