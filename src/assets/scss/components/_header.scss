@@ -127,11 +127,23 @@
 						width: 60%;
 						float: left;
 						margin-left: 14rem;
+						animation:linear infinite alternate;
+						animation-name: scaleImg;
+						animation-duration: 2s;
 					}			
 					img {
 						max-width: 76%;
 					}
 				}
+				@keyframes scaleImg {
+					0% {
+						transform: scale(1);
+					}
+
+					100% {
+						transform: scale(1.1);
+					}
+				}	
 				.left-list-container {
 					width: 100%;
 					height: 100%;
@@ -205,7 +217,11 @@
 								.header-icon {
 									color:  $text-color;
 									font-size: 2rem;
+									animation:linear infinite alternate;
+									animation-name: scale;
+									animation-duration: 2s;
 									&:hover {
+										transform: scale(1);
 										color: $secondary-color;
 									}
 								@include media(768px) {
@@ -216,7 +232,8 @@
 							&:last-child::before {
 								content: '';
 								position: absolute;
-								height: 2px;
+								height: 3px;
+								border-radius: 0.5rem;
 								background-color: darken($text-color, 70);
 								top: 50%;
 								display: none;
@@ -226,15 +243,52 @@
 								}
 							}
 							&:first-child::after {
+								animation:linear infinite alternate;
+								animation-name: flowLeft;
+								animation-duration: 2s;
 								left: -10rem;
 								@include media(992px) {
 								left: 20rem;
 								}
 							}
 							&:last-child::before {
+								animation:linear infinite alternate;
+								animation-name: flowRight;
+								animation-duration: 2s;
 								right: 10rem;
 								@include media(992px) {
 									right: 20rem;
+								}
+							}
+							@keyframes flowRight {
+								0% {
+									transform: translateX(0px);
+								}
+
+								100% {
+									transform: translateX(-40px);
+									background-color: $secondary-color;
+									height: 5px;
+								}
+							}
+							@keyframes flowLeft {
+								0% {
+									transform: translateX(0px);
+								}
+
+								100% {
+									transform: translateX(40px);
+									background-color: $secondary-color;
+									height: 7px;
+								}
+							}
+							@keyframes scale {
+								0% {
+									transform: scale(1);
+								}
+
+								100% {
+									transform: scale(1.6);
 								}
 							}
 						}

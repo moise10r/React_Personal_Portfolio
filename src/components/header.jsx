@@ -32,7 +32,7 @@ class Header extends Component {
 	};
 	variants_4 = {
 		open: { y: -10 },
-		closed: { y: '-100vw'},
+		closed: { y: '-100vw' },
 	};
 	handleMenu() {
 		this.setState({
@@ -90,11 +90,12 @@ class Header extends Component {
 									variants={this.variants}
 									className='left-list-container'
 								>
-									<motion.ul 
-														animate={isOpen ? 'open' : 'closed'}
-														transition={{ duration: 2 }}
-														variants={this.variants_4}
-									className='social-media-list'>
+									<motion.ul
+										animate={isOpen ? 'open' : 'closed'}
+										transition={{ duration: 2 }}
+										variants={this.variants_4}
+										className='social-media-list'
+									>
 										<li className='social-media-link'>
 											<a href='#2'>
 												<IconContext.Provider
@@ -134,7 +135,7 @@ class Header extends Component {
 									</motion.ul>
 									<motion.ul
 										animate={isOpen ? 'open' : 'closed'}
-										transition={{ duration: 2 }}
+										transition={{ delay: 2, type:    'spring', stiffness:    60 }}
 										variants={this.variants}
 										className='nav-list'
 									>
