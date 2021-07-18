@@ -46,12 +46,31 @@
 				.btn-resume {
 					padding: 0.6rem 2rem;
 					border: 2px solid $secondary-color;
-					background-color: lighten($black-ground-color, 60);
+					background-color: darken($black-ground-color, 0);
 					color: $secondary-color;
 					font-size: 1.8rem;
 					font-weight: 600;
 					border-radius: 0.5rem;
 					margin-right: 1.3rem;
+					position: relative;
+					z-index: 1;
+					&::before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						content: "";
+						border-radius: 0.5rem;
+						background-color: lighten($black-ground-color, 90);
+						transition: transform 700ms;
+						transform-origin: left;
+						transform: scaleX(0);
+						z-index: -1;
+					}
+					&:hover::before {
+						transform: scaleX(1);
+					}
 				}
 				.connect {
 					z-index: 1;

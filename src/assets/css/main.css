@@ -91,13 +91,12 @@ ul {
   right: 0;
   bottom: 0;
   clip-path: circle(4rem at 93.5% 4.5rem);
-  transition: clip-path 2s;
-  z-index: 999;
+  transition: clip-path 5s;
   background-color: #161616;
 }
 .main-navbar.open {
+  transition: clip-path 3s;
   clip-path: circle(100%);
-  z-index: 99;
 }
 .main-navbar.open .languages {
   position: absolute;
@@ -137,10 +136,10 @@ ul {
 .main-navbar.open .languages li:last-child a:hover {
   color: #969696;
 }
-
 .main-navbar.open .main-navbar-container {
   width: 100%;
   height: 100%;
+  z-index: 99999;
 }
 .main-navbar.open .main-navbar-container .menu-icon {
   display: none;
@@ -406,12 +405,31 @@ ul {
 .headline-section .main-healine-container .headline-left-container .connections .btn-resume {
   padding: 0.6rem 2rem;
   border: 2px solid #cf000f;
-  background-color: #afafaf;
+  background-color: #161616;
   color: #cf000f;
   font-size: 1.8rem;
   font-weight: 600;
   border-radius: 0.5rem;
   margin-right: 1.3rem;
+  position: relative;
+  z-index: 1;
+}
+.headline-section .main-healine-container .headline-left-container .connections .btn-resume::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  transition: transform 700ms;
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: -1;
+}
+.headline-section .main-healine-container .headline-left-container .connections .btn-resume:hover::before {
+  transform: scaleX(1);
 }
 .headline-section .main-healine-container .headline-left-container .connections .connect {
   z-index: 1;
