@@ -10,7 +10,7 @@ const HeadLine = () => {
 			<div className='main-healine-container'>
 				<div className='headline-left-container'>
 					<motion.h1
-						initial={{ x: -1000 }}
+						initial={{ x: '100vh' }}
 						animate={{ x: 10 }}
 						transition={{ duration: 1.7 }}
 						className='me'
@@ -18,7 +18,7 @@ const HeadLine = () => {
 						I'm Moise Glad to see you <span>!</span>
 					</motion.h1>
 					<motion.p
-						initial={{ x: -1000 }}
+						initial={{ x: '100vh' }}
 						animate={{ x: 10 }}
 						transition={{ duration: 2 }}
 						className='about-me'
