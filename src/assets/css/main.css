@@ -390,7 +390,12 @@ li {
 
 .headline-section {
   width: 100%;
-  margin-top: 9rem;
+  margin-top: 12rem;
+}
+@media screen and (min-width: 992px) {
+  .headline-section {
+    margin-top: 9rem;
+  }
 }
 .headline-section .main-healine-container {
   display: flex;
@@ -522,76 +527,211 @@ li {
   width: 75%;
 }
 
-.about-me-main-section {
+.about {
   width: 100%;
-  margin-top: 20rem;
+  margin-top: 12rem;
 }
-.about-me-main-section .main-about-wrapper {
+@media screen and (min-width: 992px) {
+  .about {
+    margin-top: 20rem;
+  }
+}
+.about .about-me-main-section {
   width: 75%;
   margin: 0 auto;
+}
+.about .about-me-main-section .title {
+  font-size: 6rem;
+  font-weight: 600;
+  margin-bottom: 10rem;
+  color: #fff;
+  position: relative;
+}
+.about .about-me-main-section .title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  width: 7rem;
+  background-color: #cf000f;
+}
+.about .about-me-main-section .title span {
+  color: #cf000f;
+  animation: linear infinite alternate;
+  animation-duration: 1.5s;
+}
+@keyframes scalePoint {
+  0% {
+    font-size: 6rem;
+  }
+  100% {
+    font-size: 7rem;
+  }
+}
+.about .about-me-main-section .main-about-wrapper {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  align-items: flex-start;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container {
+@media screen and (min-width: 772px) {
+  .about .about-me-main-section .main-about-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about .about-me-main-section .main-about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.about .about-me-main-section .main-about-wrapper .about-left-main-container {
   width: 80%;
   max-width: 35rem;
-  padding: 6rem 4rem;
+  padding: 9rem 4rem;
   border: 1px solid #ffffff99;
   border-right: none;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container .experience-year {
+@media screen and (min-width: 1200px) {
+  .about .about-me-main-section .main-about-wrapper .about-left-main-container {
+    width: 50%;
+  }
+}
+.about .about-me-main-section .main-about-wrapper .about-left-main-container .experience-year {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  align-items: flex-end;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container .experience-year span:first-child {
+.about .about-me-main-section .main-about-wrapper .about-left-main-container .experience-year span:first-child {
   font-size: 14.5rem;
   font-weight: 900;
   line-height: 1;
   color: #fff;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container .experience-year span:last-child {
+.about .about-me-main-section .main-about-wrapper .about-left-main-container .experience-year span:last-child {
   margin-bottom: 1.4rem;
   padding: 1.2rem;
   border-radius: 50%;
   background-color: #cf000f;
   margin-left: 1.5rem;
+  align-self: flex-end;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph {
+.about .about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph .right {
+.about .about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph .right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   align-items: flex-end;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph .right span {
+.about .about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph .right span {
   margin-bottom: 0.7rem;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.5;
   color: #fff;
 }
-.about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph .left {
+.about .about-me-main-section .main-about-wrapper .about-left-main-container .year-paragraph .left {
   height: 2px;
   width: 30%;
   align-self: flex-end;
   background-color: #fff;
   margin-bottom: 1rem;
   margin-left: 2rem;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container {
+  width: 100%;
+  margin-top: 9rem;
+}
+@media screen and (min-width: 1200px) {
+  .about .about-me-main-section .main-about-wrapper .about-right-main-container {
+    justify-self: flex-start;
+    width: 50%;
+    margin-top: 0;
+  }
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .great-experience {
+  width: 100%;
+  max-width: 600px;
+  color: #fff;
+  text-align: start;
+  font-size: 4.6rem;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .detail {
+  margin-top: 2rem;
+  color: #ffffff99;
+  max-width: 350px;
+  line-height: 1.5;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container {
+  width: 100%;
+  margin-top: 6rem;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container .progress {
+  width: 100%;
+  margin-bottom: 7rem;
+  max-width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container .progress .progress-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container .progress .progress-container span {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container .progress .progress-bar {
+  width: 100%;
+  height: 0.7rem;
+  border-radius: 0.7rem;
+  margin-top: 1.8rem;
+  background-color: #fff;
+  position: relative;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container .progress .progress-bar::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #cf000f;
+  border-radius: 0.7rem;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container .progress:nth-child(2) .progress-bar::after {
+  width: 75%;
+}
+.about .about-me-main-section .main-about-wrapper .about-right-main-container .progrees-container .progress:nth-child(3) .progress-bar::after {
+  width: 90%;
 }
 
 .container {
@@ -629,7 +769,7 @@ li {
   font-weight: 500;
   display: none;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 700px) {
   .last::before {
     display: block;
   }
