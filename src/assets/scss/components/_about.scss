@@ -1,0 +1,62 @@
+.about-me-main-section {
+	width: 100%;
+	margin-top: 20rem;
+	.main-about-wrapper {
+		width: 75%;
+		margin: 0 auto;
+		@include flex-start(column);
+		align-items: flex-start;
+		.about-left-main-container {
+			width: 80%;
+			max-width: 35rem;
+			// margin: 0 auto;
+			padding: 6rem 4rem;
+			border: 1px solid $secondary-text-color;
+			border-right: none;
+			.experience-year {
+				width: 100%;
+				@include flex-center(row);
+				align-items: flex-end;
+				span {
+					&:first-child {
+						font-size: 14.5rem;
+						font-weight: 900;
+						line-height: 1;
+						color: $text-color;
+					}
+					&:last-child {
+						margin-bottom: 1.4rem;
+						padding: 1.2rem;
+						border-radius: 50%;
+						background-color: $secondary-color;
+						margin-left: 1.5rem;
+					}
+				}
+			}
+			.year-paragraph {
+				width: 100%;
+				margin-top: 4rem;
+				@include flex-between(row);
+				.right {
+					@include flex-end(column);
+					align-items: flex-end;
+					span {
+						margin-bottom: 0.7rem;
+						font-size: 2rem;
+						font-weight: 600;
+						line-height: 1.5;
+            color: $text-color;
+					}
+				}
+        .left {
+          height: 2px;
+          width: 30%;
+          align-self: flex-end;
+          background-color: $text-color;
+					margin-bottom: 1rem;
+          margin-left: 2rem;
+        }
+			}
+		}
+	}
+}
