@@ -394,8 +394,6 @@ li {
   margin-top: 9rem;
 }
 .headline-section .main-healine-container {
-  margin: 0 auto;
-  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -410,7 +408,7 @@ li {
   font-size: 4rem;
   font-weight: 700;
   line-height: 4rem;
-  letter-spacing: 0;
+  letter-spacicontainerng: 0;
   text-align: left;
   color: #fff;
 }
@@ -520,6 +518,10 @@ li {
   .headline-section .main-healine-container .headline-img {
     display: block;
   }
+}
+.headline-section .container {
+  margin: 0 auto;
+  width: 75%;
 }
 
 .container {

@@ -2,8 +2,6 @@
 	width: 100%;
 	margin-top: 9rem;
 	.main-healine-container {
-		margin: 0 auto;
-		width: 75%;
     @include flex-center(row);
     justify-content:flex-start;
 		.headline-left-container {
@@ -13,7 +11,7 @@
 				font-size: 4rem;
 				font-weight: 700;
 				line-height: 4rem;
-				letter-spacing: 0;
+				letter-spacicontainerng: 0;
 				text-align: left;
 				color: $text-color;
 				@include media(800px) {
@@ -110,4 +108,9 @@
       }
     }
 	}
+	.container {
+		margin: 0 auto;
+		width: 75%;
+	}
 }
+

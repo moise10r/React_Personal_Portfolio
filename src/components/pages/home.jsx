@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../header';
 import HeadLine from '../headline';
+import About from '../about';
 
 import { IconContext } from 'react-icons';
 import { ImGithub } from 'react-icons/im';
@@ -15,6 +16,7 @@ class Home extends Component {
 				<Header />
 				<main>
 					<HeadLine />
+					<About/>
 				</main>
 				<div className='left-bar-icons'>
 					<div className='bar'></div>

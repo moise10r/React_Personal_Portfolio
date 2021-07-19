@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const HeadLine = () => {
 	return (
 		<section className='headline-section'>
-			<div className='main-healine-container'>
+			<div className='main-healine-container container'>
 				<div className='headline-left-container'>
 					<motion.h1
 						initial={{ x: '100vh' }}
