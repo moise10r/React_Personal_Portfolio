@@ -2,17 +2,22 @@
   width: 100%;
   margin-top: 12rem;
   @include media(992px) {
-     margin-top: 20rem;
+     margin-top: 15rem;
   }
   .about-me-main-section {
     width: 75%;
     margin: 0 auto;
     .title {
-      font-size: 6rem;
+      font-size: 4rem;
       font-weight: 600;
-      margin-bottom: 10rem;
       color: $text-color;
       position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 5rem;
+      @include media(763px) {
+        font-size: 6rem;
+        font-weight: 600;
+     }
       &::after {
         position: absolute;
         content: "";
@@ -20,7 +25,7 @@
         left: 0;
         height: 0.5rem;
         border-radius: 0.5rem;
-        width: 7rem;
+        width: 15rem;
         background-color: $secondary-color;
       }
       span {
@@ -38,7 +43,118 @@
         }
       }	
     }
-    .main-about-wrapper {
+    .main-about-wrapper-one {
+      width: 100%;
+      margin-bottom: 7rem;
+      @include flex-between(column);
+      @include media(990px) {
+        @include flex-between(row);
+     }
+      .about-left-wrapper {
+        width: 100%;
+        @include media(990px) {
+          width: 55%;
+        }
+        .about-me-details {
+          font-size: 1.8rem;
+          color: $secondary-text-color;
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+        .about-connect {
+					font-size: 2.2rem;
+					font-weight: 500;
+					color: $secondary-color;		
+          @include flex-start(row);
+          span{
+            &:last-child{
+              margin-top: 1rem;
+              margin-left: 1rem;
+              color: $secondary-text-color;
+              animation:linear infinite alternate;
+              animation-name: flowRight;
+              animation-duration: 2s;
+            }
+            @keyframes flowRight {
+              0% {
+                transform: translateX(0px);
+              }
+
+              100% {
+                transform: translateX(10px);
+              }
+            }
+          }
+        }
+        .about-social-icon-list {
+          @include flex-start(row);
+          margin-top: 1.5rem;
+          .social-media-link {
+            margin-right: 2.5rem;
+            .about-icon {
+              font-size: 2.5rem;
+              color: $secondary-text-color;
+              &:hover {
+                color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+      .about-rigth-wrapper{
+        width: 100%;
+        margin-top: 6rem;
+        @include media(990px) {
+          width: 65%;
+          padding-left: 6rem;
+        }
+        .languages-list {
+          width: 100%;
+          max-width: 40rem;
+          margin: 0 auto;
+          @include flex-center(column);
+          .language-header {
+            width: 100%;
+            @include flex-between(row);
+            color: $text-color;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            span{
+              .about-icon {
+                 font-size: 2.5rem;
+              }
+            } 
+            &::after {
+              position: absolute;
+              content: "";
+              bottom: 0;
+              right: 0;
+              left: 0;
+              height: 0.15rem;
+              display: none;
+              background-color: darken($secondary-text-color, 30);
+            }
+          }
+          .language-link {
+            width: 100%;
+            @include flex-start(row);
+            align-items: center;
+            background-color: darken($secondary-text-color, 80);
+            border-radius: 0.5rem;
+            padding: 1rem 1rem;
+            margin-bottom: 1.5rem;
+            span {
+              margin-left: 2rem;
+              color: $secondary-text-color;
+              font-size: 1.8rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .main-about-wrapper-two {
       width: 100%;
       @include flex-center(column);
       @include media(772px){
