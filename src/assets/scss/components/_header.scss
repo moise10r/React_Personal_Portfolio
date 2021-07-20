@@ -253,24 +253,14 @@
 							}
 							&:last-child::before {
 								animation:linear infinite alternate;
-								animation-name: flowRight;
+								animation-name: flowRightNow;
 								animation-duration: 2s;
 								right: 10rem;
 								@include media(992px) {
 									right: 20rem;
 								}
 							}
-							@keyframes flowRight {
-								0% {
-									transform: translateX(0px);
-								}
-
-								100% {
-									transform: translateX(-40px);
-									background-color: $secondary-color;
-									height: 5px;
-								}
-							}
+					
 							@keyframes flowLeft {
 								0% {
 									transform: translateX(0px);
@@ -278,6 +268,17 @@
 
 								100% {
 									transform: translateX(40px);
+									background-color: $secondary-color;
+									height: 7px;
+								}
+							}
+							@keyframes flowRightNow {
+								0% {
+									transform: translateX(0px);
+								}
+
+								100% {
+									transform: translateX(-40px);
 									background-color: $secondary-color;
 									height: 7px;
 								}

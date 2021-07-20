@@ -333,7 +333,7 @@ li {
 }
 .main-navbar.open .main-navbar-container .header-list .left-list-container .social-media-list .social-media-link:last-child::before {
   animation: linear infinite alternate;
-  animation-name: flowRight;
+  animation-name: flowRightNow;
   animation-duration: 2s;
   right: 10rem;
 }
@@ -342,22 +342,22 @@ li {
     right: 20rem;
   }
 }
-@keyframes flowRight {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-40px);
-    background-color: #cf000f;
-    height: 5px;
-  }
-}
 @keyframes flowLeft {
   0% {
     transform: translateX(0px);
   }
   100% {
     transform: translateX(40px);
+    background-color: #cf000f;
+    height: 7px;
+  }
+}
+@keyframes flowRightNow {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-40px);
     background-color: #cf000f;
     height: 7px;
   }
