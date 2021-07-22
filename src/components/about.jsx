@@ -6,9 +6,12 @@ import { FiTwitter } from 'react-icons/fi';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { FiChevronDown } from 'react-icons/fi';
 import { HiChevronDoubleLeft } from 'react-icons/hi';
+import { IoMdPlay} from 'react-icons/io';
 import ellipse_1 from '../assets/images/Ellipse_1.png';
 import ellipse_2 from '../assets/images/Ellipse_2.png';
 import ellipse_3 from '../assets/images/Ellipse_3.png';
+import about from '../assets/images/about.jpg';
+
 
 const About = () => {
 	return (
@@ -66,9 +69,9 @@ const About = () => {
 							</li>
 						</ul>
 					</div>
-					<div className='about-rigth-wrapper'>
-						<ul className='languages-list'>
-							<h3 className="language-header">
+					<ul className='about-rigth-wrapper'>
+						<li className='languages-list'>
+							<h3 className='language-header'>
 								<span>Languages</span>
 								<span>
 									<IconContext.Provider value={{ className: 'about-icon' }}>
@@ -76,20 +79,22 @@ const About = () => {
 									</IconContext.Provider>
 								</span>
 							</h3>
-							<li className='language-link'>
-								<img src={ellipse_1} alt='langueage' />
-                <span>JavaScript</span>
-							</li>
-							<li className='language-link'>
-								<img src={ellipse_2} alt='langueage' />
-                <span>Html</span>
-							</li>
-							<li className='language-link'>
-								<img src={ellipse_3} alt='langueage' />
-                <span>Css</span>
-							</li>
-						</ul>
-					</div>
+							<ul className='languages-list-container'>
+								<li className='language-link'>
+									<img src={ellipse_1} alt='langueage' />
+									<span>JavaScript</span>
+								</li>
+								<li className='language-link'>
+									<img src={ellipse_2} alt='langueage' />
+									<span>Html</span>
+								</li>
+								<li className='language-link'>
+									<img src={ellipse_3} alt='langueage' />
+									<span>Css</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 				<div className='main-about-wrapper-two'>
 					<div className='about-left-main-container'>
@@ -134,6 +139,18 @@ const About = () => {
 								</div>
 								<div className='progress-bar'></div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className='short-video-section'>
+				<div className='short-video-container'>
+					<div className="about-img-wrapper"><img src={about } alt="bg" /></div>
+					<div className="play-container">
+						<div className='play'>
+							<IconContext.Provider value={{ className: 'about-icon' }}>
+								<IoMdPlay/>
+							</IconContext.Provider>
 						</div>
 					</div>
 				</div>

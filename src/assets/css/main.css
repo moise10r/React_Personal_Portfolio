@@ -657,6 +657,7 @@ li {
   .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper {
     width: 65%;
     padding-left: 6rem;
+    margin-top: 0;
   }
 }
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list {
@@ -692,7 +693,23 @@ li {
   display: none;
   background-color: rgba(179, 179, 179, 0.6);
 }
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-link {
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 990px) {
+  .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -704,11 +721,26 @@ li {
   padding: 1rem 1rem;
   margin-bottom: 1.5rem;
 }
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-link span {
+@media screen and (min-width: 990px) {
+  .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+}
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link span {
   margin-left: 2rem;
   color: #ffffff99;
   font-size: 1.8rem;
   font-weight: 500;
+}
+@media screen and (min-width: 990px) {
+  .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link span {
+    margin-top: 0.7rem;
+    margin-left: 0;
+  }
 }
 .about .about-me-main-section .main-about-wrapper-two {
   width: 100%;
@@ -872,6 +904,60 @@ li {
 }
 .about .about-me-main-section .main-about-wrapper-two .about-right-main-container .progrees-container .progress:nth-child(3) .progress-bar::after {
   width: 90%;
+}
+.about .short-video-section {
+  width: 100%;
+  margin-top: 6rem;
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .about .short-video-section {
+    margin-top: 10rem;
+  }
+}
+.about .short-video-section .about-img-wrapper {
+  width: 100%;
+}
+.about .short-video-section .about-img-wrapper img {
+  width: 100%;
+}
+.about .short-video-section .play-container {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.about .short-video-section .play {
+  padding: 2rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media screen and (min-width: 900px) {
+  .about .short-video-section .play {
+    padding: 3.6rem;
+  }
+}
+.about .short-video-section .play .about-icon {
+  color: #fff;
+  font-size: 2.7rem;
+}
+@media screen and (min-width: 900px) {
+  .about .short-video-section .play .about-icon {
+    font-size: 3.7rem;
+  }
+}
+.about .short-video-section .play:hover {
+  padding: 3.9rem;
 }
 
 .container {

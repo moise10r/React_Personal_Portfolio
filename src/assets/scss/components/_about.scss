@@ -107,6 +107,7 @@
         @include media(990px) {
           width: 65%;
           padding-left: 6rem;
+          margin-top: 0;
         }
         .languages-list {
           width: 100%;
@@ -136,20 +137,36 @@
               background-color: darken($secondary-text-color, 30);
             }
           }
-          .language-link {
-            width: 100%;
-            @include flex-start(row);
-            align-items: center;
-            background-color: darken($secondary-text-color, 80);
-            border-radius: 0.5rem;
-            padding: 1rem 1rem;
-            margin-bottom: 1.5rem;
-            span {
-              margin-left: 2rem;
-              color: $secondary-text-color;
-              font-size: 1.8rem;
-              font-weight: 500;
-            }
+          .languages-list-container {
+              width: 100%;
+              @include flex-center(column);
+              @include media(990px) {
+                margin-top: 1rem;
+                @include flex-center(row);
+              }
+              .language-link {
+                width: 100%;
+                @include flex-start(row);
+                align-items: center;
+                background-color: darken($secondary-text-color, 80);
+                border-radius: 0.5rem;
+                padding: 1rem 1rem;
+                margin-bottom: 1.5rem;
+                @include media(990px) {
+                  @include flex-center(column);
+                  margin-left: 1rem;
+                }
+                span {
+                  margin-left: 2rem;
+                  color: $secondary-text-color;
+                  font-size: 1.8rem;
+                  font-weight: 500;
+                  @include media(990px) {
+                    margin-top: 0.7rem;
+                    margin-left: 0;
+                  } 
+                }
+              }
           }
         }
       }
@@ -288,5 +305,46 @@
       }
     }
   }
-  
+  .short-video-section {
+    width: 100%;
+    margin-top: 6rem;
+    position: relative;
+    @include media(1200px){
+      margin-top: 10rem;
+    }
+    .about-img-wrapper {
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    .play-container {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include flex-center(row);
+    }
+    .play {
+      padding: 2rem;
+      border: 2px solid $text-color;
+      border-radius: 50%;
+      cursor: pointer;
+      @include media(900px){
+          padding: 3.6rem;
+      }
+      @include flex-center(row);
+      .about-icon {
+        color: $text-color;
+        font-size: 2.7rem;
+        @include media(900px){
+          font-size: 3.7rem;
+      }
+      }
+      &:hover {
+        padding: 3.9rem;
+      }
+    }
+  }
 }
