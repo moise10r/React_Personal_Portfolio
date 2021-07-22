@@ -695,10 +695,19 @@ li {
 }
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container {
   width: 100%;
+  transition: all 2s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container.open {
+  overflow: hidden;
+}
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container.open li {
+  transform: translateY(-100vh);
+  height: 0;
+  transition: all 1s ease-in-out;
 }
 @media screen and (min-width: 990px) {
   .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container {
@@ -958,6 +967,12 @@ li {
 }
 .about .short-video-section .play:hover {
   padding: 3.9rem;
+}
+
+.chevron-icons {
+  padding: 0.3rem;
+  cursor: pointer;
+  z-index: 999;
 }
 
 .container {

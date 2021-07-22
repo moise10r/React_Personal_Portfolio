@@ -139,6 +139,15 @@
           }
           .languages-list-container {
               width: 100%;
+              transition: all 2s ease-in-out;
+              &.open {
+                overflow: hidden;
+                li {
+                  transform: translateY(-100vh);
+                  height: 0;
+                  transition: all 1s ease-in-out
+                }
+              }
               @include flex-center(column);
               @include media(990px) {
                 margin-top: 1rem;
@@ -347,4 +356,9 @@
       }
     }
   }
+}
+.chevron-icons {
+  padding: 0.3rem;
+  cursor: pointer;
+  z-index: 999;
 }
