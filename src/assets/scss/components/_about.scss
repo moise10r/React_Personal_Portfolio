@@ -149,10 +149,10 @@
             background-color: darken($text-color,  40);
             cursor: pointer;
             &.left {
-              right: -2rem;
+              right: -2.5rem;
             }
             &.right {
-              left: -2rem;
+              left: -2.5rem;
             }
             &:hover {
               background-color: $secondary-color;
@@ -161,26 +161,25 @@
           .languages-list-container {
               width: 90%;
               margin: 0 auto;
-              transition: all 2s ease-in-out;
-              overflow: hidden;
-              @include flex-center(column);
-              align-items: center;
-              justify-content: center;
-              @include media(990px) {
-                margin-top: 1rem;
-                @include flex-center(row);
+              transition: all 2s ease-in-out;   
+              margin-top: 1rem;
+              align-items: initial;
+              justify-content: left;
+              overflow-x: auto;
+              @include flex-center(row);
+              &::-webkit-scrollbar {
+                visibility: hidden;
               }
               .language-link {
-                width: 100%;
-                @include flex-start(row);
+                min-width: 30%;
+                position: relative;
+                left: 0;
                 align-items: center;
                 background-color: darken($secondary-text-color, 80);
                 border-radius: 0.5rem;
                 padding: 1rem 1rem;
-                @include media(990px) {
-                  @include flex-center(column);
-                  margin: 0 0.5rem;
-                }
+               @include flex-center(column);
+               margin: 0 0.5rem;
                 span {
                   margin-left: 2rem;
                   color: $secondary-text-color;
