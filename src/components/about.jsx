@@ -4,13 +4,16 @@ import { ImGithub } from 'react-icons/im';
 import { FaFacebookF } from 'react-icons/fa';
 import { FiTwitter } from 'react-icons/fi';
 import { GrLinkedinOption } from 'react-icons/gr';
-import { FiChevronDown } from 'react-icons/fi';
+import { FiChevronLeft} from 'react-icons/fi';
 import { FiChevronRight } from 'react-icons/fi';
 import { HiChevronDoubleLeft } from 'react-icons/hi';
 import { IoMdPlay} from 'react-icons/io';
 import ellipse_1 from '../assets/images/Ellipse_1.png';
 import ellipse_2 from '../assets/images/Ellipse_2.png';
 import ellipse_3 from '../assets/images/Ellipse_3.png';
+import ellipse_4 from '../assets/images/react.png';
+import ellipse_5 from '../assets/images/nodejs.png';
+import ellipse_6 from '../assets/images/jest.png';
 import about from '../assets/images/about.jpg';
 
 
@@ -20,38 +23,7 @@ class About extends Component {
 			isFramOpen: false
 		}
 	
-	handleFrames = () => {
-		console.log('click');
-		if(!this.state.isFramOpen) {
-			this.setState({
-				isFramOpen:true
-			})
-			console.log(this.state.isFramOpen);
-		} else {
-			this.setState({
-				isFramOpen:false
-			})
-			console.log(this.state.isFramOpen);
-
-		}
-	}
-	handleLangs= () => {
-		console.log('click');
-		if(!this.state.isLangOpen) {
-			this.setState({
-				isLangOpen:true
-			})
-			console.log(this.state.isLangOpen);
-		} else {
-			this.setState({
-				isLangOpen:false
-			})
-			console.log(this.state.isLangOpen);
-
-		}
-	}
 	render(){
-		const { isLangOpen, isFramOpen } = this.state;
 		return (
 			<section className='about'>
 				<div className='about-me-main-section'>
@@ -107,71 +79,76 @@ class About extends Component {
 								</li>
 							</ul>
 						</div>
-						<ul className='about-rigth-wrapper'>
-							<li className='languages-list'>
-								<h3 className='language-header'>
-									<span>Languages</span>
-									<div className="chevron-icons" onClick={this.handleLangs}>
-										{isLangOpen ? (<span>
-											<IconContext.Provider value={{ className: 'about-icon' }}>
-												<FiChevronDown />
-											</IconContext.Provider>
-										</span>):(	
-										<span>
-											<IconContext.Provider value={{ className: 'about-icon' }}>
-												<FiChevronRight />
-											</IconContext.Provider>
-										</span>)}
-									</div>
-								</h3>
-								<ul className={isLangOpen? ("languages-list-container open"):("languages-list-container")}>
-									<li className='language-link'>
-										<img src={ellipse_1} alt='langueage' />
-										<span>JavaScript</span>
-									</li>
-									<li className='language-link'>
-										<img src={ellipse_2} alt='langueage' />
-										<span>Html</span>
-									</li>
-									<li className='language-link'>
-										<img src={ellipse_3} alt='langueage' />
-										<span>Css</span>
-									</li>
-								</ul>
-							</li>
-							<li className='languages-list'>
-								<h3 className='language-header'>
-									<span>Frameworks</span>
-									<div className="chevron-icons" onClick={this.handleFrames}>
-										{isFramOpen ? (<span>
-											<IconContext.Provider value={{ className: 'about-icon' }}>
-												<FiChevronDown />
-											</IconContext.Provider>
-										</span>):(	
-										<span>
-											<IconContext.Provider value={{ className: 'about-icon' }}>
-												<FiChevronRight />
-											</IconContext.Provider>
-										</span>)}
-									</div>
-								</h3> 
-								<ul className={isFramOpen? ("languages-list-container open"):("languages-list-container")}>
-									<li className='language-link'>
-										<img src={ellipse_1} alt='langueage' />
-										<span>JavaScript</span>
-									</li>
-									<li className='language-link'>
-										<img src={ellipse_2} alt='langueage' />
-										<span>Html</span>
-									</li>
-									<li className='language-link'>
-										<img src={ellipse_3} alt='langueage' />
-										<span>Css</span>
-									</li>
-								</ul> 
-							</li>
-						</ul>
-					</div>
+							<ul className='about-rigth-wrapper'>
+								<li className='languages-list lang'>
+									<h3 className='language-header'>
+										<span>Languages</span>
+									</h3>
+								<div className='about-rigth-list-wrapper '>
+								<span className='carousel-icon-wrapper right' href='#2'>
+										<IconContext.Provider value={{ className: 'carousel-icon' }}>
+											<FiChevronLeft/>
+										</IconContext.Provider>
+									</span>
+									<ul className= 'languages-list-container'>
+										<li className='language-link'>
+											<div className="img-wrapper"><img src={ellipse_1} alt='langueage' /></div>
+											<span>JavaScript</span>
+										</li>
+										<li className='language-link'>
+										<div className="img-wrapper"><img src={ellipse_2} alt='langueage' /></div>
+
+											<span>Html</span>
+										</li>
+										<li className='language-link'>
+										<div className="img-wrapper"><img src={ellipse_3} alt='langueage' /></div>
+
+											<span>Css</span>
+										</li>
+									</ul>
+									<span className='carousel-icon-wrapper left' href='#2'>
+										<IconContext.Provider value={{ className: 'carsoul-icon' }}>
+											<FiChevronRight />
+										</IconContext.Provider>
+									</span>
+								</div>
+								</li>
+								<li className='languages-list'>
+									<h3 className='language-header'>
+										<span>Frameworks & <strong className='under'>Libraries</strong></span>
+									</h3>
+									<div className='about-rigth-list-wrapper '>
+								<span className='carousel-icon-wrapper right' href='#2'>
+										<IconContext.Provider value={{ className: 'carousel-icon' }}>
+											<FiChevronLeft/>
+										</IconContext.Provider>
+									</span>
+									<ul className= 'languages-list-container'>
+										<li className='language-link'>
+										<div className="img-wrapper"><img src={ellipse_4} alt='langueage' /></div>
+
+											<span>React</span>
+										</li>
+										<li className='language-link'>
+										<div className="img-wrapper"><img src={ellipse_5} alt='langueage' /></div>
+
+											<span>Nodejs</span>
+										</li>
+										<li className='language-link'>
+										<div className="img-wrapper"><img src={ellipse_6} alt='langueage' /></div>
+
+											<span>Jest</span>
+										</li>
+									</ul>
+									<span className='carousel-icon-wrapper left' href='#2'>
+										<IconContext.Provider value={{ className: 'carsoul-icon' }}>
+											<FiChevronRight />
+										</IconContext.Provider>
+									</span>
+								</div>
+								</li>
+							</ul>
+						</div>
 					<div className='main-about-wrapper-two'>
 						<div className='about-left-main-container'>
 							<div className='experience-year'>

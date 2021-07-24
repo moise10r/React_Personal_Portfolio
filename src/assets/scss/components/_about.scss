@@ -112,7 +112,6 @@
         .languages-list {
           width: 100%;
           max-width: 40rem;
-          margin: 0 auto;
           @include flex-center(column);
           .language-header {
             width: 100%;
@@ -137,18 +136,36 @@
               background-color: darken($secondary-text-color, 30);
             }
           }
+          .about-rigth-list-wrapper {
+            width: 100%;
+            position: relative;
+            @include flex-between(row);
+          }
+          .carousel-icon-wrapper {
+            position: absolute;
+            padding: 1rem;
+            @include flex-center(row);
+            border-radius: 50%;
+            background-color: darken($text-color,  40);
+            cursor: pointer;
+            &.left {
+              right: -2rem;
+            }
+            &.right {
+              left: -2rem;
+            }
+            &:hover {
+              background-color: $secondary-color;
+            }
+          }
           .languages-list-container {
-              width: 100%;
+              width: 90%;
+              margin: 0 auto;
               transition: all 2s ease-in-out;
-              &.open {
-                overflow: hidden;
-                li {
-                  transform: translateY(-100vh);
-                  height: 0;
-                  transition: all 1s ease-in-out
-                }
-              }
+              overflow: hidden;
               @include flex-center(column);
+              align-items: center;
+              justify-content: center;
               @include media(990px) {
                 margin-top: 1rem;
                 @include flex-center(row);
@@ -160,22 +177,33 @@
                 background-color: darken($secondary-text-color, 80);
                 border-radius: 0.5rem;
                 padding: 1rem 1rem;
-                margin-bottom: 1.5rem;
                 @include media(990px) {
                   @include flex-center(column);
-                  margin-left: 1rem;
+                  margin: 0 0.5rem;
                 }
                 span {
                   margin-left: 2rem;
                   color: $secondary-text-color;
                   font-size: 1.8rem;
                   font-weight: 500;
+            
                   @include media(990px) {
                     margin-top: 0.7rem;
                     margin-left: 0;
                   } 
                 }
+                .img-wrapper {
+                  height: 4.5rem;
+                  width: 4.5rem;
+                  border-radius: 50%;
+                  img {
+                    width: 100%;
+                  }
+                }
               }
+          }
+          &.lang {
+            margin-bottom: 1.5rem;
           }
         }
       }
@@ -357,8 +385,7 @@
     }
   }
 }
-.chevron-icons {
-  padding: 0.3rem;
-  cursor: pointer;
-  z-index: 999;
+
+.under {
+  color: $secondary-color;
 }
