@@ -17,6 +17,12 @@ body {
   font-size: 1.6rem;
   background-color: #161616;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #cf000f;
+}
 
 input,
 button {

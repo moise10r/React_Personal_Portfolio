@@ -15,6 +15,8 @@ import ellipse_4 from '../assets/images/react.png';
 import ellipse_5 from '../assets/images/nodejs.png';
 import ellipse_6 from '../assets/images/jest.png';
 import about from '../assets/images/about.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 class About extends Component {
 	state = {
@@ -44,6 +46,7 @@ class About extends Component {
 	};
 
 	componentDidMount() {
+		AOS.init();
 		const lang = document.querySelectorAll('.lang');
 		const fram = document.querySelectorAll('.fram');
 		const chevrons = document.querySelectorAll('.lang-icon');
@@ -123,18 +126,23 @@ class About extends Component {
 		return (
 			<section className='about'>
 				<div className='about-me-main-section'>
-					<h2 className='title'>
+					<h2 data-aos='fade-down-right' className='title'>
 						About me<span>.</span>
 					</h2>
 					<div className='main-about-wrapper-one'>
 						<div className='about-left-wrapper'>
-							<p className='about-me-details'>
+							<p data-aos='zoom-in-right' className='about-me-details'>
 								Hello I’m a software developer! I can help you build a product ,
 								feature or website Look through some of my work and experience!
 								If you like what you see and have a project you need coded,
 								don’t hestiate to contact me.
 							</p>
-							<a href='#2' className='about-connect'>
+							<a
+								data-aos='fade-right'
+								data-aos-easing='ease-in-sine'
+								href='#2'
+								className='about-connect'
+							>
 								<span>Let's connect</span>
 								<span>
 									<IconContext.Provider
@@ -145,28 +153,44 @@ class About extends Component {
 								</span>
 							</a>
 							<ul className='about-social-icon-list'>
-								<li className='social-media-link'>
+								<li
+									data-aos='fade-up-right'
+									data-aos-duration='1000'
+									className='social-media-link'
+								>
 									<a href='#2'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<FaFacebookF />
 										</IconContext.Provider>
 									</a>
 								</li>
-								<li className='social-media-link'>
+								<li
+									data-aos='fade-up-right'
+									data-aos-duration='4000'
+									className='social-media-link'
+								>
 									<a href='#2'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<ImGithub />
 										</IconContext.Provider>
 									</a>
 								</li>
-								<li className='social-media-link'>
+								<li
+									data-aos='fade-up-right'
+									data-aos-duration='7000'
+									className='social-media-link'
+								>
 									<a href='#2'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<FiTwitter />
 										</IconContext.Provider>
 									</a>
 								</li>
-								<li className='social-media-link'>
+								<li
+									data-aos='fade-up-right'
+									data-aos-duration='10000'
+									className='social-media-link'
+								>
 									<a href='#2'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<GrLinkedinOption />
@@ -178,17 +202,29 @@ class About extends Component {
 						<ul className='about-rigth-wrapper'>
 							<li className='languages-list'>
 								<h3 className='language-header'>
-								<span className='skill-title'>Languages</span>
+									<span data-aos='zoom-in' className='skill-title'>
+										Languages
+									</span>
 
 									<span className='icons'>
-										<span className='carousel-icon-wrapper  lang-icon' href='#2'>
+										<span
+											data-aos='zoom-out-left'
+											data-aos-duration='5000'
+											className='carousel-icon-wrapper  lang-icon'
+											href='#2'
+										>
 											<IconContext.Provider
 												value={{ className: 'carousel-icon' }}
 											>
 												<FiChevronLeft />
 											</IconContext.Provider>
 										</span>
-										<span className='carousel-icon-wrapper  lang-icon' href='#2'>
+										<span
+											data-aos='zoom-out-left'
+											data-aos-duration='10000'
+											className='carousel-icon-wrapper  lang-icon'
+											href='#2'
+										>
 											<IconContext.Provider
 												value={{ className: 'carousel-icon' }}
 											>
@@ -196,12 +232,17 @@ class About extends Component {
 											</IconContext.Provider>
 										</span>
 									</span>
-
 								</h3>
 								<div className='about-rigth-list-wrapper '>
 									<ul className='languages-list-container'>
 										{languages.map(({ image, id, title }) => (
-											<li key={id} className='language-link lang'>
+											<li
+												data-aos='flip-left'
+												data-aos-easing='ease-out-cubic'
+												data-aos-duration='10000'
+												key={id}
+												className='language-link lang'
+											>
 												<div className='img-wrapper'>
 													<img src={image} alt='langueage' />
 												</div>
@@ -213,21 +254,27 @@ class About extends Component {
 							</li>
 							<li className='languages-list'>
 								<h3 className='language-header'>
-									<span className='skill-title'>
+									<span data-aos='zoom-in' className='skill-title'>
 										Frameworks & <strong className='under'>Libraries</strong>
 									</span>
 									<span className='icons'>
-										<span className='carousel-icon-wrapper carsoul-icon-fram' href='#2'>
-											<IconContext.Provider
-												value={{ className: 'icon' }}
-											>
+										<span
+											data-aos='zoom-out-left'
+											data-aos-duration='5000'
+											className='carousel-icon-wrapper carsoul-icon-fram'
+											href='#2'
+										>
+											<IconContext.Provider value={{ className: 'icon' }}>
 												<FiChevronLeft />
 											</IconContext.Provider>
 										</span>
-										<span className='carousel-icon-wrapper carsoul-icon-fram' href='#2'>
-											<IconContext.Provider
-												value={{ className: 'icon' }}
-											>
+										<span
+											data-aos='zoom-out-left'
+											data-aos-duration='10000'
+											className='carousel-icon-wrapper carsoul-icon-fram'
+											href='#2'
+										>
+											<IconContext.Provider value={{ className: 'icon' }}>
 												<FiChevronRight />
 											</IconContext.Provider>
 										</span>
@@ -236,7 +283,13 @@ class About extends Component {
 								<div className='about-rigth-list-wrapper '>
 									<ul className='languages-list-container'>
 										{frameWorks.map(({ id, image, title }) => (
-											<li key={id} className='language-link fram'>
+											<li
+												data-aos='flip-left'
+												data-aos-easing='ease-out-cubic'
+												data-aos-duration='10000'
+												key={id}
+												className='language-link fram'
+											>
 												<div className='img-wrapper'>
 													<img src={image} alt='langueage' />
 												</div>
@@ -250,13 +303,15 @@ class About extends Component {
 					</div>
 					<div className='main-about-wrapper-two'>
 						<div className='about-left-main-container'>
-							<div className='experience-year'>
+							<div 
+							data-aos="fade-right"
+							className='experience-year'>
 								<span>2</span>
 								<span className='dot'></span>
 							</div>
 							<div className='year-paragraph'>
 								<div className='left'></div>
-								<div className='right'>
+								<div data-aos="fade-up-right" className='right'>
 									<span>Year</span>
 									<span>Experience</span>
 									<span>Working</span>
@@ -264,27 +319,34 @@ class About extends Component {
 							</div>
 						</div>
 						<div className='about-right-main-container'>
-							<h2 className='great-experience'>Great Experience</h2>
-							<p className='detail'>
+							<h2 data-aos="fade-down-left" className='great-experience'>Great Experience</h2>
+							<p data-aos="zoom-in-up" className='detail'>
 								Fill appear won't may make moveth signs. Fourth. Good own. Green
 								you're moveth us, lesser.
 							</p>
 							<div className='progrees-container'>
-								<div className='progress'>
-									<div className='progress-container'>
+								<div 	data-aos="zoom-out-left" 
+										data-aos-duration='10000'	 className='progress'>
+									<div 
+								
+									className='progress-container'>
 										<span>Web design</span>
 										<span>70%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
-								<div className='progress'>
+								<div
+								data-aos="zoom-out-left" 
+								data-aos-duration='20000'
+								className='progress'>
 									<div className='progress-container'>
 										<span>Electronic</span>
 										<span>85%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
-								<div className='progress'>
+								<div 	data-aos="zoom-out-left" 
+										data-aos-duration='30000'	 className='progress'>
 									<div className='progress-container'>
 										<span>Web design</span>
 										<span>90%</span>

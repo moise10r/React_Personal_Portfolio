@@ -4,8 +4,16 @@ import { GiCircleClaws } from 'react-icons/gi';
 import { MdLocationCity } from 'react-icons/md';
 import { FiPhoneCall } from 'react-icons/fi';
 import { IoIosSend } from 'react-icons/io';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 class Contact extends Component {
 	state = {};
+componentDidMount() {
+  AOS.init({
+    duration : 2000
+  })
+}
+
 	render() {
 		return (
 			<section className='contact-main-section'>
@@ -17,33 +25,47 @@ class Contact extends Component {
 						feature that you need built or a project that needs coding. I’d love
 						to help with it
 					</p>
-          <p className="emojs">😆 😃 🤩</p>
+					<p className='emojs'>😆 😃 🤩</p>
 					<div className='contact-main-wrapper'>
-					
 						<div className='main-contact-right-container'>
-							<h3>Contact Info <span>.</span> </h3>
-							<p className="show-info">
+							<h3>
+								Contact Info <span>.</span>{' '}
+							</h3>
+							<p className='show-info'>
 								Always available for freelance work if the write project comes
 								along, Feel free to contact me
 							</p>
 							<div className='more-info'>
 								<ul className='info-icons'>
-									<li>
+									<li
+                                   data-aos="fade-up-right"
+                                   data-aos-duration="4000"
+                  >
 										<IconContext.Provider value={{ className: 'icon' }}>
 											<GiCircleClaws />
 										</IconContext.Provider>
 									</li>
-									<li>
+									<li
+                                   data-aos="fade-up-right"
+                                   data-aos-duration="3000"
+                  >
 										<IconContext.Provider value={{ className: 'icon' }}>
 											<MdLocationCity />
 										</IconContext.Provider>
 									</li>{' '}
-									<li>
+									<li
+                                   data-aos="fade-up-right"
+                                   data-aos-duration="2000"
+                  >
 										<IconContext.Provider value={{ className: 'icon' }}>
 											<FiPhoneCall />
 										</IconContext.Provider>
 									</li>{' '}
-									<li>
+									<li
+                  data-aos="fade-up-right"
+                  data-aos-duration="1000"
+
+                  >
 										<IconContext.Provider value={{ className: 'icon' }}>
 											<IoIosSend />
 										</IconContext.Provider>
@@ -69,32 +91,44 @@ class Contact extends Component {
 								</ul>
 							</div>
 						</div>
-				
-        
-            <div className='main-contact-left-container'>
+
+						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form id="contact-form" action='/'>
-								<div className='form-group'>
+							<form 
+              id='contact-form' action='/'>
+								<div 
+                data-aos='fade-left'
+                data-aos-duration="1000"
+                className='form-group'>
 									<input type='text' name='name' placeholder='Your Name' />
 								</div>
-								<div className='form-group'>
+								<div 
+                     data-aos='fade-left'
+                     data-aos-duration="2000"
+                className='form-group'>
 									<input type='text' name='email' placeholder='Your Email' />
 								</div>
-								<div className='form-group'>
+								<div         
+                     data-aos='fade-left'
+                     data-aos-duration="2500"
+                className='form-group'>
 									<textarea
 										name='message'
 										id='message'
 										cols='30'
 										rows='10'
-                    placeholder="Message"
+										placeholder='Message'
 									></textarea>
 								</div>
-								<button type='submit' className='btn'>
+								<button 
+                 data-aos="fade-up"
+                 data-aos-anchor-placement="center-bottom"
+                type='submit' className='btn'>
 									Get In Touch
 								</button>
 							</form>
-						</div>         
-        	</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		);
