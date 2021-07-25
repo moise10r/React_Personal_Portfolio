@@ -50,11 +50,11 @@
 	right: 0;
 	bottom: 0;
 	clip-path: circle(4rem at 93.5% 4.5rem);
-	transition: clip-path 5s;
+	transition: clip-path 2s;
 	background-color: $black-ground-color;
 	z-index: 1;
 	&.open {
-		transition: clip-path 3s;
+		transition: clip-path 2s;
 		clip-path: circle(100%);
 		z-index: 2;
 		.languages {

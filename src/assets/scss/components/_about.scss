@@ -53,7 +53,7 @@
       .about-left-wrapper {
         width: 100%;
         @include media(990px) {
-          width: 55%;
+          flex: 1;
         }
         .about-me-details {
           font-size: 1.8rem;
@@ -104,14 +104,14 @@
       .about-rigth-wrapper{
         width: 100%;
         margin-top: 6rem;
+        
         @include media(990px) {
-          width: 65%;
+          width: 55%;
           padding-left: 6rem;
           margin-top: 0;
         }
         .languages-list {
           width: 100%;
-          max-width: 40rem;
           @include flex-center(column);
           .language-header {
             width: 100%;
@@ -141,6 +141,7 @@
             width: 100%;
             position: relative;
             @include flex-between(row);
+
           }
           .languages-list-container {
               width: 90%;
@@ -153,21 +154,24 @@
                 visibility: hidden;
               }
               .language-link {
-                min-width: 31%;
+                min-width: 55%;
                 position: relative;
                 left: 0;
                 background-color: darken($secondary-text-color, 80);
                 border-radius: 0.5rem;
                 padding: 1rem 1rem;
-                @include flex-center(column);
+                @include flex-center(column);;
                 margin: 0 0.5rem;
                 transition: 0.5s;
+                @include media(990px) {
+                  min-width: 31%;
+                } 
                 span {
-                  margin-left: 2rem;
                   color: $secondary-text-color;
                   font-size: 1.8rem;
                   font-weight: 500;
-            
+                  margin-top: 0.3rem;
+                  text-align: center;
                   @include media(990px) {
                     margin-top: 0.7rem;
                     margin-left: 0;

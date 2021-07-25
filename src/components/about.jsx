@@ -181,16 +181,16 @@ class About extends Component {
 								<span className='skill-title'>Languages</span>
 
 									<span className='icons'>
-										<span className='carousel-icon-wrapper' href='#2'>
+										<span className='carousel-icon-wrapper  lang-icon' href='#2'>
 											<IconContext.Provider
-												value={{ className: 'carousel-icon lang-icon' }}
+												value={{ className: 'carousel-icon' }}
 											>
 												<FiChevronLeft />
 											</IconContext.Provider>
 										</span>
-										<span className='carousel-icon-wrapper' href='#2'>
+										<span className='carousel-icon-wrapper  lang-icon' href='#2'>
 											<IconContext.Provider
-												value={{ className: 'carousel-icon lang-icon' }}
+												value={{ className: 'carousel-icon' }}
 											>
 												<FiChevronRight />
 											</IconContext.Provider>
@@ -217,16 +217,16 @@ class About extends Component {
 										Frameworks & <strong className='under'>Libraries</strong>
 									</span>
 									<span className='icons'>
-										<span className='carousel-icon-wrapper right' href='#2'>
+										<span className='carousel-icon-wrapper carsoul-icon-fram' href='#2'>
 											<IconContext.Provider
-												value={{ className: 'carsoul-icon-fram' }}
+												value={{ className: 'icon' }}
 											>
 												<FiChevronLeft />
 											</IconContext.Provider>
 										</span>
-										<span className='carousel-icon-wrapper left' href='#2'>
+										<span className='carousel-icon-wrapper carsoul-icon-fram' href='#2'>
 											<IconContext.Provider
-												value={{ className: 'carsoul-icon-fram' }}
+												value={{ className: 'icon' }}
 											>
 												<FiChevronRight />
 											</IconContext.Provider>

@@ -91,12 +91,12 @@ li {
   right: 0;
   bottom: 0;
   clip-path: circle(4rem at 93.5% 4.5rem);
-  transition: clip-path 5s;
+  transition: clip-path 2s;
   background-color: #161616;
   z-index: 1;
 }
 .main-navbar.open {
-  transition: clip-path 3s;
+  transition: clip-path 2s;
   clip-path: circle(100%);
   z-index: 2;
 }
@@ -414,8 +414,9 @@ li {
   line-height: 4rem;
   text-align: left;
   color: #fff;
+  max-width: 500px;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .headline-section .main-healine-container .headline-left-container .me {
     font-size: 7rem;
     line-height: 6.5rem;
@@ -598,7 +599,7 @@ li {
 }
 @media screen and (min-width: 990px) {
   .about .about-me-main-section .main-about-wrapper-one .about-left-wrapper {
-    width: 55%;
+    flex: 1;
   }
 }
 .about .about-me-main-section .main-about-wrapper-one .about-left-wrapper .about-me-details {
@@ -655,14 +656,13 @@ li {
 }
 @media screen and (min-width: 990px) {
   .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper {
-    width: 65%;
+    width: 55%;
     padding-left: 6rem;
     margin-top: 0;
   }
 }
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list {
   width: 100%;
-  max-width: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -724,7 +724,7 @@ li {
   visibility: hidden;
 }
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link {
-  min-width: 31%;
+  min-width: 55%;
   position: relative;
   left: 0;
   background-color: rgba(51, 51, 51, 0.6);
@@ -737,11 +737,17 @@ li {
   margin: 0 0.5rem;
   transition: 0.5s;
 }
+@media screen and (min-width: 990px) {
+  .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link {
+    min-width: 31%;
+  }
+}
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link span {
-  margin-left: 2rem;
   color: #ffffff99;
   font-size: 1.8rem;
   font-weight: 500;
+  margin-top: 0.3rem;
+  text-align: center;
 }
 @media screen and (min-width: 990px) {
   .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link span {
