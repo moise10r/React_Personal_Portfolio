@@ -1026,9 +1026,15 @@ li {
   width: 15rem;
   background-color: #cf000f;
 }
+.project-main-wrapper .my {
+  margin-top: 3rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
 .project-main-wrapper .card-list-container {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;

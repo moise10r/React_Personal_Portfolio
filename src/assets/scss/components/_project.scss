@@ -29,9 +29,15 @@
       background-color: $secondary-color;
     }
   }
+  .my {
+    margin-top: 3rem;
+    color: $text-color;
+    font-size: 2rem;
+    font-weight: 600;
+  }
   .card-list-container {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 15rem;
     @include flex-center(column);
     transform: skewY(0deg);
     @include media(992px) {
