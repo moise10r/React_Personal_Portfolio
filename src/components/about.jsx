@@ -21,62 +21,104 @@ class About extends Component {
 		isLangOpen: false,
 		isFramOpen: false,
 		languages: [
-			{id:1, title: 'JavaScript', image: ellipse_1 },
-			{id:2, title: 'Html', image: ellipse_2},
-			{id:3, title: 'Css', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:4, title: 'Scss', image: ellipse_3 },
-			{id:1, title: 'JavaScript', image: ellipse_1 },
-
+			{ id: 1, title: 'JavaScript', image: ellipse_1 },
+			{ id: 2, title: 'Html', image: ellipse_2 },
+			{ id: 3, title: 'Css', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 4, title: 'Scss', image: ellipse_3 },
+			{ id: 1, title: 'JavaScript', image: ellipse_1 },
 		],
 		frameWorks: [
-			{id:1, title: 'React', image: ellipse_4 },
-			{id:2, title: 'Nodejs', image: ellipse_5},
-			{id:3, title: 'Jest', image: ellipse_6 },
+			{ id: 1, title: 'React', image: ellipse_4 },
+			{ id: 2, title: 'Nodejs', image: ellipse_5 },
+			{ id: 3, title: 'Jest', image: ellipse_6 },
+			{ id: 3, title: 'Jest', image: ellipse_6 },
+			{ id: 3, title: 'Jest', image: ellipse_6 },
 		],
 	};
-	
-	componentDidMount(){
+
+	componentDidMount() {
 		const lang = document.querySelectorAll('.lang');
+		const fram = document.querySelectorAll('.fram');
 		const chevrons = document.querySelectorAll('.lang-icon');
-		let visibleLang = Math.ceil(lang.length/2);
+		const chevrons2 = document.querySelectorAll('.carsoul-icon-fram');
+		let visibleLang = Math.ceil(lang.length / 2);
+		let visibleFram = Math.ceil(fram.length / 2);
 		let i = 0;
 		let movePer = 10.34;
-		let maxMove =lang[1].offsetWidth/2 * movePer ;
-		console.log(lang[1].offsetWidth);
-		let rightMove = () => {
+		let maxMove = (lang[1].offsetWidth / 2) * movePer;
+		let i2 = 0;
+		let movePer2 = 10.34;
+		let maxMove2 = (fram[1].offsetWidth / 2) * movePer2;
+		const rightMove1 = () => {
 			i = i + movePer;
-			if(lang === 1 ) { i = 0}
-			for(const j of lang) { 
-				if( i > maxMove){i = i - movePer}
+			if (lang === 1) {
+				i = 0;
+			}
+			for (const j of lang) {
+				if (i > maxMove) {
+					i = i - movePer;
+				}
 				j.style.left = '-' + i + '%';
 			}
-		}
-		let leftMove = () => {
+		};
+		const leftMove1 = () => {
 			i = i - movePer;
-			if(i <= 1 ) {
-				console.log('less');
-				i = 0
-				}
-			for(const j of lang) { 
+			if (i <= 1) {
+				i = 0;
+			}
+			for (const j of lang) {
 				console.log(i);
-				if( visibleLang > 1) {
+				if (visibleLang > 1) {
 					j.style.left = '-' + i + '%';
 				}
 			}
-		}
-		chevrons[1].addEventListener('click', () => rightMove() )
-		chevrons[0].addEventListener('click', () => leftMove() )
+		};
+		const rightMove2 = () => {
+			i2 = i2 + movePer2;
+			if (fram === 1) {
+				i2 = 0;
+			}
+			for (const j of fram) {
+				if (i2 > maxMove2) {
+					i2 = i2 - movePer2;
+				}
+				j.style.left = '-' + i2 + '%';
+			}
+		};
+		const leftMove2 = () => {
+			i2 = i2 - movePer2;
+			if (i2 <= 1) {
+				i2 = 0;
+			}
+			for (const j of fram) {
+				console.log(i);
+				if (visibleFram > 1) {
+					j.style.left = '-' + i2 + '%';
+				}
+			}
+		};
+		chevrons[1].addEventListener('click', () => {
+			rightMove1();
+		});
+		chevrons[0].addEventListener('click', () => {
+			leftMove1();
+		});
+		chevrons2[1].addEventListener('click', () => {
+			rightMove2();
+		});
+		chevrons2[0].addEventListener('click', () => {
+			leftMove2();
+		});
 	}
 
 	render() {
-	
 		const { languages, frameWorks } = this.state;
 		return (
 			<section className='about'>
@@ -147,19 +189,19 @@ class About extends Component {
 										</IconContext.Provider>
 									</span>
 									<ul className='languages-list-container'>
-										{
-											languages.map(({image, id, title}) => (
-											<li  key={id} className='language-link lang'>
-											<div className='img-wrapper'>
-												<img src={image} alt='langueage' />
-											</div>
-											<span>{title}</span>
-										</li>))
-										}
-						
-								</ul>
+										{languages.map(({ image, id, title }) => (
+											<li key={id} className='language-link lang'>
+												<div className='img-wrapper'>
+													<img src={image} alt='langueage' />
+												</div>
+												<span>{title}</span>
+											</li>
+										))}
+									</ul>
 									<span className='carousel-icon-wrapper left' href='#2'>
-										<IconContext.Provider value={{ className: 'carousel-icon lang-icon' }}>
+										<IconContext.Provider
+											value={{ className: 'carousel-icon lang-icon' }}
+										>
 											<FiChevronRight />
 										</IconContext.Provider>
 									</span>
@@ -174,25 +216,23 @@ class About extends Component {
 								<div className='about-rigth-list-wrapper '>
 									<span className='carousel-icon-wrapper right' href='#2'>
 										<IconContext.Provider
-											value={{ className: 'carousel-icon icon-left' }}
+											value={{ className: 'carsoul-icon-fram' }}
 										>
 											<FiChevronLeft />
 										</IconContext.Provider>
 									</span>
 									<ul className='languages-list-container'>
-									{
-											frameWorks.map(({id,image,title}) => (
-											<li ref={this.lang} key={id} className='language-link fram'>
-											<div className='img-wrapper'>
-												<img src={image} alt='langueage' />
-											</div>
-											<span>{title}</span>
-										</li>))
-										}
-						
+										{frameWorks.map(({ id, image, title }) => (
+											<li key={id} className='language-link fram'>
+												<div className='img-wrapper'>
+													<img src={image} alt='langueage' />
+												</div>
+												<span>{title}</span>
+											</li>
+										))}
 									</ul>
 									<span className='carousel-icon-wrapper left' href='#2'>
-										<IconContext.Provider value={{ className: 'carsoul-icon' }}>
+										<IconContext.Provider value={{ className: 'carsoul-icon-fram' }}>
 											<FiChevronRight />
 										</IconContext.Provider>
 									</span>
@@ -263,7 +303,7 @@ class About extends Component {
 				</div>
 			</section>
 		);
-	};
+	}
 }
 
 export default About;
