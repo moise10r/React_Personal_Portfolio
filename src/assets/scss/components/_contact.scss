@@ -117,8 +117,10 @@
     }
     .main-contact-left-container{
       width: 100%;
-      @include media(1000px){
+      @include media(1000px)
+      {
         width: 60%;
+      }
         p {
           color: $text-color;
           font-size: 2.3rem;
@@ -146,6 +148,7 @@
             }
             #message {
               margin-top: 1rem;
+              padding: 0 1rem;
               background-color: $black-ground-color;
               width: 100%;
               outline: none;
@@ -193,7 +196,6 @@
             }
           }
         }
-      }
     }
   }
 }
