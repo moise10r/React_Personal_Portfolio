@@ -117,46 +117,30 @@
             width: 100%;
             @include flex-between(row);
             color: $text-color;
-            font-size: 2rem;
-            position: relative;
             padding-bottom: 1rem;
-            span{
-              .about-icon {
-                 font-size: 2.5rem;
+            .icons {
+              @include flex-center(row);
+              .carousel-icon-wrapper {
+                @include flex-center(row);
+                padding: 1rem;
+                border-radius: 50%;
+                cursor: pointer;
+                &:hover {
+                  background-color: darken($text-color, 40);
+                }
+                &:first-child {
+                  margin-right: 2rem;
+                }
               }
-            } 
-            &::after {
-              position: absolute;
-              content: "";
-              bottom: 0;
-              right: 0;
-              left: 0;
-              height: 0.15rem;
-              display: none;
-              background-color: darken($secondary-text-color, 30);
+            }
+            .skill-title{
+              font-size: 2rem;
             }
           }
           .about-rigth-list-wrapper {
             width: 100%;
             position: relative;
             @include flex-between(row);
-          }
-          .carousel-icon-wrapper {
-            position: absolute;
-            padding: 1rem;
-            @include flex-center(row);
-            border-radius: 50%;
-            background-color: darken($text-color,  40);
-            cursor: pointer;
-            &.left {
-              right: -2.5rem;
-            }
-            &.right {
-              left: -2.5rem;
-            }
-            &:hover {
-              background-color: $secondary-color;
-            }
           }
           .languages-list-container {
               width: 90%;

@@ -675,22 +675,31 @@ li {
   align-items: center;
   flex-direction: row;
   color: #fff;
-  font-size: 2rem;
-  position: relative;
   padding-bottom: 1rem;
 }
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-header span .about-icon {
-  font-size: 2.5rem;
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-header .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-header::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 0.15rem;
-  display: none;
-  background-color: rgba(179, 179, 179, 0.6);
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-header .icons .carousel-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-header .icons .carousel-icon-wrapper:hover {
+  background-color: #999999;
+}
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-header .icons .carousel-icon-wrapper:first-child {
+  margin-right: 2rem;
+}
+.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .language-header .skill-title {
+  font-size: 2rem;
 }
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .about-rigth-list-wrapper {
   width: 100%;
@@ -699,26 +708,6 @@ li {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-}
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .carousel-icon-wrapper {
-  position: absolute;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  border-radius: 50%;
-  background-color: #999999;
-  cursor: pointer;
-}
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .carousel-icon-wrapper.left {
-  right: -2.5rem;
-}
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .carousel-icon-wrapper.right {
-  left: -2.5rem;
-}
-.about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .carousel-icon-wrapper:hover {
-  background-color: #cf000f;
 }
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container {
   width: 90%;

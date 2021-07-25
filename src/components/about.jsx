@@ -178,16 +178,27 @@ class About extends Component {
 						<ul className='about-rigth-wrapper'>
 							<li className='languages-list'>
 								<h3 className='language-header'>
-									<span>Languages</span>
+								<span className='skill-title'>Languages</span>
+
+									<span className='icons'>
+										<span className='carousel-icon-wrapper' href='#2'>
+											<IconContext.Provider
+												value={{ className: 'carousel-icon lang-icon' }}
+											>
+												<FiChevronLeft />
+											</IconContext.Provider>
+										</span>
+										<span className='carousel-icon-wrapper' href='#2'>
+											<IconContext.Provider
+												value={{ className: 'carousel-icon lang-icon' }}
+											>
+												<FiChevronRight />
+											</IconContext.Provider>
+										</span>
+									</span>
+
 								</h3>
 								<div className='about-rigth-list-wrapper '>
-									<span className='carousel-icon-wrapper right' href='#2'>
-										<IconContext.Provider
-											value={{ className: 'carousel-icon lang-icon' }}
-										>
-											<FiChevronLeft />
-										</IconContext.Provider>
-									</span>
 									<ul className='languages-list-container'>
 										{languages.map(({ image, id, title }) => (
 											<li key={id} className='language-link lang'>
@@ -198,29 +209,31 @@ class About extends Component {
 											</li>
 										))}
 									</ul>
-									<span className='carousel-icon-wrapper left' href='#2'>
-										<IconContext.Provider
-											value={{ className: 'carousel-icon lang-icon' }}
-										>
-											<FiChevronRight />
-										</IconContext.Provider>
-									</span>
 								</div>
 							</li>
 							<li className='languages-list'>
 								<h3 className='language-header'>
-									<span>
+									<span className='skill-title'>
 										Frameworks & <strong className='under'>Libraries</strong>
+									</span>
+									<span className='icons'>
+										<span className='carousel-icon-wrapper right' href='#2'>
+											<IconContext.Provider
+												value={{ className: 'carsoul-icon-fram' }}
+											>
+												<FiChevronLeft />
+											</IconContext.Provider>
+										</span>
+										<span className='carousel-icon-wrapper left' href='#2'>
+											<IconContext.Provider
+												value={{ className: 'carsoul-icon-fram' }}
+											>
+												<FiChevronRight />
+											</IconContext.Provider>
+										</span>
 									</span>
 								</h3>
 								<div className='about-rigth-list-wrapper '>
-									<span className='carousel-icon-wrapper right' href='#2'>
-										<IconContext.Provider
-											value={{ className: 'carsoul-icon-fram' }}
-										>
-											<FiChevronLeft />
-										</IconContext.Provider>
-									</span>
 									<ul className='languages-list-container'>
 										{frameWorks.map(({ id, image, title }) => (
 											<li key={id} className='language-link fram'>
@@ -231,11 +244,6 @@ class About extends Component {
 											</li>
 										))}
 									</ul>
-									<span className='carousel-icon-wrapper left' href='#2'>
-										<IconContext.Provider value={{ className: 'carsoul-icon-fram' }}>
-											<FiChevronRight />
-										</IconContext.Provider>
-									</span>
 								</div>
 							</li>
 						</ul>
