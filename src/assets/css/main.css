@@ -725,11 +725,9 @@ li {
   margin: 0 auto;
   transition: all 2s ease-in-out;
   margin-top: 1rem;
-  align-items: initial;
-  justify-content: left;
   overflow-x: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
 }
@@ -740,7 +738,6 @@ li {
   min-width: 30%;
   position: relative;
   left: 0;
-  align-items: center;
   background-color: rgba(51, 51, 51, 0.6);
   border-radius: 0.5rem;
   padding: 1rem 1rem;
@@ -749,6 +746,7 @@ li {
   align-items: center;
   flex-direction: column;
   margin: 0 0.5rem;
+  transition: 0.5s;
 }
 .about .about-me-main-section .main-about-wrapper-one .about-rigth-wrapper .languages-list .languages-list-container .language-link span {
   margin-left: 2rem;

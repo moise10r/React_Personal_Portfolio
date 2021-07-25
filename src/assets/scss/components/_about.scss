@@ -163,10 +163,8 @@
               margin: 0 auto;
               transition: all 2s ease-in-out;   
               margin-top: 1rem;
-              align-items: initial;
-              justify-content: left;
               overflow-x: auto;
-              @include flex-center(row);
+              @include flex-start(row);
               &::-webkit-scrollbar {
                 visibility: hidden;
               }
@@ -174,12 +172,12 @@
                 min-width: 30%;
                 position: relative;
                 left: 0;
-                align-items: center;
                 background-color: darken($secondary-text-color, 80);
                 border-radius: 0.5rem;
                 padding: 1rem 1rem;
-               @include flex-center(column);
-               margin: 0 0.5rem;
+                @include flex-center(column);
+                margin: 0 0.5rem;
+                transition: 0.5s;
                 span {
                   margin-left: 2rem;
                   color: $secondary-text-color;

@@ -20,9 +20,64 @@ class About extends Component {
 	state = {
 		isLangOpen: false,
 		isFramOpen: false,
+		languages: [
+			{id:1, title: 'JavaScript', image: ellipse_1 },
+			{id:2, title: 'Html', image: ellipse_2},
+			{id:3, title: 'Css', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:4, title: 'Scss', image: ellipse_3 },
+			{id:1, title: 'JavaScript', image: ellipse_1 },
+
+		],
+		frameWorks: [
+			{id:1, title: 'React', image: ellipse_4 },
+			{id:2, title: 'Nodejs', image: ellipse_5},
+			{id:3, title: 'Jest', image: ellipse_6 },
+		],
 	};
+	
+	componentDidMount(){
+		const lang = document.querySelectorAll('.lang');
+		const chevrons = document.querySelectorAll('.lang-icon');
+		let visibleLang = Math.ceil(lang.length/2);
+		let i = 0;
+		let movePer = 10.34;
+		let maxMove =lang[1].offsetWidth/2 * movePer ;
+		console.log(lang[1].offsetWidth);
+		let rightMove = () => {
+			i = i + movePer;
+			if(lang === 1 ) { i = 0}
+			for(const j of lang) { 
+				if( i > maxMove){i = i - movePer}
+				j.style.left = '-' + i + '%';
+			}
+		}
+		let leftMove = () => {
+			i = i - movePer;
+			if(i <= 1 ) {
+				console.log('less');
+				i = 0
+				}
+			for(const j of lang) { 
+				console.log(i);
+				if( visibleLang > 1) {
+					j.style.left = '-' + i + '%';
+				}
+			}
+		}
+		chevrons[1].addEventListener('click', () => rightMove() )
+		chevrons[0].addEventListener('click', () => leftMove() )
+	}
 
 	render() {
+	
+		const { languages, frameWorks } = this.state;
 		return (
 			<section className='about'>
 				<div className='about-me-main-section'>
@@ -79,75 +134,32 @@ class About extends Component {
 							</ul>
 						</div>
 						<ul className='about-rigth-wrapper'>
-							<li className='languages-list lang'>
+							<li className='languages-list'>
 								<h3 className='language-header'>
 									<span>Languages</span>
 								</h3>
 								<div className='about-rigth-list-wrapper '>
 									<span className='carousel-icon-wrapper right' href='#2'>
 										<IconContext.Provider
-											value={{ className: 'carousel-icon' }}
+											value={{ className: 'carousel-icon lang-icon' }}
 										>
 											<FiChevronLeft />
 										</IconContext.Provider>
 									</span>
 									<ul className='languages-list-container'>
-										<li className='language-link'>
+										{
+											languages.map(({image, id, title}) => (
+											<li  key={id} className='language-link lang'>
 											<div className='img-wrapper'>
-												<img src={ellipse_1} alt='langueage' />
+												<img src={image} alt='langueage' />
 											</div>
-											<span>JavaScript</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_1} alt='langueage' />
-											</div>
-											<span>JavaScript</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_1} alt='langueage' />
-											</div>
-											<span>JavaScript</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_2} alt='langueage' />
-											</div>
-
-											<span>Html</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_2} alt='langueage' />
-											</div>
-
-											<span>Html</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_2} alt='langueage' />
-											</div>
-
-											<span>Html</span>
-										</li>{' '}
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_2} alt='langueage' />
-											</div>
-
-											<span>Html</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_3} alt='langueage' />
-											</div>
-
-											<span>Css</span>
-										</li>
-									</ul>
+											<span>{title}</span>
+										</li>))
+										}
+						
+								</ul>
 									<span className='carousel-icon-wrapper left' href='#2'>
-										<IconContext.Provider value={{ className: 'carsoul-icon' }}>
+										<IconContext.Provider value={{ className: 'carousel-icon lang-icon' }}>
 											<FiChevronRight />
 										</IconContext.Provider>
 									</span>
@@ -162,33 +174,22 @@ class About extends Component {
 								<div className='about-rigth-list-wrapper '>
 									<span className='carousel-icon-wrapper right' href='#2'>
 										<IconContext.Provider
-											value={{ className: 'carousel-icon' }}
+											value={{ className: 'carousel-icon icon-left' }}
 										>
 											<FiChevronLeft />
 										</IconContext.Provider>
 									</span>
 									<ul className='languages-list-container'>
-										<li className='language-link'>
+									{
+											frameWorks.map(({id,image,title}) => (
+											<li ref={this.lang} key={id} className='language-link fram'>
 											<div className='img-wrapper'>
-												<img src={ellipse_4} alt='langueage' />
+												<img src={image} alt='langueage' />
 											</div>
-
-											<span>React</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_5} alt='langueage' />
-											</div>
-
-											<span>Nodejs</span>
-										</li>
-										<li className='language-link'>
-											<div className='img-wrapper'>
-												<img src={ellipse_6} alt='langueage' />
-											</div>
-
-											<span>Jest</span>
-										</li>
+											<span>{title}</span>
+										</li>))
+										}
+						
 									</ul>
 									<span className='carousel-icon-wrapper left' href='#2'>
 										<IconContext.Provider value={{ className: 'carsoul-icon' }}>
@@ -262,7 +263,7 @@ class About extends Component {
 				</div>
 			</section>
 		);
-	}
+	};
 }
 
 export default About;

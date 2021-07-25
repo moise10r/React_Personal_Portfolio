@@ -139,8 +139,9 @@ class Header extends Component {
 										variants={this.variants}
 										className='nav-list'
 									>
-										{links.map((link) => (
+										{links.map(({id,title}) => (
 											<motion.li
+											key={id}
 												whileHover={{
 													scale: 1.3,
 													x: -80,
@@ -155,8 +156,8 @@ class Header extends Component {
 													href='#1'
 													className='active'
 												>
-													{link.title}
-													<span>0{link.id}</span>
+													{title}
+													<span>0{id}</span>
 												</motion.a>
 											</motion.li>
 										))}
