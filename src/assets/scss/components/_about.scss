@@ -122,9 +122,12 @@
               @include flex-center(row);
               .carousel-icon-wrapper {
                 @include flex-center(row);
-                padding: 1rem;
+                padding: 0.5rem;
                 border-radius: 50%;
                 cursor: pointer;
+                @include media(500px){
+                  padding: 1rem;
+                }
                 &:hover {
                   background-color: darken($text-color, 40);
                 }
@@ -163,7 +166,7 @@
                 @include flex-center(column);;
                 margin: 0 0.5rem;
                 transition: 0.5s;
-                @include media(990px) {
+                @include media(597px) {
                   min-width: 31%;
                 } 
                 span {

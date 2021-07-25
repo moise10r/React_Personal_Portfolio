@@ -10,7 +10,7 @@ export const data = [
 		title: 'Honesty Adoption',
 		description: {
 			type: 'Adoption',
-			interface: 'Frontend Dev',
+			development: 'Frontend Dev',
 			year: 2015,
 		},
 		fullDesciption:
@@ -28,7 +28,7 @@ export const data = [
 		title: 'Facebook 360',
 		description: {
 			type: 'CANOPY',
-			interface: 'Backend Dev',
+			development: 'Backend Dev',
 			year: 2015,
 		},
 		fullDesciption:
@@ -45,7 +45,7 @@ export const data = [
 		title: 'Uber Navigation',
 		description: {
 			type: 'CANOPY',
-			interface: 'Backend Dev',
+			development: 'Backend Dev',
 			year: 2015,
 		},
 		fullDesciption:
@@ -62,7 +62,7 @@ export const data = [
 		title: 'Tonic',
 		description: {
 			type: 'CANOPY',
-			interface: 'Backend Dev',
+			development: 'Backend Dev',
 			year: 2015,
 		},
 		fullDesciption:

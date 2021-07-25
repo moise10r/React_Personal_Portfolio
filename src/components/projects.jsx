@@ -13,35 +13,36 @@ class Projects extends Component {
 		});
 	}
 	render() {
-		// const { data } = this.state;
+		const { data } = this.state;
 		return (
 			<section className='main-section-project'>
 				<div className='project-main-wrapper'>
 					<h2 className='title'> Portfolio</h2>
 					<ul className='card-list-container'>
-						<li className='card'>
+						{
+							data.map(({id,title, image,	description,detail, technologies}) => (
+								<li className='card'>
 							<a class='img-wrapper' href='#2'>
-								<img src={ellipse_4} alt='tonic' />
+								<img src={image} alt='tonic' />
 							</a>
 							<div class='right-content'>
 								<div class='project-title'>
-									<h2>React</h2>
+									<h2>{title}</h2>
 								</div>
 								<div class='info'>
-									<span>CANOPY</span>
+									<span>{description.type}</span>
 									<span>
-										<img src={count} alt='counter' />
+										<img src={count} className="counter" alt='counter' />
 									</span>
-									<span>Backend</span>
+									<span>{description.development}</span>
 									<span>
-										<img src={count} alt='counter' />
+										<img src={count} className="counter" alt='counter' />
 									</span>
-									<span>2021</span>
+									<span>{description.year}</span>
 								</div>
 								<div class='detail'>
 									<p>
-										A smart assistant to make driving more safe, efficient, and
-										fun by unlocking your most expensive computer: your car.
+										{detail}
 									</p>
 								</div>
 								<ul class='languages'>
@@ -62,6 +63,7 @@ class Projects extends Component {
 								</div>
 							</div>
 						</li>
+						))}
 					</ul>
 				</div>
 			</section>
