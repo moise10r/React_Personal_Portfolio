@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { data } from '../services/data';
-import ellipse_4 from '../assets/images/Portfolio_4.png';
 import count from '../assets/images/Counter.png';
 
 class Projects extends Component {
@@ -22,7 +21,7 @@ class Projects extends Component {
 					<ul className='card-list-container'>
 						{data.map(
 							({ id, title, image, description, detail, technologies }) => (
-								<li className='card'>
+								<li key={id} className='card'>
 									<a class='img-wrapper' href='#2'>
 										<img src={image} alt='tonic' />
 									</a>
