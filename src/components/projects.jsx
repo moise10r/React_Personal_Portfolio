@@ -16,12 +16,24 @@ class Projects extends Component {
 		return (
 			<section className='main-section-project'>
 				<div className='project-main-wrapper'>
-					<h2 className='title'> Portfolio</h2>
-					<p className='my'>QUALITY WORK RECENTLY DONE PROJECT 🥰</p>
+					<h2 data-aos='fade-down-right' className='title'>
+						{' '}
+						Portfolio
+					</h2>
+					<p
+						data-aos='fade-right'
+						data-aos-offset='300'
+						data-aos-easing='ease-in-sine'
+						className='my'
+					>
+						QUALITY WORK RECENTLY DONE PROJECT 🥰
+					</p>
 					<ul className='card-list-container'>
 						{data.map(
 							({ id, title, image, description, detail, technologies }) => (
-								<li key={id} className='card'>
+								<li data-aos="flip-left"
+								data-aos-easing="ease-out-cubic"
+								data-aos-duration="2000"  key={id} className='card'>
 									<a class='img-wrapper' href='#2'>
 										<img src={image} alt='tonic' />
 									</a>
