@@ -1,0 +1,42 @@
+.main-section-project {
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.project-main-wrapper {
+  width: 75%;
+  margin: 0 auto;
+
+  .title {
+    font-size: 4rem;
+    font-weight: 600;
+    color: $text-color;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 5rem;
+    @include media(763px) {
+      font-size: 6rem;
+      font-weight: 600;
+   }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 0.5rem;
+      border-radius: 0.5rem;
+      width: 15rem;
+      background-color: $secondary-color;
+    }
+  }
+  .card-list-container {
+    width: 100%;
+    @include flex-center(row);
+    .card {
+      width: 80%;
+      margin: 0 auto;
+      background-color: red;
+    }
+
+  }
+}
