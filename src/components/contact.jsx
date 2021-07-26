@@ -34,11 +34,11 @@ class Contact extends Component {
 					<p className='emojs'>😆 😃 🤩</p>
 					<div className='contact-main-wrapper'>
 						<div className='main-contact-right-container'>
-							<h3 data-aos="zoom-in-down">
+							<h3 data-aos='zoom-in-down'>
 								Contact Info <span>.</span>{' '}
 							</h3>
-							<p data-aos="zoom-in-right" className='show-info'>
-								Always available for freelance work if the write project comes
+							<p data-aos='zoom-in-right' className='show-info'>
+								Always available for freelance work if the right project comes
 								along, Feel free to contact me
 							</p>
 							<div className='more-info'>

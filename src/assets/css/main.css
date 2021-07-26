@@ -537,6 +537,7 @@ li {
 .about {
   width: 100%;
   margin-top: 12rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 992px) {
   .about {
@@ -1223,6 +1224,7 @@ li {
 .contact-main-section {
   width: 100%;
   margin-top: 5rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 767px) {
   .contact-main-section {
@@ -1308,7 +1310,7 @@ li {
   margin-top: 1.5rem;
   color: #ffffff99;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info {
+.contact-main-section .more-info {
   margin-top: 5rem;
   width: 100%;
   display: flex;
@@ -1316,7 +1318,7 @@ li {
   align-items: center;
   flex-direction: row;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info .info-icons {
+.contact-main-section .more-info .info-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1324,17 +1326,17 @@ li {
   margin-right: 4rem;
   position: relative;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info .info-icons li {
+.contact-main-section .more-info .info-icons li {
   margin: 1.5rem 0;
   padding: 1rem;
   background-color: #cf000f;
   opacity: 0.6;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info .info-icons li .icon {
+.contact-main-section .more-info .info-icons li .icon {
   color: #fff;
   font-size: 2rem;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info .info-icons::after {
+.contact-main-section .more-info .info-icons::after {
   position: absolute;
   content: "";
   top: 1.8rem;
@@ -1343,26 +1345,27 @@ li {
   width: 1px;
   background-color: #ffffff99;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info .info-details li {
+.contact-main-section .more-info .info-details li {
   margin: 3.5rem 0;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info .info-details li span {
+.contact-main-section .more-info .info-details li span {
   color: #fff;
   font-weight: 600;
   margin-bottom: 0.7rem;
 }
-.contact-main-section .contact-main-wrapper .main-contact-right-container .more-info .info-details li p {
+.contact-main-section .more-info .info-details li p {
   color: #ffffff99;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container {
+
+.main-contact-left-container {
   width: 100%;
 }
 @media screen and (min-width: 1000px) {
-  .contact-main-section .contact-main-wrapper .main-contact-left-container {
+  .main-contact-left-container {
     width: 60%;
   }
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container p {
+.main-contact-left-container p {
   color: #fff;
   font-size: 2.3rem;
   font-style: italic;
@@ -1370,7 +1373,7 @@ li {
   text-align: end;
   margin-right: 2rem;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form {
+.main-contact-left-container #contact-form {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1378,11 +1381,12 @@ li {
   flex-direction: column;
   padding-top: 4rem;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form .form-group {
-  width: 100%;
+.main-contact-left-container #contact-form .form-group {
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 1rem;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form .form-group input {
+.main-contact-left-container #contact-form .form-group input {
   width: 100%;
   background-color: #161616;
   border-bottom: 1px solid #ffffff99;
@@ -1391,8 +1395,9 @@ li {
   font-weight: 500;
   color: #ffffff99;
   cursor: text;
+  font-family: "Quicksand", sans-serif;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form .form-group #message {
+.main-contact-left-container #contact-form .form-group #message {
   margin-top: 1rem;
   padding: 0 1rem;
   background-color: #161616;
@@ -1403,8 +1408,17 @@ li {
   color: #ffffff99;
   font-weight: 500;
   font-size: 1.7rem;
+  resize: none;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form .btn {
+.main-contact-left-container #contact-form .form-group #message::-webkit-scrollbar {
+  width: 10px;
+}
+.main-contact-left-container #contact-form .form-group #message::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #cf000f;
+  cursor: pointer;
+}
+.main-contact-left-container #contact-form .btn {
   padding: 0.6rem 2rem;
   border: 2px solid #cf000f;
   background-color: #cf000f;
@@ -1417,8 +1431,9 @@ li {
   z-index: 1;
   opacity: 0.99;
   align-self: flex-start;
+  margin-left: 6rem;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form .btn::before {
+.main-contact-left-container #contact-form .btn::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -1432,10 +1447,10 @@ li {
   transform: scaleX(0);
   z-index: -1;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form .btn:hover {
+.main-contact-left-container #contact-form .btn:hover {
   color: #cf000f;
 }
-.contact-main-section .contact-main-wrapper .main-contact-left-container #contact-form .btn:hover::before {
+.main-contact-left-container #contact-form .btn:hover::before {
   transform: scaleX(1);
 }
 
