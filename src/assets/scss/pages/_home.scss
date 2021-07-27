@@ -1,8 +1,12 @@
   @import '../components/header';
   @import '../components/headline';
+  @import '../components/about';
+  @import '../components/project';
+  @import '../components/contact';
 
   .container {
     width: 100%;
+    height: 100%;
     position: relative;
   }
   
@@ -31,7 +35,7 @@
       color: $text-color;
       font-weight: 500;
       display: none;
-      @include media(400px) {
+      @include media(700px) {
         display: block;
       }
     }

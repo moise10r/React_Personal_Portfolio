@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Header from '../header';
-import HeadLine from '../headline';
-
 import { IconContext } from 'react-icons';
 import { ImGithub } from 'react-icons/im';
 import { FiTwitter } from 'react-icons/fi';
 import { GrLinkedinOption } from 'react-icons/gr';
+import Header from '../header';
+import HeadLine from '../headline';
+import About from '../about';
+import Projects from '../projects';
+import Contact from '../contact';
 
 class Home extends Component {
 	state = {};
@@ -15,6 +17,9 @@ class Home extends Component {
 				<Header />
 				<main>
 					<HeadLine />
+					<About />
+					<Projects />
+					<Contact  />
 				</main>
 				<div className='left-bar-icons'>
 					<div className='bar'></div>

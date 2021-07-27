@@ -14,8 +14,8 @@ class Header extends Component {
 		isOpen: false,
 		links: [
 			{ id: 1, title: 'Home', to: '/' },
-			{ id: 2, title: 'Portfolio', to: '/' },
-			{ id: 3, title: 'About', to: '/' },
+			{ id: 2, title: 'About', to: '/' },
+			{ id: 3, title: 'Portfolio', to: '/' },
 			{ id: 4, title: 'Contact', to: '/' },
 		],
 	};
@@ -32,7 +32,7 @@ class Header extends Component {
 	};
 	variants_4 = {
 		open: { y: -10 },
-		closed: { y: '-100vw'},
+		closed: { y: '100vw' },
 	};
 	handleMenu() {
 		this.setState({
@@ -85,16 +85,14 @@ class Header extends Component {
 									<img src={navbarImg} alt='' />
 								</motion.div>
 								<motion.div
-									animate={isOpen ? 'open' : 'closed'}
-									transition={{ duration: 2 }}
-									variants={this.variants}
 									className='left-list-container'
 								>
-									<motion.ul 
-														animate={isOpen ? 'open' : 'closed'}
-														transition={{ duration: 2 }}
-														variants={this.variants_4}
-									className='social-media-list'>
+									<motion.ul
+										animate={isOpen ? 'open' : 'closed'}
+										transition={{ duration: 1, type: 'spring' }}
+										variants={this.variants_4}
+										className='social-media-list'
+									>
 										<li className='social-media-link'>
 											<a href='#2'>
 												<IconContext.Provider
@@ -133,13 +131,14 @@ class Header extends Component {
 										</li>
 									</motion.ul>
 									<motion.ul
-										animate={isOpen ? 'open' : 'closed'}
-										transition={{ duration: 2 }}
-										variants={this.variants}
+										// animate={isOpen ? 'open' : 'closed'}
+										// transition={{ delay: 2, type: 'spring', stiffness: 60 }}
+										// variants={this.variants}
 										className='nav-list'
 									>
-										{links.map((link) => (
+										{links.map(({ id, title }) => (
 											<motion.li
+												key={id}
 												whileHover={{
 													scale: 1.3,
 													x: -80,
@@ -154,8 +153,8 @@ class Header extends Component {
 													href='#1'
 													className='active'
 												>
-													{link.title}
-													<span>0{link.id}</span>
+													{title}
+													<span>0{id}</span>
 												</motion.a>
 											</motion.li>
 										))}

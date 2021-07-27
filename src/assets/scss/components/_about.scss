@@ -1,0 +1,380 @@
+.about {
+  width: 100%;
+  margin-top: 12rem;
+  overflow: hidden;
+  @include media(992px) {
+     margin-top: 15rem;
+  }
+  .about-me-main-section {
+    width: 75%;
+    margin: 0 auto;
+    .title {
+      font-size: 4rem;
+      font-weight: 600;
+      color: $text-color;
+      position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 5rem;
+      @include media(763px) {
+        font-size: 6rem;
+        font-weight: 600;
+     }
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        width: 15rem;
+        background-color: $secondary-color;
+      }
+      span {
+        color: $secondary-color;
+        animation:linear infinite alternate;
+        // animation-name: scalePoint;
+        animation-duration: 1.5s;
+      }
+      @keyframes scalePoint {
+        0% {
+          font-size: 6rem;
+        }
+        100% {
+          font-size: 7rem;
+        }
+      }	
+    }
+    .main-about-wrapper-one {
+      width: 100%;
+      margin-bottom: 7rem;
+      @include flex-between(column);
+      @include media(990px) {
+        @include flex-between(row);
+     }
+      .about-left-wrapper {
+        width: 100%;
+        @include media(990px) {
+          flex: 1;
+        }
+        .about-me-details {
+          font-size: 1.8rem;
+          color: $secondary-text-color;
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+        .about-connect {
+					font-size: 2.2rem;
+					font-weight: 500;
+					color: $secondary-color;		
+          @include flex-start(row);
+          span{
+            &:last-child{
+              margin-top: 1rem;
+              margin-left: 1rem;
+              color: $secondary-text-color;
+              animation:linear infinite alternate;
+              animation-name: flowRight;
+              animation-duration: 2s;
+            }
+            @keyframes flowRight {
+              0% {
+                transform: translateX(0px);
+              }
+
+              100% {
+                transform: translateX(10px);
+              }
+            }
+          }
+        }
+        .about-social-icon-list {
+          @include flex-start(row);
+          margin-top: 1.5rem;
+          .social-media-link {
+            margin-right: 2.5rem;
+            .about-icon {
+              font-size: 2.5rem;
+              color: $secondary-text-color;
+              &:hover {
+                color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+      .about-rigth-wrapper{
+        width: 100%;
+        margin-top: 6rem;
+        
+        @include media(990px) {
+          width: 55%;
+          padding-left: 6rem;
+          margin-top: 0;
+        }
+        .languages-list {
+          width: 100%;
+          @include flex-center(column);
+          .language-header {
+            width: 100%;
+            @include flex-between(row);
+            color: $text-color;
+            padding-bottom: 1rem;
+            .icons {
+              @include flex-center(row);
+              .carousel-icon-wrapper {
+                @include flex-center(row);
+                padding: 0.5rem;
+                border-radius: 50%;
+                cursor: pointer;
+                @include media(500px){
+                  padding: 1rem;
+                }
+                &:hover {
+                  background-color: darken($text-color, 40);
+                }
+                &:first-child {
+                  margin-right: 2rem;
+                }
+              }
+            }
+            .skill-title{
+              font-size: 2rem;
+            }
+          }
+          .about-rigth-list-wrapper {
+            width: 100%;
+            position: relative;
+            @include flex-between(row);
+
+          }
+          .languages-list-container {
+              width: 90%;
+              margin: 0 auto;
+              transition: all 2s ease-in-out;   
+              margin-top: 1rem;
+              overflow-x: auto;
+              @include flex-start(row);
+              &::-webkit-scrollbar {
+                visibility: hidden;
+              }
+              .language-link {
+                min-width: 55%;
+                position: relative;
+                left: 0;
+                background-color: darken($secondary-text-color, 80);
+                border-radius: 0.5rem;
+                padding: 1rem 1rem;
+                @include flex-center(column);;
+                margin: 0 0.5rem;
+                transition: 0.5s;
+                @include media(597px) {
+                  min-width: 31%;
+                } 
+                span {
+                  color: $secondary-text-color;
+                  font-size: 1.8rem;
+                  font-weight: 500;
+                  margin-top: 0.3rem;
+                  text-align: center;
+                  @include media(990px) {
+                    margin-top: 0.7rem;
+                    margin-left: 0;
+                  } 
+                }
+                .img-wrapper {
+                  height: 4.5rem;
+                  width: 4.5rem;
+                  border-radius: 50%;
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+          }
+          &.lang {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+    .main-about-wrapper-two {
+      width: 100%;
+      @include flex-center(column);
+      @include media(772px){
+        @include flex-start(column);
+        align-items: flex-start;
+      }
+      @include media(1200px){
+        @include flex-center(row);
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .about-left-main-container {
+        width: 80%;
+        max-width: 35rem;
+        padding: 9rem 4rem;
+        border: 1px solid $secondary-text-color;
+        border-right: none;
+        @include media(1200px){
+          width: 50%;
+        }
+        .experience-year {
+          width: 100%;
+          @include flex-center(row);
+          span {
+            &:first-child {
+              font-size: 14.5rem;
+              font-weight: 900;
+              line-height: 1;
+              color: $text-color;
+            }
+            &:last-child {
+              margin-bottom: 1.4rem;
+              padding: 1.2rem;
+              border-radius: 50%;
+              background-color: $secondary-color;
+              margin-left: 1.5rem;
+              align-self: flex-end;
+            }
+          }
+        }
+        .year-paragraph {
+          width: 100%;
+          margin-top: 5rem;
+          @include flex-between(row);
+          .right {
+            @include flex-end(column);
+            align-items: flex-end;
+            span {
+              margin-bottom: 0.7rem;
+              font-size: 2rem;
+              font-weight: 600;
+              line-height: 1.5;
+              color: $text-color;
+            }
+          }
+          .left {
+            height: 2px;
+            width: 30%;
+            align-self: flex-end;
+            background-color: $text-color;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+          }
+        }
+      }
+      .about-right-main-container {
+        width: 100%;
+        margin-top: 9rem;
+        @include media(1200px){
+          justify-self: flex-start;
+          width: 50%;
+          margin-top: 0;
+        }
+        .great-experience {
+          width: 100%;
+          max-width: 600px;
+          color: $text-color;
+          text-align: start;
+          font-size: 4.6rem;
+        }
+        .detail {
+          margin-top: 2rem;
+          color: $secondary-text-color;
+          max-width: 350px;
+          line-height: 1.5;
+        }
+        .progrees-container {
+          width: 100%;
+          margin-top: 6rem;
+          .progress {
+            width: 100%;
+            margin-bottom: 7rem;
+            max-width: 50rem;
+            @include flex-center(column);
+            .progress-container {
+              width: 100%;
+              @include flex-between(row);
+              span {
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: $text-color;
+              }
+            }
+            .progress-bar {
+              width: 100%;
+              height: 0.7rem;
+              border-radius: 0.7rem;
+              margin-top: 1.8rem;
+              background-color: $text-color;
+              position: relative;
+              &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 60%;
+                height: 100%;
+                background-color: $secondary-color;
+                border-radius: 0.7rem;
+              }
+            }
+            &:nth-child(2) .progress-bar::after{
+              width: 75%;
+            }
+            &:nth-child(3) .progress-bar::after{
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .short-video-section {
+    width: 100%;
+    margin-top: 6rem;
+    position: relative;
+    @include media(1200px){
+      margin-top: 10rem;
+    }
+    .about-img-wrapper {
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    .play-container {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include flex-center(row);
+    }
+    .play {
+      padding: 2rem;
+      border: 2px solid $text-color;
+      border-radius: 50%;
+      cursor: pointer;
+      @include media(900px){
+          padding: 3.6rem;
+      }
+      @include flex-center(row);
+      .about-icon {
+        color: $text-color;
+        font-size: 2.7rem;
+        @include media(900px){
+          font-size: 3.7rem;
+      }
+      }
+      &:hover {
+        padding: 3.9rem;
+      }
+    }
+  }
+}
+
+.under {
+  color: $secondary-color;
+}
