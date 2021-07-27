@@ -44,7 +44,7 @@ class Home extends Component {
 					<div className='bar'></div>
 					<ul className='social-icons-list'>
 						<li className='social-left-bar-icons-link'>
-							<a href='#1'>
+							<a href='https://github.com/moise10r'>
 								<IconContext.Provider value={{ className: 'bar-icon' }}>
 									<ImGithub />
 								</IconContext.Provider>
@@ -58,7 +58,7 @@ class Home extends Component {
 							</a>
 						</li>
 						<li className='social-left-bar-icons-link'>
-							<a href='#1'>
+							<a href='https://www.linkedin.com/in/nganulo-rushanika-mo%C3%AFse-626139197/'>
 								<IconContext.Provider value={{ className: 'bar-icon' }}>
 									<GrLinkedinOption />
 								</IconContext.Provider>
