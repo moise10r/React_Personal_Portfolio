@@ -15,7 +15,7 @@ class Home extends Component {
 		const progressBar = document.querySelector('.home-progress-bar');
 		function updateProgressBar() {
 			console.log(getProgressPercentage());
-			progressBar.style.height = `${getProgressPercentage()}vh`;
+			progressBar.style.height = `${getProgressPercentage()}%`;
 			progressBar.style.maxHeight = '100%';
 			if (getProgressPercentage() > 0) {
 				progressBar.style.background = 'red';
