@@ -13,6 +13,7 @@ class Projects extends Component {
 	}
 	render() {
 		const { data } = this.state;
+		const { onHandleProjectDetail } = this.props;
 		return (
 			<section className='main-section-project'>
 				<div className='project-main-wrapper'>
@@ -30,10 +31,14 @@ class Projects extends Component {
 					</p>
 					<ul className='card-list-container'>
 						{data.map(
-							({ id, title, image, description, detail, technologies }) => (
-								<li data-aos="flip-left"
-								data-aos-easing="ease-out-cubic"
-								data-aos-duration="2000"  key={id} className='card'>
+							({ id, title, image, type, development, year, detail, technologies,fullDesciption }) => (
+								<li
+									data-aos='flip-left'
+									data-aos-easing='ease-out-cubic'
+									data-aos-duration='2000'
+									key={id}
+									className='card'
+								>
 									<a class='img-wrapper' href='#2'>
 										<img src={image} alt='tonic' />
 									</a>
@@ -42,15 +47,15 @@ class Projects extends Component {
 											<h2>{title}</h2>
 										</div>
 										<div class='info'>
-											<span>{description.type}</span>
+											<span>{type}</span>
 											<span>
 												<img src={count} className='counter' alt='counter' />
 											</span>
-											<span>{description.development}</span>
+											<span>{development}</span>
 											<span>
 												<img src={count} className='counter' alt='counter' />
 											</span>
-											<span>{description.year}</span>
+											<span>{year}</span>
 										</div>
 										<div class='detail'>
 											<p>{detail}</p>
@@ -66,7 +71,12 @@ class Projects extends Component {
 												<a href='#2'>JS</a>
 											</li>
 										</ul>
-										<div class='see-project'>
+										<div
+											onClick={() =>
+												onHandleProjectDetail({ id, title, image, type, development, year, detail, technologies,fullDesciption })
+											}
+											class='see-project'
+										>
 											<a class='btn' href='#2'>
 												See Project
 											</a>
