@@ -582,14 +582,6 @@ li {
   animation: linear infinite alternate;
   animation-duration: 1.5s;
 }
-@keyframes scalePoint {
-  0% {
-    font-size: 6rem;
-  }
-  100% {
-    font-size: 7rem;
-  }
-}
 .about .about-me-main-section .main-about-wrapper-one {
   width: 100%;
   margin-bottom: 7rem;
@@ -935,7 +927,7 @@ li {
   content: "";
   top: 0;
   left: 0;
-  width: 60%;
+  width: 80%;
   height: 100%;
   background-color: #cf000f;
   border-radius: 0.7rem;
@@ -944,7 +936,7 @@ li {
   width: 75%;
 }
 .about .about-me-main-section .main-about-wrapper-two .about-right-main-container .progrees-container .progress:nth-child(3) .progress-bar::after {
-  width: 90%;
+  width: 70%;
 }
 .about .short-video-section {
   width: 100%;

@@ -51,7 +51,7 @@ class Home extends Component {
 							</a>
 						</li>
 						<li className='social-left-bar-icons-link'>
-							<a href='#1'>
+							<a href='https://twitter.com/MRushanika'>
 								<IconContext.Provider value={{ className: 'bar-icon' }}>
 									<FiTwitter />
 								</IconContext.Provider>

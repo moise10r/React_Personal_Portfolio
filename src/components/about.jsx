@@ -321,8 +321,8 @@ class About extends Component {
 								Great Experience
 							</h2>
 							<p data-aos='zoom-in-up' className='detail'>
-								Fill appear won't may make moveth signs. Fourth. Good own. Green
-								you're moveth us, lesser.
+								I have serious passion for UI effects, animations and creating
+								intuitive, dynamic user experiences.
 							</p>
 							<div className='progrees-container'>
 								<div

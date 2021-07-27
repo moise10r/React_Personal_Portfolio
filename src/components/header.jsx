@@ -103,7 +103,7 @@ class Header extends Component {
 											</a>
 										</li>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://github.com/moise10r'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -112,7 +112,7 @@ class Header extends Component {
 											</a>
 										</li>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://twitter.com/MRushanika'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -121,7 +121,7 @@ class Header extends Component {
 											</a>
 										</li>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://www.linkedin.com/in/nganulo-rushanika-mo%C3%AFse-626139197/'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -131,9 +131,6 @@ class Header extends Component {
 										</li>
 									</motion.ul>
 									<motion.ul
-										// animate={isOpen ? 'open' : 'closed'}
-										// transition={{ delay: 2, type: 'spring', stiffness: 60 }}
-										// variants={this.variants}
 										className='nav-list'
 									>
 										{links.map(({ id, title }) => (
