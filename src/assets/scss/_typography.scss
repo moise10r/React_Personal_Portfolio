@@ -1,3 +1,5 @@
+@import './mixins';
+
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +17,16 @@ body {
   font-size: 1.6rem;
   background-color: $black-ground-color;
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
   }
   &::-webkit-scrollbar-thumb {
     background: $secondary-color;
+  }
+
+  @include media(500px) {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
   }
 }
 

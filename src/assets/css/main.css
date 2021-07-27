@@ -18,10 +18,15 @@ body {
   background-color: #161616;
 }
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 body::-webkit-scrollbar-thumb {
   background: #cf000f;
+}
+@media screen and (min-width: 500px) {
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
 }
 
 input,
