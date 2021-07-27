@@ -1456,6 +1456,9 @@ li {
   height: 100%;
   position: relative;
 }
+.container.open {
+  filter: blur(8px);
+}
 
 .bar {
   height: 100px;
