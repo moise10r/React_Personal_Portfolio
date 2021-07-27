@@ -303,15 +303,13 @@ class About extends Component {
 					</div>
 					<div className='main-about-wrapper-two'>
 						<div className='about-left-main-container'>
-							<div 
-							data-aos="fade-right"
-							className='experience-year'>
+							<div data-aos='fade-right' className='experience-year'>
 								<span>2</span>
 								<span className='dot'></span>
 							</div>
 							<div className='year-paragraph'>
 								<div className='left'></div>
-								<div data-aos="fade-up-right" className='right'>
+								<div data-aos='fade-up-right' className='right'>
 									<span>Year</span>
 									<span>Experience</span>
 									<span>Working</span>
@@ -319,34 +317,41 @@ class About extends Component {
 							</div>
 						</div>
 						<div className='about-right-main-container'>
-							<h2 data-aos="fade-down-left" className='great-experience'>Great Experience</h2>
-							<p data-aos="zoom-in-up" className='detail'>
+							<h2 data-aos='fade-down-left' className='great-experience'>
+								Great Experience
+							</h2>
+							<p data-aos='zoom-in-up' className='detail'>
 								Fill appear won't may make moveth signs. Fourth. Good own. Green
 								you're moveth us, lesser.
 							</p>
 							<div className='progrees-container'>
-								<div 	data-aos="zoom-out-left" 
-										data-aos-duration='10000'	 className='progress'>
-									<div 
-								
-									className='progress-container'>
+								<div
+									data-aos='zoom-out-left'
+									data-aos-duration='10000'
+									className='progress'
+								>
+									<div className='progress-container'>
 										<span>Web design</span>
 										<span>70%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
 								<div
-								data-aos="zoom-out-left" 
-								data-aos-duration='20000'
-								className='progress'>
+									data-aos='zoom-out-left'
+									data-aos-duration='20000'
+									className='progress'
+								>
 									<div className='progress-container'>
 										<span>Electronic</span>
 										<span>85%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
-								<div 	data-aos="zoom-out-left" 
-										data-aos-duration='30000'	 className='progress'>
+								<div
+									data-aos='zoom-out-left'
+									data-aos-duration='30000'
+									className='progress'
+								>
 									<div className='progress-container'>
 										<span>Web design</span>
 										<span>90%</span>
@@ -359,7 +364,7 @@ class About extends Component {
 				</div>
 				<div className='short-video-section'>
 					<div className='short-video-container'>
-						<div className='about-img-wrapper'>
+						<div data-aos='zoom-in' className='about-img-wrapper'>
 							<img src={about} alt='bg' />
 						</div>
 						<div className='play-container'>

@@ -11,6 +11,25 @@ import Contact from '../contact';
 
 class Home extends Component {
 	state = {};
+	componentDidMount() {
+		const progressBar = document.querySelector('.home-progress-bar');
+		function updateProgressBar() {
+			console.log(getProgressPercentage());
+			progressBar.style.height = `${getProgressPercentage()}vh`;
+			progressBar.style.maxHeight = '100%';
+			if (getProgressPercentage() > 0) {
+				progressBar.style.background = 'red';
+			}
+			requestAnimationFrame(updateProgressBar);
+		}
+		function getProgressPercentage() {
+			return (
+				(window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+				100
+			);
+		}
+		updateProgressBar();
+	}
 	render() {
 		return (
 			<div className='container'>
@@ -19,7 +38,7 @@ class Home extends Component {
 					<HeadLine />
 					<About />
 					<Projects />
-					<Contact  />
+					<Contact />
 				</main>
 				<div className='left-bar-icons'>
 					<div className='bar'></div>
@@ -48,7 +67,9 @@ class Home extends Component {
 					</ul>
 					<div className='bar last'></div>
 				</div>
-				<div className='rigth-scroll-bar'></div>
+				<div className='rigth-scroll-bar'>
+					<div className='home-progress-bar'></div>
+				</div>
 			</div>
 		);
 	}

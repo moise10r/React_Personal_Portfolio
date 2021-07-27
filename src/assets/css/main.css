@@ -1544,12 +1544,11 @@ li {
   border-radius: 0.5rem;
   background-color: #fff;
 }
-.rigth-scroll-bar::after {
+.rigth-scroll-bar .progress-bar {
   position: absolute;
   content: "";
   top: 0;
   width: 100%;
-  height: 10vh;
   background-color: #cf000f;
 }
 @media screen and (min-width: 500px) {
