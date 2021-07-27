@@ -84,9 +84,7 @@ class Header extends Component {
 								>
 									<img src={navbarImg} alt='' />
 								</motion.div>
-								<motion.div
-									className='left-list-container'
-								>
+								<motion.div className='left-list-container'>
 									<motion.ul
 										animate={isOpen ? 'open' : 'closed'}
 										transition={{ duration: 1, type: 'spring' }}
@@ -94,7 +92,7 @@ class Header extends Component {
 										className='social-media-list'
 									>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://www.facebook.com/moiseMrnrushanika'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -130,9 +128,7 @@ class Header extends Component {
 											</a>
 										</li>
 									</motion.ul>
-									<motion.ul
-										className='nav-list'
-									>
+									<motion.ul className='nav-list'>
 										{links.map(({ id, title }) => (
 											<motion.li
 												key={id}

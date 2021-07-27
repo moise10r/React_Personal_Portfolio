@@ -158,7 +158,7 @@ class About extends Component {
 									data-aos-duration='1000'
 									className='social-media-link'
 								>
-									<a href='#2'>
+									<a href='https://www.facebook.com/moiseMrnrushanika'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<FaFacebookF />
 										</IconContext.Provider>
@@ -169,7 +169,7 @@ class About extends Component {
 									data-aos-duration='4000'
 									className='social-media-link'
 								>
-									<a href='#2'>
+									<a href='https://github.com/moise10r'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<ImGithub />
 										</IconContext.Provider>
