@@ -332,7 +332,7 @@ class About extends Component {
 								>
 									<div className='progress-container'>
 										<span>Web design</span>
-										<span>70%</span>
+										<span>80%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
@@ -343,7 +343,7 @@ class About extends Component {
 								>
 									<div className='progress-container'>
 										<span>Electronic</span>
-										<span>85%</span>
+										<span>75%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
@@ -353,8 +353,8 @@ class About extends Component {
 									className='progress'
 								>
 									<div className='progress-container'>
-										<span>Web design</span>
-										<span>90%</span>
+										<span>Problem solving</span>
+										<span>70%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
