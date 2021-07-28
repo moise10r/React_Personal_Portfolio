@@ -429,3 +429,40 @@ a {
     color: $black-ground-color;
   }
 }
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include flex-center(row);
+  z-index: 999;
+  display: none;
+  &.open-video {
+    display: block;
+  } 
+}
+
+.video-content-wrapper {
+  width: 100%;
+  height: 100%;
+  @include flex-center(row);
+}
+
+.close-video {
+  position: absolute;
+  top: 2rem;
+  right: 20%;
+  width: 4rem;
+  height: 4rem;
+  background-color: $text-color;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 999;
+  @include flex-center(row);
+  .icon {
+    font-size: 2.5rem;
+    color: $black-ground-color;
+  }
+}

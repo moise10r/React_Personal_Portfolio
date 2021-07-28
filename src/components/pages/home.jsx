@@ -10,12 +10,14 @@ import Projects from '../projects';
 import Contact from '../contact';
 import counter from '../../assets/images/Counter.png';
 import { VscClose } from 'react-icons/vsc';
-
+import VideoPlayer from 'react-video-js-player';
+import Radar from '../../assets/images/radar_02.mp4';
 
 class Home extends Component {
 	state = {
 		item:{},
 		isOpen:false,
+		start: false
 	};
 	componentDidMount() {
 		const progressBar = document.querySelector('.home-progress-bar');
@@ -46,16 +48,27 @@ class Home extends Component {
 			isOpen:false
 		});
 	}
+	handleWatch = () => {
+		this.setState({
+			start:true
+		})
+	}
+	handleCloseVideo = () => {
+		this.setState({
+			start: false
+		})
+	}
 	render() {
-		const { item ,isOpen } = this.state;
-		console.log(item.technologies);
+		const { item ,isOpen, start } = this.state;
+		const poster =
+			'https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fradar-localization-18739819.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Froyalty-free-stock-images-radar-localization-image18739819&tbnid=V53swVz5QAemoM&vet=12ahUKEwj7o5LwtYTyAhURQBoKHQT5Cj0QMygZegUIARCPAg..i&docid=OoVm1s3AFl2GzM&w=800&h=800&q=radar&ved=2ahUKEwj7o5LwtYTyAhURQBoKHQT5Cj0QMygZegUIARCPAg';
 		return (
 			<React.Fragment>
 				<div className={!isOpen ? 'container' : 'container open'}>
 					<Header />
 					<main>
 						<HeadLine />
-						<About />
+						<About onClick ={this.handleWatch}/>
 						<Projects onHandleProjectDetail={this.handleProjectDetail} />
 						<Contact />
 					</main>
@@ -172,6 +185,16 @@ class Home extends Component {
 						</div>
 					</div>
 					<div className='bar'></div>
+				</div>
+				<div className={!start ? ('video-container'):('video-container open-video')}>
+					<div className="video-content-wrapper">
+						<VideoPlayer src={Radar} poster={poster} height='500' width='620' />
+						<div className='close-video' onClick={() => this.handleCloseVideo()}>
+							<IconContext.Provider value={{ className: 'icon' }}>
+								<VscClose />
+							</IconContext.Provider>
+					</div>
+					</div>
 				</div>
 			</React.Fragment>
 		);

@@ -123,6 +123,7 @@ class About extends Component {
 
 	render() {
 		const { languages, frameWorks } = this.state;
+		const { onClick } = this.props;
 		return (
 			<section className='about'>
 				<div className='about-me-main-section'>
@@ -368,7 +369,7 @@ class About extends Component {
 							<img src={about} alt='bg' />
 						</div>
 						<div className='play-container'>
-							<div className='play'>
+							<div onClick={() => onClick()} className='play'>
 								<IconContext.Provider value={{ className: 'about-icon' }}>
 									<IoMdPlay />
 								</IconContext.Provider>
