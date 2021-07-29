@@ -7,7 +7,26 @@ import { IoIosSend } from 'react-icons/io';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 class Contact extends Component {
-	state = {};
+	state = {
+		user: {
+			name: '',
+			email: '',
+			message: ''
+		}
+	};
+	handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('submit');
+	}
+
+	handleChange = ({target: input}) => {
+		const user = {...this.state.user} 
+		user[input.name] = input.value
+		this.setState({
+			user
+		})
+	}
+
 	componentDidMount() {
 		AOS.init({
 			duration: 2000,
@@ -15,6 +34,7 @@ class Contact extends Component {
 	}
 
 	render() {
+		const { name, email , message} = this.state
 		return (
 			<section className='contact-main-section'>
 				<div className='contact-main-wrapper'>
@@ -87,20 +107,24 @@ class Contact extends Component {
 
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form id='contact-form' action='/'>
+							<form id='contact-form' onSubmit={this.handleSubmit}>
 								<div
 									data-aos='fade-left'
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<input type='text' name='name' placeholder='Your Name' />
+									<input type='text'
+										onChange={this.handleChange}
+									name='name' value={name} placeholder='Your Name' />
 								</div>
 								<div
 									data-aos='fade-left'
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<input type='text' name='email' placeholder='Your Email' />
+									<input type='text' 
+									onChange={this.handleChange}
+									name='email' value={email} placeholder='Your Email' />
 								</div>
 								<div
 									data-aos='fade-left'
@@ -110,6 +134,8 @@ class Contact extends Component {
 									<textarea
 										name='message'
 										id='message'
+										onChange={this.handleChange}
+										value={message}
 										cols='30'
 										rows='10'
 										placeholder='Message'
