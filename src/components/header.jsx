@@ -143,7 +143,7 @@ class Header extends Component {
 													whileHover={{
 														color: '#cf000f',
 													}}
-													href='#1'
+													href={title}
 													className='active'
 												>
 													{title}

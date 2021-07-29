@@ -15,7 +15,7 @@ class Projects extends Component {
 		const { data } = this.state;
 		const { onHandleProjectDetail } = this.props;
 		return (
-			<section className='main-section-project'>
+			<section id='Portfolio' className='main-section-project'>
 				<div className='project-main-wrapper'>
 					<h2 data-aos='fade-down-right' className='title'>
 						{' '}
@@ -31,7 +31,17 @@ class Projects extends Component {
 					</p>
 					<ul className='card-list-container'>
 						{data.map(
-							({ id, title, image, type, development, year, detail, technologies,fullDesciption }) => (
+							({
+								id,
+								title,
+								image,
+								type,
+								development,
+								year,
+								detail,
+								technologies,
+								fullDesciption,
+							}) => (
 								<li
 									data-aos='flip-left'
 									data-aos-easing='ease-out-cubic'
@@ -73,7 +83,17 @@ class Projects extends Component {
 										</ul>
 										<div
 											onClick={() =>
-												onHandleProjectDetail({ id, title, image, type, development, year, detail, technologies,fullDesciption })
+												onHandleProjectDetail({
+													id,
+													title,
+													image,
+													type,
+													development,
+													year,
+													detail,
+													technologies,
+													fullDesciption,
+												})
 											}
 											class='see-project'
 										>

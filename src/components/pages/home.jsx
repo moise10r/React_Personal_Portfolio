@@ -19,13 +19,14 @@ class Home extends Component {
 		isOpen:false,
 		start: false
 	};
+	progressBar = React.createRef();
 	componentDidMount() {
-		const progressBar = document.querySelector('.home-progress-bar');
+		const bar = this.progressBar.current;
 		function updateProgressBar() {
-			progressBar.style.height = `${getProgressPercentage()}%`;
-			progressBar.style.maxHeight = '100%';
+			bar.style.height = `${getProgressPercentage()}%`;
+			bar.style.maxHeight = '100%';
 			if (getProgressPercentage() > 0) {
-				progressBar.style.background = 'red';
+				bar.style.background = 'red';
 			}
 			requestAnimationFrame(updateProgressBar);
 		}
@@ -60,11 +61,12 @@ class Home extends Component {
 	}
 	render() {
 		const { item ,isOpen, start } = this.state;
+		console.log(item);
 		const poster =
 			'https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fradar-localization-18739819.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Froyalty-free-stock-images-radar-localization-image18739819&tbnid=V53swVz5QAemoM&vet=12ahUKEwj7o5LwtYTyAhURQBoKHQT5Cj0QMygZegUIARCPAg..i&docid=OoVm1s3AFl2GzM&w=800&h=800&q=radar&ved=2ahUKEwj7o5LwtYTyAhURQBoKHQT5Cj0QMygZegUIARCPAg';
 		return (
 			<React.Fragment>
-				<div className={!start ?'container': !isOpen ? 'container': 'container open'}>
+				<div className={!isOpen ? 'container' : 'container open'}>
 					<Header />
 					<main>
 						<HeadLine />
@@ -100,7 +102,7 @@ class Home extends Component {
 						<div className='bar last'></div>
 					</div>
 					<div className='rigth-scroll-bar'>
-						<div className='home-progress-bar'></div>
+						<div ref={this.progressBar} className='home-progress-bar'></div>
 					</div>
 				</div>
 				<div
@@ -133,9 +135,9 @@ class Home extends Component {
 								</div>
 								<div className='about-links'>
 									<ul className='languages' id='lang'>
-										{/* {technologies.map(element => {
+										{/* {item.technologies.map(element => (
 										<li> <a href="#2">{element}</a></li>
-									})}  */}
+									))}  */}
 									</ul>
 									<div className='links'>
 										<a href='#2' className='btn'>

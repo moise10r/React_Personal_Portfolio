@@ -125,7 +125,7 @@ class About extends Component {
 		const { languages, frameWorks } = this.state;
 		const { onClick } = this.props;
 		return (
-			<section className='about'>
+			<section id='About' className='about'>
 				<div className='about-me-main-section'>
 					<h2 data-aos='fade-down-right' className='title'>
 						About me<span>.</span>
