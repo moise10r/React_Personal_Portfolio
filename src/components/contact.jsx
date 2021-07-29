@@ -6,6 +6,7 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { IoIosSend } from 'react-icons/io';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Input from './common/input';
 class Contact extends Component {
 	state = {
 		user: {
@@ -113,18 +114,14 @@ class Contact extends Component {
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<input type='text'
-										onChange={this.handleChange}
-									name='name' value={name} placeholder='Your Name' />
+									<Input onChange={this.handleChange} name='name' placeholder='Your Name' value={name}/>
 								</div>
 								<div
 									data-aos='fade-left'
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<input type='text' 
-									onChange={this.handleChange}
-									name='email' value={email} placeholder='Your Email' />
+									<Input onChange={this.handleChange} name='email' placeholder='Your Email' value={email}/>
 								</div>
 								<div
 									data-aos='fade-left'
