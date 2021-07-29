@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IconContext } from 'react-icons';
 import { GiCircleClaws } from 'react-icons/gi';
 import { MdLocationCity } from 'react-icons/md';
@@ -6,9 +6,22 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { IoIosSend } from 'react-icons/io';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Input from './common/input';
+import { useForm } from '@formspree/react';
 
 const Contact = () => {
+	const [state, handleSubmit] = useForm('mrgrkgvy');
+	const [value, setValue] = useState({
+		name:'',
+		email:'',
+		message:''
+	});
+
+	const handleChange = ({target:input}) => {
+		setValue({
+			...value,
+			[input.name]: input.value
+		})
+	}
 	useEffect(() => {
 			AOS.init({
 				duration:2000
@@ -86,40 +99,34 @@ const Contact = () => {
 
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form id='contact-form' >
+							<form id='contact-form' onSubmit={handleSubmit} >
 								<div
 									data-aos='fade-left'
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<Input name='name' placeholder='Your Name' value='name'/>
+									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" required/>
 								</div>
 								<div
 									data-aos='fade-left'
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<Input  name='email' placeholder='Your Email' value='email'/>
+									<input type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" required/>
 								</div>
 								<div
 									data-aos='fade-left'
 									data-aos-duration='2500'
 									className='form-group'
 								>
-									<textarea
-										name='message'
-										id='message'
-										value='message'
-										cols='30'
-										rows='10'
-										placeholder='Message'
-									></textarea>
+								<textarea name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" required></textarea>
 								</div>
 								<button
 									data-aos='fade-up'
 									data-aos-anchor-placement='center-bottom'
 									type='submit'
 									className='btn'
+									disabled={state.submitting}
 								>
 									Get In Touch
 								</button>
