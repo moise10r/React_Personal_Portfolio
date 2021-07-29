@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { IconContext } from 'react-icons';
 import { GiCircleClaws } from 'react-icons/gi';
 import { MdLocationCity } from 'react-icons/md';
@@ -7,36 +7,14 @@ import { IoIosSend } from 'react-icons/io';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Input from './common/input';
-class Contact extends Component {
-	state = {
-		user: {
-			name: '',
-			email: '',
-			message: ''
-		}
-	};
-	handleSubmit = (e) => {
-		e.preventDefault();
-		console.log('submit');
-	}
 
-	handleChange = ({target: input}) => {
-		const user = {...this.state.user} 
-		user[input.name] = input.value
-		this.setState({
-			user
-		})
-	}
-
-	componentDidMount() {
-		AOS.init({
-			duration: 2000,
-		});
-	}
-
-	render() {
-		const { name, email , message} = this.state
-		return (
+const Contact = () => {
+	useEffect(() => {
+			AOS.init({
+				duration:2000
+			});
+	}, []);
+	return (
 			<section className='contact-main-section'>
 				<div className='contact-main-wrapper'>
 					<h2 data-aos='fade-down-right' className='title'>
@@ -108,20 +86,20 @@ class Contact extends Component {
 
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form id='contact-form' onSubmit={this.handleSubmit}>
+							<form id='contact-form' >
 								<div
 									data-aos='fade-left'
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<Input onChange={this.handleChange} name='name' placeholder='Your Name' value={name}/>
+									<Input name='name' placeholder='Your Name' value='name'/>
 								</div>
 								<div
 									data-aos='fade-left'
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<Input onChange={this.handleChange} name='email' placeholder='Your Email' value={email}/>
+									<Input  name='email' placeholder='Your Email' value='email'/>
 								</div>
 								<div
 									data-aos='fade-left'
@@ -131,8 +109,7 @@ class Contact extends Component {
 									<textarea
 										name='message'
 										id='message'
-										onChange={this.handleChange}
-										value={message}
+										value='message'
 										cols='30'
 										rows='10'
 										placeholder='Message'
@@ -152,7 +129,6 @@ class Contact extends Component {
 				</div>
 			</section>
 		);
-	}
 }
 
 export default Contact;
