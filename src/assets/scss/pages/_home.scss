@@ -434,8 +434,8 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 99999;
   @include flex-center(row);
-  z-index: 999;
   display: none;
   &.open-video {
     display: block;
@@ -457,7 +457,6 @@ a {
   background-color: $text-color;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 999;
   @include flex-center(row);
   .icon {
     font-size: 2.5rem;

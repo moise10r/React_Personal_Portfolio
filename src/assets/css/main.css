@@ -1940,11 +1940,11 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 99999;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  z-index: 999;
   display: none;
 }
 .video-container.open-video {
@@ -1969,7 +1969,6 @@ a {
   background-color: #fff;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
