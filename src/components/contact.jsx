@@ -60,7 +60,7 @@ const Contact = () => {
 			});
 	}, []);
 	return (
-			<section className='contact-main-section'>
+			<section id='contact' title='contact' className='contact-main-section'>
 				<div className='contact-main-wrapper'>
 					<h2 data-aos='fade-down-right' className='title'>
 						Contact

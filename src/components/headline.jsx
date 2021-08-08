@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const HeadLine = () => {
 	return (
-		<section className='headline-section'>
+		<section className='headline-section' id="home" title ='home'>
 			<div className='main-healine-container container'>
 				<div className='headline-left-container'>
 					<motion.h1

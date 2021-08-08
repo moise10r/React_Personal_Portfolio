@@ -15,7 +15,7 @@ class Projects extends Component {
 		const { data } = this.state;
 		const { onHandleProjectDetail } = this.props;
 		return (
-			<section id='Portfolio' className='main-section-project'>
+			<section id='portfolio' title="portfolio" className='main-section-project'>
 				<div className='project-main-wrapper'>
 					<h2 data-aos='fade-down-right' className='title'>
 						{' '}

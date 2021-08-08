@@ -8,7 +8,7 @@ import { GrLinkedinOption } from 'react-icons/gr';
 import { VscClose } from 'react-icons/vsc';
 import navbarImg from '../assets/images/navbar-img.svg';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 class Header extends Component {
 	state = {
@@ -41,7 +41,7 @@ class Header extends Component {
 		});
 	}
 
-	handleCloseMenu() {
+	handleCloseMenu = () => {
 		if (this.state.isOpen) {
 			setTimeout(() => {
 				this.setState({
@@ -50,7 +50,11 @@ class Header extends Component {
 			}, 500);
 		} else return;
 	}
-
+	handleCloseHeader = () => {
+		this.setState({
+			isOpen: false,
+		});
+	}
 	render() {
 		const { links, isOpen } = this.state;
 		return (
@@ -130,7 +134,7 @@ class Header extends Component {
 										</li>
 									</motion.ul>
 									<motion.ul className='nav-list'>
-										{links.map(({ id, title }) => (
+										{links.map(({ id, title,to }) => (
 											<motion.li
 												key={id}
 												whileHover={{
@@ -142,6 +146,10 @@ class Header extends Component {
 											>
 												<Link
 													className='link'
+													to={to}
+													smooth={true}
+													duration={5000}
+													onClick = {this.handleCloseHeader}
 												>
 													{title}
 													<span>0{id}</span>
