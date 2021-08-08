@@ -13,8 +13,9 @@ class Projects extends Component {
 	}
 	render() {
 		const { data } = this.state;
+		const { onHandleProjectDetail } = this.props;
 		return (
-			<section className='main-section-project'>
+			<section id='portfolio' title="portfolio" className='main-section-project'>
 				<div className='project-main-wrapper'>
 					<h2 data-aos='fade-down-right' className='title'>
 						{' '}
@@ -30,44 +31,71 @@ class Projects extends Component {
 					</p>
 					<ul className='card-list-container'>
 						{data.map(
-							({ id, title, image, description, detail, technologies }) => (
-								<li data-aos="flip-left"
-								data-aos-easing="ease-out-cubic"
-								data-aos-duration="2000"  key={id} className='card'>
-									<a class='img-wrapper' href='#2'>
+							({
+								id,
+								title,
+								image,
+								type,
+								development,
+								year,
+								detail,
+								technologies,
+								fullDesciption,
+							}) => (
+								<li
+									data-aos='flip-left'
+									data-aos-easing='ease-out-cubic'
+									data-aos-duration='2000'
+									key={id}
+									className='card'
+								>
+									<a className='img-wrapper' href='#2'>
 										<img src={image} alt='tonic' />
 									</a>
-									<div class='right-content'>
-										<div class='project-title'>
+									<div className='right-content'>
+										<div className='project-title'>
 											<h2>{title}</h2>
 										</div>
-										<div class='info'>
-											<span>{description.type}</span>
+										<div className='info'>
+											<span>{type}</span>
 											<span>
 												<img src={count} className='counter' alt='counter' />
 											</span>
-											<span>{description.development}</span>
+											<span>{development}</span>
 											<span>
 												<img src={count} className='counter' alt='counter' />
 											</span>
-											<span>{description.year}</span>
+											<span>{year}</span>
 										</div>
-										<div class='detail'>
+										<div className='detail'>
 											<p>{detail}</p>
 										</div>
-										<ul class='languages'>
-											<li>
-												<a href='#2'>react</a>
-											</li>
-											<li>
-												<a href='#2'>Html</a>
-											</li>
-											<li>
-												<a href='#2'>JS</a>
-											</li>
+										<ul className='languages'>
+											{
+												technologies.map((tech) => (
+														<li>
+															<a href='#2'>{tech}</a>
+														</li>
+												))
+											}
 										</ul>
-										<div class='see-project'>
-											<a class='btn' href='#2'>
+										<div
+											onClick={() =>
+												onHandleProjectDetail({
+													id,
+													title,
+													image,
+													type,
+													development,
+													year,
+													detail,
+													technologies,
+													fullDesciption,
+												})
+											}
+											className='see-project'
+										>
+											<a className='btn' href='#2'>
 												See Project
 											</a>
 										</div>

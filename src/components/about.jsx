@@ -14,6 +14,8 @@ import ellipse_3 from '../assets/images/Ellipse_3.png';
 import ellipse_4 from '../assets/images/react.png';
 import ellipse_5 from '../assets/images/nodejs.png';
 import ellipse_6 from '../assets/images/jest.png';
+import ellipse_7 from '../assets/images/scss.svg';
+import ellipse_8 from '../assets/images/bootstrap.png';
 import about from '../assets/images/about.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -26,22 +28,13 @@ class About extends Component {
 			{ id: 1, title: 'JavaScript', image: ellipse_1 },
 			{ id: 2, title: 'Html', image: ellipse_2 },
 			{ id: 3, title: 'Css', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 4, title: 'Scss', image: ellipse_3 },
-			{ id: 1, title: 'JavaScript', image: ellipse_1 },
 		],
 		frameWorks: [
 			{ id: 1, title: 'React', image: ellipse_4 },
 			{ id: 2, title: 'Nodejs', image: ellipse_5 },
 			{ id: 3, title: 'Jest', image: ellipse_6 },
-			{ id: 3, title: 'Jest', image: ellipse_6 },
-			{ id: 3, title: 'Jest', image: ellipse_6 },
+			{ id: 4, title: 'scss', image: ellipse_7 },
+			{ id: 5, title: 'Bootstrap', image: ellipse_8 },
 		],
 	};
 
@@ -77,7 +70,6 @@ class About extends Component {
 				i = 0;
 			}
 			for (const j of lang) {
-				console.log(i);
 				if (visibleLang > 1) {
 					j.style.left = '-' + i + '%';
 				}
@@ -101,7 +93,6 @@ class About extends Component {
 				i2 = 0;
 			}
 			for (const j of fram) {
-				console.log(i);
 				if (visibleFram > 1) {
 					j.style.left = '-' + i2 + '%';
 				}
@@ -123,8 +114,9 @@ class About extends Component {
 
 	render() {
 		const { languages, frameWorks } = this.state;
+		const { onClick } = this.props;
 		return (
-			<section className='about'>
+			<section id='about' title="about" className='about'>
 				<div className='about-me-main-section'>
 					<h2 data-aos='fade-down-right' className='title'>
 						About me<span>.</span>
@@ -158,7 +150,7 @@ class About extends Component {
 									data-aos-duration='1000'
 									className='social-media-link'
 								>
-									<a href='#2'>
+									<a href='https://www.facebook.com/moiseMrnrushanika'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<FaFacebookF />
 										</IconContext.Provider>
@@ -169,7 +161,7 @@ class About extends Component {
 									data-aos-duration='4000'
 									className='social-media-link'
 								>
-									<a href='#2'>
+									<a href='https://github.com/moise10r'>
 										<IconContext.Provider value={{ className: 'about-icon' }}>
 											<ImGithub />
 										</IconContext.Provider>
@@ -303,15 +295,13 @@ class About extends Component {
 					</div>
 					<div className='main-about-wrapper-two'>
 						<div className='about-left-main-container'>
-							<div 
-							data-aos="fade-right"
-							className='experience-year'>
+							<div data-aos='fade-right' className='experience-year'>
 								<span>2</span>
 								<span className='dot'></span>
 							</div>
 							<div className='year-paragraph'>
 								<div className='left'></div>
-								<div data-aos="fade-up-right" className='right'>
+								<div data-aos='fade-up-right' className='right'>
 									<span>Year</span>
 									<span>Experience</span>
 									<span>Working</span>
@@ -319,37 +309,44 @@ class About extends Component {
 							</div>
 						</div>
 						<div className='about-right-main-container'>
-							<h2 data-aos="fade-down-left" className='great-experience'>Great Experience</h2>
-							<p data-aos="zoom-in-up" className='detail'>
-								Fill appear won't may make moveth signs. Fourth. Good own. Green
-								you're moveth us, lesser.
+							<h2 data-aos='fade-down-left' className='great-experience'>
+								Great Experience
+							</h2>
+							<p data-aos='zoom-in-up' className='detail'>
+								I have serious passion for UI effects, animations and creating
+								intuitive, dynamic user experiences.
 							</p>
 							<div className='progrees-container'>
-								<div 	data-aos="zoom-out-left" 
-										data-aos-duration='10000'	 className='progress'>
-									<div 
-								
-									className='progress-container'>
+								<div
+									data-aos='zoom-out-left'
+									data-aos-duration='10000'
+									className='progress'
+								>
+									<div className='progress-container'>
 										<span>Web design</span>
-										<span>70%</span>
+										<span>80%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
 								<div
-								data-aos="zoom-out-left" 
-								data-aos-duration='20000'
-								className='progress'>
+									data-aos='zoom-out-left'
+									data-aos-duration='20000'
+									className='progress'
+								>
 									<div className='progress-container'>
 										<span>Electronic</span>
-										<span>85%</span>
+										<span>75%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
-								<div 	data-aos="zoom-out-left" 
-										data-aos-duration='30000'	 className='progress'>
+								<div
+									data-aos='zoom-out-left'
+									data-aos-duration='30000'
+									className='progress'
+								>
 									<div className='progress-container'>
-										<span>Web design</span>
-										<span>90%</span>
+										<span>Problem solving</span>
+										<span>70%</span>
 									</div>
 									<div className='progress-bar'></div>
 								</div>
@@ -359,11 +356,11 @@ class About extends Component {
 				</div>
 				<div className='short-video-section'>
 					<div className='short-video-container'>
-						<div className='about-img-wrapper'>
+						<div data-aos='zoom-in' className='about-img-wrapper'>
 							<img src={about} alt='bg' />
 						</div>
 						<div className='play-container'>
-							<div className='play'>
+							<div onClick={() => onClick()} className='play'>
 								<IconContext.Provider value={{ className: 'about-icon' }}>
 									<IoMdPlay />
 								</IconContext.Provider>

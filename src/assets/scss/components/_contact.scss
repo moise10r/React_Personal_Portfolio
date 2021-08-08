@@ -2,13 +2,53 @@
 	width: 100%;
 	margin-top: 5rem;
 	overflow: hidden;
-	@include media(767px) {
-		margin-top: 20rem;
-	}
-	.contact-main-wrapper {
-		width: 75%;
-		margin: 0 auto;
-		padding-bottom: 3rem;
+
+		@include media(767px) {
+			margin-top: 20rem;
+		}
+		.contact-main-wrapper {
+			width: 75%;
+			margin: 0 auto;
+			padding-bottom: 3rem;
+			position: relative;
+			z-index: 10000;
+			.toast-container {
+		   	position: absolute; 
+				right: 0;
+				top: 27%;
+				padding: 1.5rem 1.5rem;
+				border-radius: 0.5rem;
+				background-color: #63d471;
+				background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+				@include flex-center(row);
+				.close-toast {
+					position: absolute;
+					@include flex-center(row);
+					bottom: -1rem;
+					right: -1.2rem;
+					padding: 0.5rem;
+					border-radius: 50%;
+					background-color: rgb(1, 112, 1);
+					cursor: pointer;
+					.close {
+						color: $text-color;
+						font-weight: 900;
+						font-size: 2rem;
+					}
+				}
+				.toast-message {
+					font-weight: 900;
+					color: $text-color;
+				}
+				.check-icon {
+					@include flex-center(row);
+					margin-right: 0.5rem;
+					.check {
+						font-size: 3rem;
+						color: #008000;
+					}
+				}
+			}
 		.title {
 			font-size: 4rem;
 			font-weight: 600;
@@ -180,8 +220,12 @@
 	            }
 
 	          }
-
 	        }
+					.error-msg {
+						font-size: 1.6rem;
+						margin-bottom: 0.5rem;
+						color: $secondary-color;
+					}	
 	        .btn {
 	          padding: 0.6rem 2rem;
 	          border: 2px solid $secondary-color;
@@ -219,3 +263,7 @@
 	        }
 	      }
 	  }
+
+		input:-internal-autofill-selected {
+			background-color: $black-ground-color;
+		}

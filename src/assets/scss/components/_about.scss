@@ -32,17 +32,8 @@
       span {
         color: $secondary-color;
         animation:linear infinite alternate;
-        // animation-name: scalePoint;
         animation-duration: 1.5s;
       }
-      @keyframes scalePoint {
-        0% {
-          font-size: 6rem;
-        }
-        100% {
-          font-size: 7rem;
-        }
-      }	
     }
     .main-about-wrapper-one {
       width: 100%;
@@ -314,7 +305,7 @@
                 content: "";
                 top: 0;
                 left: 0;
-                width: 60%;
+                width: 80%;
                 height: 100%;
                 background-color: $secondary-color;
                 border-radius: 0.7rem;
@@ -324,7 +315,7 @@
               width: 75%;
             }
             &:nth-child(3) .progress-bar::after{
-              width: 90%;
+              width: 70%;
             }
           }
         }

@@ -8,15 +8,16 @@ import { GrLinkedinOption } from 'react-icons/gr';
 import { VscClose } from 'react-icons/vsc';
 import navbarImg from '../assets/images/navbar-img.svg';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 class Header extends Component {
 	state = {
 		isOpen: false,
 		links: [
-			{ id: 1, title: 'Home', to: '/' },
-			{ id: 2, title: 'About', to: '/' },
-			{ id: 3, title: 'Portfolio', to: '/' },
-			{ id: 4, title: 'Contact', to: '/' },
+			{ id: 1, title: 'Home', to: 'home' },
+			{ id: 2, title: 'About', to: 'about' },
+			{ id: 3, title: 'Portfolio', to: 'portfolio' },
+			{ id: 4, title: 'Contact', to: 'contact' },
 		],
 	};
 	variants = {
@@ -40,7 +41,7 @@ class Header extends Component {
 		});
 	}
 
-	handleCloseMenu() {
+	handleCloseMenu = () => {
 		if (this.state.isOpen) {
 			setTimeout(() => {
 				this.setState({
@@ -49,7 +50,11 @@ class Header extends Component {
 			}, 500);
 		} else return;
 	}
-
+	handleCloseHeader = () => {
+		this.setState({
+			isOpen: false,
+		});
+	}
 	render() {
 		const { links, isOpen } = this.state;
 		return (
@@ -84,9 +89,7 @@ class Header extends Component {
 								>
 									<img src={navbarImg} alt='' />
 								</motion.div>
-								<motion.div
-									className='left-list-container'
-								>
+								<motion.div className='left-list-container'>
 									<motion.ul
 										animate={isOpen ? 'open' : 'closed'}
 										transition={{ duration: 1, type: 'spring' }}
@@ -94,7 +97,7 @@ class Header extends Component {
 										className='social-media-list'
 									>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://www.facebook.com/moiseMrnrushanika'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -103,7 +106,7 @@ class Header extends Component {
 											</a>
 										</li>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://github.com/moise10r'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -112,7 +115,7 @@ class Header extends Component {
 											</a>
 										</li>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://twitter.com/MRushanika'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -121,7 +124,7 @@ class Header extends Component {
 											</a>
 										</li>
 										<li className='social-media-link'>
-											<a href='#2'>
+											<a href='https://www.linkedin.com/in/nganulo-rushanika-mo%C3%AFse-626139197/'>
 												<IconContext.Provider
 													value={{ className: 'header-icon' }}
 												>
@@ -130,13 +133,8 @@ class Header extends Component {
 											</a>
 										</li>
 									</motion.ul>
-									<motion.ul
-										// animate={isOpen ? 'open' : 'closed'}
-										// transition={{ delay: 2, type: 'spring', stiffness: 60 }}
-										// variants={this.variants}
-										className='nav-list'
-									>
-										{links.map(({ id, title }) => (
+									<motion.ul className='nav-list'>
+										{links.map(({ id, title,to }) => (
 											<motion.li
 												key={id}
 												whileHover={{
@@ -146,16 +144,16 @@ class Header extends Component {
 												transition={{ duration: 1 }}
 												className='nav-link'
 											>
-												<motion.a
-													whileHover={{
-														color: '#cf000f',
-													}}
-													href='#1'
-													className='active'
+												<Link
+													className='link'
+													to={to}
+													smooth={true}
+													duration={5000}
+													onClick = {this.handleCloseHeader}
 												>
 													{title}
 													<span>0{id}</span>
-												</motion.a>
+												</Link>
 											</motion.li>
 										))}
 									</motion.ul>
