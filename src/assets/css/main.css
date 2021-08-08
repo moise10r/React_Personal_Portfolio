@@ -1255,6 +1255,7 @@ li {
   width: 100%;
   margin-top: 5rem;
   overflow: hidden;
+  z-index: 1;
 }
 @media screen and (min-width: 767px) {
   .contact-main-section {
@@ -1266,7 +1267,6 @@ li {
   margin: 0 auto;
   padding-bottom: 3rem;
   position: relative;
-  z-index: 99999999;
 }
 .contact-main-section .contact-main-wrapper .toast-container {
   position: absolute;
