@@ -71,15 +71,13 @@ class Projects extends Component {
 											<p>{detail}</p>
 										</div>
 										<ul className='languages'>
-											<li>
-												<a href='#2'>react</a>
-											</li>
-											<li>
-												<a href='#2'>Html</a>
-											</li>
-											<li>
-												<a href='#2'>JS</a>
-											</li>
+											{
+												technologies.map((tech) => (
+														<li>
+															<a href='#2'>{tech}</a>
+														</li>
+												))
+											}
 										</ul>
 										<div
 											onClick={() =>

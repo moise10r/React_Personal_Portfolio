@@ -1753,12 +1753,12 @@ a {
 }
 .card-popup-window .main-container .languages li {
   display: none;
-}
-.card-popup-window .main-container .languages li:nth-child(1), .card-popup-window .main-container .languages li:nth-child(2), .card-popup-window .main-container .languages li:nth-child(3) {
-  padding: 1rem 1rem;
   background-color: #232323;
+  padding: 1rem 1rem;
   border-radius: 8px;
   margin: 0.4rem;
+}
+.card-popup-window .main-container .languages li:nth-child(1), .card-popup-window .main-container .languages li:nth-child(2), .card-popup-window .main-container .languages li:nth-child(3) {
   display: block;
 }
 .card-popup-window .main-container .languages li a {
@@ -1825,9 +1825,6 @@ a {
     padding: 1rem 1.4rem;
   }
   .card-popup-window .main-container .languages li {
-    padding: 0.12rem 0.75rem;
-    background-color: #ebebff;
-    border-radius: 8px;
     margin: 0.4rem;
     display: block;
   }

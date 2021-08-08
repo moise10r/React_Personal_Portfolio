@@ -235,11 +235,11 @@ a {
 
       li {
         display: none;
+        background-color: lighten($black-ground-color, 5);
+        padding: 1rem 1rem;
+        border-radius: 8px;
+        margin: 0.4rem;
         &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-          padding: 1rem 1rem;
-          background-color: lighten($black-ground-color, 5);
-          border-radius: 8px;
-          margin: 0.4rem;
           display: block;
         }
 
@@ -319,9 +319,6 @@ a {
     }
 
     .languages li {
-      padding: 0.12rem 0.75rem;
-      background-color: #ebebff;
-      border-radius: 8px;
       margin: 0.4rem;
       display: block;
     }
