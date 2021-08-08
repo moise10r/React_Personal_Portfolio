@@ -184,6 +184,9 @@
 									color: $secondary-color;
 								}
 							}
+							&:hover a {
+								color: $secondary-color;
+							}
 						}
 						&::after {
 							position: absolute;

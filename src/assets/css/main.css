@@ -279,6 +279,9 @@ li {
   background-color: #fff;
   color: #cf000f;
 }
+.main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list .nav-link:hover a {
+  color: #cf000f;
+}
 .main-navbar.open .main-navbar-container .header-list .left-list-container .nav-list::after {
   position: absolute;
   content: "";

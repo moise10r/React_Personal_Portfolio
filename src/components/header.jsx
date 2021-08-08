@@ -8,15 +8,16 @@ import { GrLinkedinOption } from 'react-icons/gr';
 import { VscClose } from 'react-icons/vsc';
 import navbarImg from '../assets/images/navbar-img.svg';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 	state = {
 		isOpen: false,
 		links: [
-			{ id: 1, title: 'Home', to: '/' },
-			{ id: 2, title: 'About', to: '/' },
-			{ id: 3, title: 'Portfolio', to: '/' },
-			{ id: 4, title: 'Contact', to: '/' },
+			{ id: 1, title: 'Home', to: 'home' },
+			{ id: 2, title: 'About', to: 'about' },
+			{ id: 3, title: 'Portfolio', to: 'portfolio' },
+			{ id: 4, title: 'Contact', to: 'contact' },
 		],
 	};
 	variants = {
@@ -139,16 +140,12 @@ class Header extends Component {
 												transition={{ duration: 1 }}
 												className='nav-link'
 											>
-												<motion.a
-													whileHover={{
-														color: '#cf000f',
-													}}
-													href={title}
-													className='active'
+												<Link
+													className='link'
 												>
 													{title}
 													<span>0{id}</span>
-												</motion.a>
+												</Link>
 											</motion.li>
 										))}
 									</motion.ul>
