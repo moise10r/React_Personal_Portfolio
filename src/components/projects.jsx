@@ -49,14 +49,14 @@ class Projects extends Component {
 									key={id}
 									className='card'
 								>
-									<a class='img-wrapper' href='#2'>
+									<a className='img-wrapper' href='#2'>
 										<img src={image} alt='tonic' />
 									</a>
-									<div class='right-content'>
-										<div class='project-title'>
+									<div className='right-content'>
+										<div className='project-title'>
 											<h2>{title}</h2>
 										</div>
-										<div class='info'>
+										<div className='info'>
 											<span>{type}</span>
 											<span>
 												<img src={count} className='counter' alt='counter' />
@@ -67,10 +67,10 @@ class Projects extends Component {
 											</span>
 											<span>{year}</span>
 										</div>
-										<div class='detail'>
+										<div className='detail'>
 											<p>{detail}</p>
 										</div>
-										<ul class='languages'>
+										<ul className='languages'>
 											<li>
 												<a href='#2'>react</a>
 											</li>
@@ -95,9 +95,9 @@ class Projects extends Component {
 													fullDesciption,
 												})
 											}
-											class='see-project'
+											className='see-project'
 										>
-											<a class='btn' href='#2'>
+											<a className='btn' href='#2'>
 												See Project
 											</a>
 										</div>

@@ -151,7 +151,7 @@ const Contact = () => {
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" />
+									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name'/>
 								</div>
 								{errors.name && (<p className="error-msg">{errors.name}</p>)}
 								<div
@@ -159,7 +159,7 @@ const Contact = () => {
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<input  type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" />
+									<input  type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email'/>
 								</div>
 								{errors.email && (<p className="error-msg">{errors.email}</p>)}
 								<div
