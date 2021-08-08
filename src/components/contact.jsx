@@ -13,7 +13,7 @@ import validations from '../utils';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-	const [state, handleSubmit] = useForm('mrgrkgvy1');
+	const [state, handleSubmit] = useForm('mrgrkgvy');
 	const [value, setValue] = useState({
 		name:'',
 		email:'',
@@ -36,7 +36,6 @@ const Contact = () => {
 		setErrors(validations(value));		
 		if (!value.name && !value.email && !value.message) {
 			setIsSent(false);
-			console.log('false');
 		}
 		else if (!Object.keys(e).length) {
 			setTimeout(() => {
