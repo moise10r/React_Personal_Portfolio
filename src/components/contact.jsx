@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { IconContext } from 'react-icons';
 import { GiCircleClaws } from 'react-icons/gi';
 import { MdLocationCity } from 'react-icons/md';
@@ -25,17 +25,31 @@ const Contact = () => {
 		})
 	}
 
+	const form = useRef();
+	const inputName = useRef();
+	const inputEmail = useRef()
+	const inputMsg = useRef()
 	const handleSubmitFrom = (e) => {
-		setErrors(validations(value));
+		setErrors(validations(value));		
+		if (!Object.keys(e).length) {
+			console.log('no');
+			setTimeout(() => {
+				setValue({
+					...value,
+					name:'',
+					email:'',
+					message:''
+				})
+			}, 1000);
+		}
 	}
 
 	const handleFromPrevent = (e) => {
 			e.preventDefault();	
-	}
-
+		}
 	useEffect(() => {
-			AOS.init({
-				duration:2000
+		AOS.init({
+			duration:2000
 			});
 	}, []);
 	return (
@@ -110,13 +124,13 @@ const Contact = () => {
 
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form id='contact-form' onSubmit={!Object.keys(errors).length ? (handleSubmit) : (handleFromPrevent)} >
+							<form ref={form} id='contact-form' onSubmit={!Object.keys(errors).length ? handleSubmit : (handleFromPrevent)} >
 								<div
 									data-aos='fade-left'
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" />
+									<input ref={inputName} type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" />
 								</div>
 								{errors.name && (<p className="error-msg">{errors.name}</p>)}
 								<div
@@ -124,7 +138,7 @@ const Contact = () => {
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<input type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" />
+									<input ref={inputEmail} type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" />
 								</div>
 								{errors.email && (<p className="error-msg">{errors.email}</p>)}
 								<div
@@ -132,7 +146,7 @@ const Contact = () => {
 									data-aos-duration='2500'
 									className='form-group'
 								>
-								<textarea name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" ></textarea>
+								<textarea ref={inputMsg} name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" ></textarea>
 								</div>
 								{errors.message && (<p className="error-msg">{errors.message}</p>)}
 								<button
@@ -141,7 +155,7 @@ const Contact = () => {
 									type='submit'
 									className='btn'
 									disabled={state.submitting}
-									onClick={handleSubmitFrom}
+									onClick={() => handleSubmitFrom(errors)}
 								>
 									Get In Touch
 								</button>
