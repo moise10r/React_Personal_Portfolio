@@ -114,13 +114,22 @@
           display: flex;
           flex-wrap: wrap;
           margin-top: 2rem;
+          @include flex-start(row);
+          @include media(600px){
+            flex-wrap: nowrap;
+          }
           li {
             padding: 0.6rem 1.5rem;
             background-color: darken($text-color, 60);
             border-radius: 0.5rem;
             margin: 0.4rem;
+            display: none;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+              display: block;
+            }    
             @include media(600px){
-              margin-right: 2rem;  
+              margin-right: 2rem; 
+              flex-wrap: nowrap;
             }
           }
           a {
