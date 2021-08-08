@@ -26,14 +26,13 @@ const Contact = () => {
 	}
 
 	const handleSubmitFrom = (e) => {
-		// e.preventDefault();
 		setErrors(validations(value));
 	}
-	// console.log(Object.keys(errors).length);
-	// if(!Object.keys(errors).length) {
-	// 	handleSubmit();
-	// 	console.log('nothing');
-	// }
+
+	const handleFromPrevent = (e) => {
+			e.preventDefault();	
+	}
+
 	useEffect(() => {
 			AOS.init({
 				duration:2000
@@ -111,13 +110,13 @@ const Contact = () => {
 
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form id='contact-form' onSubmit={!Object.keys(errors).length ? (handleSubmit) : ('')} >
+							<form id='contact-form' onSubmit={!Object.keys(errors).length ? (handleSubmit) : (handleFromPrevent)} >
 								<div
 									data-aos='fade-left'
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" required/>
+									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" />
 								</div>
 								{errors.name && (<p className="error-msg">{errors.name}</p>)}
 								<div
@@ -125,7 +124,7 @@ const Contact = () => {
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<input type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" required/>
+									<input type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" />
 								</div>
 								{errors.email && (<p className="error-msg">{errors.email}</p>)}
 								<div
@@ -133,7 +132,7 @@ const Contact = () => {
 									data-aos-duration='2500'
 									className='form-group'
 								>
-								<textarea name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" required></textarea>
+								<textarea name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" ></textarea>
 								</div>
 								{errors.message && (<p className="error-msg">{errors.message}</p>)}
 								<button

@@ -180,8 +180,12 @@
 	            }
 
 	          }
-
 	        }
+					.error-msg {
+						font-size: 1.6rem;
+						margin-bottom: 0.5rem;
+						color: $secondary-color;
+					}	
 	        .btn {
 	          padding: 0.6rem 2rem;
 	          border: 2px solid $secondary-color;

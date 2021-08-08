@@ -1415,6 +1415,11 @@ li {
   background: #cf000f;
   cursor: pointer;
 }
+.main-contact-left-container #contact-form .error-msg {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #cf000f;
+}
 .main-contact-left-container #contact-form .btn {
   padding: 0.6rem 2rem;
   border: 2px solid #cf000f;
