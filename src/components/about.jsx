@@ -70,7 +70,6 @@ class About extends Component {
 				i = 0;
 			}
 			for (const j of lang) {
-				console.log(i);
 				if (visibleLang > 1) {
 					j.style.left = '-' + i + '%';
 				}
@@ -94,7 +93,6 @@ class About extends Component {
 				i2 = 0;
 			}
 			for (const j of fram) {
-				console.log(i);
 				if (visibleFram > 1) {
 					j.style.left = '-' + i2 + '%';
 				}
