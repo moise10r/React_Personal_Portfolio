@@ -13,7 +13,7 @@ import validations from '../utils';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-	const [state, handleSubmit] = useForm('mrgrkgvy1');
+	const [state, handleSubmit] = useForm('mrgrkgvy');
 	const [value, setValue] = useState({
 		name:'',
 		email:'',
