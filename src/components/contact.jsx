@@ -1,21 +1,26 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IconContext } from 'react-icons';
 import { GiCircleClaws } from 'react-icons/gi';
 import { MdLocationCity } from 'react-icons/md';
 import { FiPhoneCall } from 'react-icons/fi';
 import { IoIosSend } from 'react-icons/io';
+import { BsCheckCircle } from 'react-icons/bs';
+import { CgClose } from 'react-icons/cg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useForm } from '@formspree/react';
 import validations from '../utils';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
-	const [state, handleSubmit] = useForm('mrgrkgvy');
+	const [state, handleSubmit] = useForm('mrgrkgvy1');
 	const [value, setValue] = useState({
 		name:'',
 		email:'',
 		message:''
 	});
+
+	const [isSent, setIsSent] = useState(false);
 
 	const [errors, setErrors] = useState({});
 	const handleChange = ({target:input}) => {
@@ -24,11 +29,12 @@ const Contact = () => {
 			[input.name]: input.value
 		})
 	}
-
+	const handleCloseToast = () => {
+		setIsSent(false);
+	}
 	const handleSubmitFrom = (e) => {
 		setErrors(validations(value));		
 		if (!Object.keys(e).length) {
-			console.log('no');
 			setTimeout(() => {
 				setValue({
 					...value,
@@ -37,12 +43,14 @@ const Contact = () => {
 					message:''
 				})
 			}, 1000);
+			setIsSent(true);
 		}
 	}
 
 	const handleFromPrevent = (e) => {
 			e.preventDefault();	
-		}
+	}
+
 	useEffect(() => {
 		AOS.init({
 			duration:2000
@@ -65,6 +73,21 @@ const Contact = () => {
 						to help with it
 					</p>
 					<p className='emojs'>😆 😃 🤩</p>
+					{ isSent && <motion.div 	initial={{x:400}}	animate={{x:0}}
+										transition={{ type: 'spring' }}
+										className="toast-container">
+					<span className="check-icon">
+						<IconContext.Provider value={{ className: 'check' }}>
+							<BsCheckCircle  />
+							</IconContext.Provider>
+					</span>
+					<p className="toast-message">Message sent successfully</p>
+					<span onClick={handleCloseToast} className="close-toast">
+						<IconContext.Provider value={{ className: 'close' }}>
+							<CgClose/>
+							</IconContext.Provider>
+					</span>
+				</motion.div>}
 					<div className='contact-main-wrapper'>
 						<div className='main-contact-right-container'>
 							<h3 data-aos='zoom-in-down'>
@@ -117,7 +140,6 @@ const Contact = () => {
 								</ul>
 							</div>
 						</div>
-
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
 							<form  id='contact-form' onSubmit={!Object.keys(errors).length ? handleSubmit : (handleFromPrevent)} >
