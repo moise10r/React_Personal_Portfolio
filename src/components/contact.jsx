@@ -25,10 +25,6 @@ const Contact = () => {
 		})
 	}
 
-	const form = useRef();
-	const inputName = useRef();
-	const inputEmail = useRef()
-	const inputMsg = useRef()
 	const handleSubmitFrom = (e) => {
 		setErrors(validations(value));		
 		if (!Object.keys(e).length) {
@@ -124,13 +120,13 @@ const Contact = () => {
 
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form ref={form} id='contact-form' onSubmit={!Object.keys(errors).length ? handleSubmit : (handleFromPrevent)} >
+							<form  id='contact-form' onSubmit={!Object.keys(errors).length ? handleSubmit : (handleFromPrevent)} >
 								<div
 									data-aos='fade-left'
 									data-aos-duration='1000'
 									className='form-group'
 								>
-									<input ref={inputName} type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" />
+									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" />
 								</div>
 								{errors.name && (<p className="error-msg">{errors.name}</p>)}
 								<div
@@ -138,7 +134,7 @@ const Contact = () => {
 									data-aos-duration='2000'
 									className='form-group'
 								>
-									<input ref={inputEmail} type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" />
+									<input  type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" />
 								</div>
 								{errors.email && (<p className="error-msg">{errors.email}</p>)}
 								<div
@@ -146,7 +142,7 @@ const Contact = () => {
 									data-aos-duration='2500'
 									className='form-group'
 								>
-								<textarea ref={inputMsg} name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" ></textarea>
+								<textarea name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" ></textarea>
 								</div>
 								{errors.message && (<p className="error-msg">{errors.message}</p>)}
 								<button
