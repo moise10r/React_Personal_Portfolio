@@ -5,7 +5,7 @@ const validations = (values) => {
   }
   if (!values.email){
     errors.email = 'Email field is required'
-  } if (!/\S+@\S+\.\S+/.test(values.email)) {
+  } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = 'Email is invalid';
   } 
   if (!values.message) {
