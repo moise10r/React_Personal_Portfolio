@@ -62,6 +62,7 @@ class Home extends Component {
 	}
 	render() {
 		const { item ,isOpen, start } = this.state;
+			console.log(item);
 		const poster =
 			'https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fradar-localization-18739819.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Froyalty-free-stock-images-radar-localization-image18739819&tbnid=V53swVz5QAemoM&vet=12ahUKEwj7o5LwtYTyAhURQBoKHQT5Cj0QMygZegUIARCPAg..i&docid=OoVm1s3AFl2GzM&w=800&h=800&q=radar&ved=2ahUKEwj7o5LwtYTyAhURQBoKHQT5Cj0QMygZegUIARCPAg';
 		return (
@@ -134,11 +135,11 @@ class Home extends Component {
 									<p>{item.fullDesciption}</p>
 								</div>
 								<div className='about-links'>
-									<ul className='languages' id='lang'>
-										{/* {item.technologies.map(element => (
-										<li> <a href="#2">{element}</a></li>
-									))}  */}
-									</ul>
+							{	isOpen &&	<ul className='languages' id='lang'>
+										{item.technologies.map((element,index) => (
+										<li key={index} > <a href="#2">{element}</a></li>
+									))} 
+									</ul>}
 									<div className='links'>
 										<a href='#2' className='btn'>
 											<span>see live</span>

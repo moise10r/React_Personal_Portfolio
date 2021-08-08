@@ -1735,8 +1735,9 @@ a {
 }
 
 .card-popup-window .left-container .detail {
-  margin-top: 5px;
+  margin-top: 1rem;
   text-align: start;
+  margin-right: 4rem;
 }
 .card-popup-window .detail p {
   font-size: 1.7rem;
