@@ -7,6 +7,7 @@ import { IoIosSend } from 'react-icons/io';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useForm } from '@formspree/react';
+import validations from '../utils';
 
 const Contact = () => {
 	const [state, handleSubmit] = useForm('mrgrkgvy');
@@ -16,12 +17,23 @@ const Contact = () => {
 		message:''
 	});
 
+	const [errors, setErrors] = useState({});
 	const handleChange = ({target:input}) => {
 		setValue({
 			...value,
 			[input.name]: input.value
 		})
 	}
+
+	const handleSubmitFrom = (e) => {
+		// e.preventDefault();
+		setErrors(validations(value));
+	}
+	// console.log(Object.keys(errors).length);
+	// if(!Object.keys(errors).length) {
+	// 	handleSubmit();
+	// 	console.log('nothing');
+	// }
 	useEffect(() => {
 			AOS.init({
 				duration:2000
@@ -99,7 +111,7 @@ const Contact = () => {
 
 						<div className='main-contact-left-container'>
 							<p>Message Me</p>
-							<form id='contact-form' onSubmit={handleSubmit} >
+							<form id='contact-form' onSubmit={!Object.keys(errors).length ? (handleSubmit) : ('')} >
 								<div
 									data-aos='fade-left'
 									data-aos-duration='1000'
@@ -107,6 +119,7 @@ const Contact = () => {
 								>
 									<input type="text" onChange={handleChange} value={value.name} name="name" placeholder='Name' id="" required/>
 								</div>
+								{errors.name && (<p className="error-msg">{errors.name}</p>)}
 								<div
 									data-aos='fade-left'
 									data-aos-duration='2000'
@@ -114,6 +127,7 @@ const Contact = () => {
 								>
 									<input type="email"  onChange={handleChange} value={value.email} name="email" placeholder='Email' id="" required/>
 								</div>
+								{errors.email && (<p className="error-msg">{errors.email}</p>)}
 								<div
 									data-aos='fade-left'
 									data-aos-duration='2500'
@@ -121,12 +135,14 @@ const Contact = () => {
 								>
 								<textarea name="message" value={value.message}  onChange={handleChange} id="message" placeholder='Message' cols="30" rows="10" required></textarea>
 								</div>
+								{errors.message && (<p className="error-msg">{errors.message}</p>)}
 								<button
 									data-aos='fade-up'
 									data-aos-anchor-placement='center-bottom'
 									type='submit'
 									className='btn'
 									disabled={state.submitting}
+									onClick={handleSubmitFrom}
 								>
 									Get In Touch
 								</button>
