@@ -296,7 +296,7 @@ class About extends Component {
 					<div className='main-about-wrapper-two'>
 						<div className='about-left-main-container'>
 							<div data-aos='fade-right' className='experience-year'>
-								<span>2</span>
+								<span>3</span>
 								<span className='dot'></span>
 							</div>
 							<div className='year-paragraph'>

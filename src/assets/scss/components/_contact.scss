@@ -19,6 +19,10 @@
 				border-radius: 0.5rem;
 				background-color: #63d471;
 				background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+				display: none;
+				@include media(1000px) {
+					display: block;
+				}
 				@include flex-center(row);
 				.close-toast {
 					position: absolute;
