@@ -39,7 +39,7 @@ const HeadLine = () => {
 							Resume
 						</motion.a>
 						<motion.a
-							href='#3'
+							href='https://www.linkedin.com/in/nganulo-rushanika-mo%C3%AFse-626139197/'
 							initial={{ y: 1000 }}
 							animate={{ y: 10 }}
 							transition={{ duration: 3 }}
