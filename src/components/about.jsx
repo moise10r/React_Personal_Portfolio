@@ -134,7 +134,7 @@ class About extends Component {
 							<a
 								data-aos='fade-right'
 								data-aos-easing='ease-in-sine'
-								href='#2'
+								href='https://www.linkedin.com/in/nganulo-rushanika-mo%C3%AFse-626139197/'
 								className='about-connect'
 							>
 								<span>Let's connect</span>
