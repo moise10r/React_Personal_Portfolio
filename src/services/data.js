@@ -32,7 +32,7 @@ export const data = [
 		detail:
 			'My Doctor is an application implemented for Hospitals, helping patients to be assisted by their doctors remotely.',
 		technologies: ['Javascript', 'Express js', 'MongoDB'],
-		liveDemo: 'https://moise10r.github.io/Personal_Portfolio/',
+		liveDemo: 'https://github.com/moise10r/My_Doctor_Api',
 		sourceCode: 'https://github.com/moise10r/My_Doctor_Api',
 	},
 	{
