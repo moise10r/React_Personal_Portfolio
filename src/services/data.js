@@ -16,8 +16,7 @@ export const data = [
 		detail:
 			'MTechShopping_cart is an online application developed in React for selling electronic components.',
 		technologies: ['React', 'Redux', 'Sass'],
-		liveDemo:
-			'',
+		liveDemo: 'https://github.com/moise10r/MTechShoppingCart',
 		sourceCode: 'https://github.com/moise10r/MTechShoppingCart',
 	},
 	{
@@ -42,13 +41,13 @@ export const data = [
 		type: 'Management',
 		development: 'Frontend Dev',
 		year: 2021,
-		liveDemo: 'https://friendly-ritchie-818eff.netlify.app/',
-		sourceCode: 'https://github.com/moise10r/react-todo-list',
 		fullDesciption:
 			'To Do List is an application that keeps track of professional and personal projects and tasks, make lists, collaborate at work',
 		detail:
 			'To Do List is an application that keeps track of professional and personal projects and tasks, make lists, collaborate at work',
 		technologies: ['React'],
+		liveDemo: 'https://friendly-ritchie-818eff.netlify.app/',
+		sourceCode: 'https://github.com/moise10r/react-todo-list',
 	},
 	{
 		id: 4,

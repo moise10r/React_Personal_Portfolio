@@ -2,6 +2,7 @@ import React from 'react';
 import { IconContext } from 'react-icons';
 import { AiOutlineDisconnect } from 'react-icons/ai';
 import headlineImg from '../assets/images/headline_bg.svg';
+import resume from '../assets/images/Resume.pdf';
 import { motion } from 'framer-motion';
 
 const HeadLine = () => {
@@ -32,8 +33,9 @@ const HeadLine = () => {
 						<motion.a
 							initial={{ y: 1000 }}
 							animate={{ y: 10 }}
+							download
 							transition={{ duration: 2.5 }}
-							href='#2'
+							href={resume}
 							className='btn-resume'
 						>
 							Resume
