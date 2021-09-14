@@ -1154,7 +1154,7 @@ li {
 }
 @media screen and (min-width: 600px) {
   .project-main-wrapper .card-list-container .card .right-content .languages {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 }
 .project-main-wrapper .card-list-container .card .right-content .languages li {
@@ -1243,13 +1243,12 @@ li {
     top: -0.9rem;
     left: -0.8rem;
     width: 1rem;
-    height: 63.5%;
+    height: 98.5%;
     background-color: rgba(102, 102, 102, 0.6);
     transform-origin: left;
     transform: skewY(45deg);
     transition: 0.5s;
     border-radius: 0.2rem;
-    border-bottom: 20rem solid rgba(102, 102, 102, 0.6);
   }
 }
 
@@ -1802,9 +1801,9 @@ a {
   align-items: center;
   font-size: 15px;
   font-weight: 500;
+  padding: 1rem 2.5rem;
 }
 .card-popup-window .main-container .links .btn:first-child {
-  padding: 1rem 2.5rem;
   margin-right: 5px;
 }
 

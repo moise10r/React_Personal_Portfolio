@@ -117,7 +117,7 @@
           margin-top: 2rem;
           @include flex-start(row);
           @include media(600px){
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
           }
           li {
             padding: 0.6rem 1.5rem;
@@ -201,13 +201,12 @@
         top: -0.9rem;
         left: -0.8rem;
         width: 1rem;
-        height: 63.5%;
+        height: 98.5%;
         background-color: darken($secondary-text-color, 60);
         transform-origin: left;
         transform: skewY(45deg);
         transition: 0.5s;
         border-radius: 0.2rem;
-        border-bottom: 20rem solid darken($secondary-text-color, 60);
       }
     }
   }

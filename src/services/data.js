@@ -10,30 +10,30 @@ export const data = [
 		title: 'MTech Shopping',
 		type: 'Shopping',
 		development: 'Frontend Dev',
-		year: 2015,
+		year: 2020,
 		fullDesciption:
-			'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+			'MTechShopping_cart is an online application developed in React for selling electronic components.',
 		detail:
 			'MTechShopping_cart is an online application developed in React for selling electronic components.',
-		technologies: ['Html', 'Css', 'Javascript'],
+		technologies: ['React', 'Redux', 'Sass'],
 		liveDemo:
-			'https://moise10r.github.io/Capstone_Project_Module_One/index.html',
-		sourceCode: 'https://github.com/moise10r/Capstone_Project_Module_One',
+			'',
+		sourceCode: 'https://github.com/moise10r/MTechShoppingCart',
 	},
 	{
 		id: 2,
 		image: ellipse_2,
-		title: 'Facebook 360',
-		type: 'CANOPY',
+		title: 'My Doctor',
+		type: 'Assistance',
 		development: 'Backend Dev',
 		year: 2015,
 		fullDesciption:
-			'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+			'My Doctor is an application implemented for Hospitals, helping patients to be assisted by their doctors remotely. In this application the patients have the possibility to book an appointment with their doctors, they will communicate with their doctors using a chat as well. So the patients will have an electronic test kit which will communicate with the server by sending the result of test which will be populated on the UI.',
 		detail:
-			'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-		technologies: ['Html', 'Css', 'Javascript', 'github', 'Ruby', 'Bootstrap'],
+			'My Doctor is an application implemented for Hospitals, helping patients to be assisted by their doctors remotely.',
+		technologies: ['Javascript', 'Express js', 'MongoDB'],
 		liveDemo: 'https://moise10r.github.io/Personal_Portfolio/',
-		sourceCode: 'https://github.com/moise10r/Personal_Portfolio',
+		sourceCode: 'https://github.com/moise10r/My_Doctor_Api',
 	},
 	{
 		id: 3,
