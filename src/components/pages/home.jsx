@@ -140,7 +140,7 @@ class Home extends Component {
 									))} 
 									</ul>}
 									<div className='links'>
-										<a href='#2' className='btn'>
+										<a href={item.liveDemo} className='btn'>
 											<span>see live</span>
 											<span>
 												<svg
@@ -159,7 +159,7 @@ class Home extends Component {
 												</svg>
 											</span>
 										</a>
-										<a href='#2' className='btn'>
+										<a href={item.sourceCode} className='btn'>
 											<span>source code</span>{' '}
 											<span>
 												<svg

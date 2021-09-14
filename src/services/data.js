@@ -1,7 +1,7 @@
 import ellipse_1 from '../assets/images/project1.png';
 import ellipse_2 from '../assets/images/project2.png';
 import ellipse_3 from '../assets/images/project3.png';
-import ellipse_4 from '../assets/images/Portfolio_4.png';
+import ellipse_4 from '../assets/images/project4.png';
 
 export const data = [
 	{
@@ -53,16 +53,16 @@ export const data = [
 	{
 		id: 4,
 		image: ellipse_4,
-		title: 'Tonic',
-		type: 'CANOPY',
-		development: 'Backend Dev',
-		year: 2015,
+		title: 'Honesty Adoption',
+		type: 'Adoption',
+		development: 'Frontend Dev',
+		year: 2021,
 		fullDesciption:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eius quae optio et quas, quibusdam quis excepturi omnis? Quos, officia accusamus. Aperiam, molestiae beatae numquam vitae modi est quod laboriosam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi voluptatum quibusdam adipisci voluptates magnam ipsam dolores ad! Adipisci veritatis, sint perspiciatis reiciendis omnis, maiores incidunt, ex aut inventore deleniti nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil mollitia deleniti nobis facilis delectus consequuntur, culpa commodi quia repellendus molestias doloribus praesentium voluptas nisi sint, similique repellat atque maiores aperiam.    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ex quam officia ea dolor. Ea quasi in id dolorum ',
+			'Honesty Adoption is a web page of a simple series of unconnected stories but is in fact a movement that can change the lives of millions of children.',
 		detail:
-			'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-		technologies: ['Html', 'Css', 'Javascript', 'github', 'Ruby', 'Bootstrap'],
-		liveDemo: 'https://moise10r.github.io/Personal_Portfolio/',
-		sourceCode: 'https://github.com/moise10r/Personal_Portfolio',
+			'Honesty Adoption is a web page of a simple series of unconnected stories but is in fact a movement that can change the lives of millions of children.',
+		technologies: ['Html', 'Css', 'Javascript'],
+		liveDemo: 'http://moise.me/Capstone_Project_Module_One/',
+		sourceCode: 'https://github.com/moise10r/Capstone_Project_Module_One',
 	},
 ];
