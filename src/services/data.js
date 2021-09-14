@@ -1,6 +1,6 @@
 import ellipse_1 from '../assets/images/project1.png';
 import ellipse_2 from '../assets/images/project2.png';
-import ellipse_3 from '../assets/images/Portfolio_3.png';
+import ellipse_3 from '../assets/images/project3.png';
 import ellipse_4 from '../assets/images/Portfolio_4.png';
 
 export const data = [
@@ -26,7 +26,7 @@ export const data = [
 		title: 'My Doctor',
 		type: 'Assistance',
 		development: 'Backend Dev',
-		year: 2015,
+		year: 2021,
 		fullDesciption:
 			'My Doctor is an application implemented for Hospitals, helping patients to be assisted by their doctors remotely. In this application the patients have the possibility to book an appointment with their doctors, they will communicate with their doctors using a chat as well. So the patients will have an electronic test kit which will communicate with the server by sending the result of test which will be populated on the UI.',
 		detail:
@@ -38,17 +38,17 @@ export const data = [
 	{
 		id: 3,
 		image: ellipse_3,
-		title: 'Uber Navigation',
-		type: 'CANOPY',
-		development: 'Backend Dev',
+		title: 'To Do List',
+		type: 'Management',
+		development: 'Frontend Dev',
 		year: 2015,
 		fullDesciption:
-			'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+			'To Do List is an application that keeps track of professional and personal projects and tasks, make lists, collaborate at work',
 		detail:
-			'Exploring the future of media in Facebooks first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
-		technologies: ['Html', 'Css', 'Javascript', 'github', 'Ruby', 'Bootstrap'],
-		liveDemo: 'https://moise10r.github.io/Personal_Portfolio/',
-		sourceCode: 'https://github.com/moise10r/Personal_Portfolio',
+			'To Do List is an application that keeps track of professional and personal projects and tasks, make lists, collaborate at work',
+		technologies: ['React'],
+		liveDemo: 'https://friendly-ritchie-818eff.netlify.app/',
+		sourceCode: 'https://github.com/moise10r/react-todo-list',
 	},
 	{
 		id: 4,
