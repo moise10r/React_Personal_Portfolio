@@ -45,7 +45,7 @@ export const data = [
 			'To Do List is an application that keeps track of professional and personal projects and tasks, make lists, collaborate at work',
 		detail:
 			'To Do List is an application that keeps track of professional and personal projects and tasks, make lists, collaborate at work',
-		technologies: ['React'],
+		technologies: ['React', 'Css'],
 		liveDemo: 'https://friendly-ritchie-818eff.netlify.app/',
 		sourceCode: 'https://github.com/moise10r/react-todo-list',
 	},
