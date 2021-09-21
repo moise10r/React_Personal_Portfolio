@@ -120,9 +120,7 @@ a {
   z-index: 999;
   overflow-y: auto;
   display: block;
-  transform: translateY(-100vh);
   &.open-pop-up {
-    transition: 2s;
     display: none;
   }
 }
