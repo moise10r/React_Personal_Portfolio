@@ -17,6 +17,8 @@ import ellipse_6 from '../assets/images/jest.png';
 import ellipse_7 from '../assets/images/scss.svg';
 import ellipse_8 from '../assets/images/bootstrap.png';
 import ellipse_9 from '../assets/images/redux.png';
+import ellipse_10 from '../assets/images/mongodb.png';
+import ellipse_11 from '../assets/images/postgresql.png';
 import about from '../assets/images/about.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -27,13 +29,15 @@ class About extends Component {
 		isFramOpen: false,
 		languages: [
 			{ id: 1, title: 'JavaScript', image: ellipse_1 },
+			{ id: 1, title: 'MongoDB', image: ellipse_10 },
+			{ id: 1, title: 'Postgresql', image: ellipse_11 },
 			{ id: 2, title: 'Html', image: ellipse_2 },
 			{ id: 3, title: 'Css', image: ellipse_3 },
 		],
 		frameWorks: [
 			{ id: 1, title: 'React', image: ellipse_4 },
 			{ id: 1, title: 'Redux', image: ellipse_9 },
-			{ id: 2, title: 'Nodejs', image: ellipse_5 },
+			{ id: 2, title: 'Express', image: ellipse_5 },
 			{ id: 3, title: 'Jest', image: ellipse_6 },
 			{ id: 4, title: 'scss', image: ellipse_7 },
 			{ id: 5, title: 'Bootstrap', image: ellipse_8 },
