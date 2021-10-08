@@ -41,6 +41,8 @@ class Projects extends Component {
 								detail,
 								technologies,
 								fullDesciption,
+								liveDemo,
+								sourceCode,
 							}) => (
 								<li
 									data-aos='flip-left'
@@ -91,6 +93,8 @@ class Projects extends Component {
 													detail,
 													technologies,
 													fullDesciption,
+													liveDemo,
+													sourceCode,
 												})
 											}
 											className='see-project'
