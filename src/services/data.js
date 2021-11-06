@@ -2,6 +2,7 @@ import ellipse_1 from '../assets/images/project1.png';
 import ellipse_2 from '../assets/images/project2.png';
 import ellipse_3 from '../assets/images/project3.png';
 import ellipse_4 from '../assets/images/project4.png';
+import ellipse_5 from '../assets/images/project5.png';
 
 export const data = [
 	{
@@ -63,5 +64,20 @@ export const data = [
 		technologies: ['Html', 'Css', 'Javascript'],
 		liveDemo: 'http://moise.me/Capstone_Project_Module_One/',
 		sourceCode: 'https://github.com/moise10r/Capstone_Project_Module_One',
+	},
+	{
+		id: 4,
+		image: ellipse_5,
+		title: 'Smart Parking',
+		type: 'Management',
+		development: 'Frontend Dev & Backend Dev',
+		year: 2021,
+		fullDesciption:
+			'HWe are already using the intelligence of the connected car with companion apps that recognize when the car is in a paid parking area and later auto-stops when leaving. Creating a simple customer-focused payment solution for parking.',
+		detail:
+			'We are already using the intelligence of the connected car with companion apps that recognize when the car is in a paid parking area and later auto-stops when leaving. Creating a simple customer-focused payment solution for parking.',
+		technologies: ['Html', 'Css', 'Javascript'],
+		liveDemo: 'http://moise.me/Capstone_Project_Module_One/',
+		sourceCode: 'https://github.com/moise10r/smart_parking_react_dashboard',
 	},
 ];
